@@ -1,0 +1,44 @@
+{
+  "name": "@dialog-designer/dev",
+  "version": "0.1.0",
+  "description": "Local development server and manifest tooling for dialog-designer.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzachshabtay/dialog-designer.git",
+    "directory": "packages/dev"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "dialog-designer-dev": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-game-assets/core": "^0.7.0",
+    "@ai-game-assets/dev": "^0.7.0",
+    "@dialog-designer/core": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}

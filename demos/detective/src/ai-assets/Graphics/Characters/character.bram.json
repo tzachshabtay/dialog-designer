@@ -1,0 +1,18 @@
+{
+  "id": "character.bram",
+  "kind": "image",
+  "prompt": "Full-body portrait sprite of Bram Holt, broad weathered estate electrician in his late forties, rolled shirtsleeves, charcoal waistcoat, leather tool satchel, wary but honest eyes, painterly graphic-novel style, transparent background.",
+  "dimensions": { "width": 180, "height": 320 },
+  "settings": { "model": "gpt-image-2", "background": "transparent", "format": "png", "referenceAssetIds": ["background.library"] },
+  "activeVersion": "default",
+  "versions": {
+    "default": {
+      "name": "default",
+      "file": "/assets/character.bram.default.svg",
+      "prompt": "Deterministic vector character portrait of Bram Holt with work clothes and tool satchel.",
+      "createdAt": "2026-08-30T00:00:00.000Z",
+      "model": "manual-svg"
+    }
+  },
+  "tags": ["character", "suspect", "bram"]
+}

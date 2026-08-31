@@ -1,0 +1,18 @@
+{
+  "id": "character.ada",
+  "kind": "image",
+  "prompt": "Full-body portrait sprite of Ada Mercer, sharp intelligent woman pianist in her late twenties, dark red 1930s evening dress, controlled posture masking anxiety, tasteful jewelry, painterly graphic-novel style, transparent background.",
+  "dimensions": { "width": 180, "height": 320 },
+  "settings": { "model": "gpt-image-2", "background": "transparent", "format": "png", "referenceAssetIds": ["background.library"] },
+  "activeVersion": "default",
+  "versions": {
+    "default": {
+      "name": "default",
+      "file": "/assets/character.ada.default.svg",
+      "prompt": "Deterministic vector character portrait of Ada Mercer in a dark red 1930s evening dress.",
+      "createdAt": "2026-08-30T00:00:00.000Z",
+      "model": "manual-svg"
+    }
+  },
+  "tags": ["character", "suspect", "ada"]
+}

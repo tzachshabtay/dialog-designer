@@ -1,0 +1,68 @@
+{
+  "id": "dialog.bram",
+  "name": "Bram Holt",
+  "entryNodeId": "bram.intro",
+  "enabled": true,
+  "tags": ["suspect", "bram"],
+  "metadata": { "suspectId": "bram", "subtitle": "The electrician · dismissed this afternoon" },
+  "nodes": {
+    "bram.intro": {
+      "id": "bram.intro", "type": "block", "name": "Opening", "enabled": true, "nextNodeId": "bram.menu",
+      "lines": [
+        { "id": "bram.intro.detective", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.bram-opening" },
+        { "id": "bram.intro.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.intro" }
+      ]
+    },
+    "bram.menu": {
+      "id": "bram.menu", "type": "decision", "name": "Interview topics", "prompt": "What will you ask Bram?", "enabled": true,
+      "options": [
+        { "id": "bram.ask.alarm", "text": "Ask why the display alarm was dead", "enabled": true, "nextNodeId": "bram.alarm" },
+        { "id": "bram.ask.breaker", "text": "Ask what tripped the power", "enabled": true, "nextNodeId": "bram.breaker" },
+        { "id": "bram.ask.lock", "text": "Have him inspect the display lock", "enabled": true, "nextNodeId": "bram.lock" },
+        { "id": "bram.ask.lamp", "text": "Trace the fault inside the room", "enabled": true, "nextNodeId": "bram.lamp" },
+        { "id": "bram.ask.reconsider", "text": "Withdraw the accusation and ask for facts", "enabled": true, "nextNodeId": "bram.reconsider" },
+        { "id": "bram.accuse.wrong", "text": "Accuse Bram of taking the ledger", "enabled": true, "nextNodeId": "bram.wrong" },
+        { "id": "bram.leave", "text": "End the interview", "enabled": true }
+      ]
+    },
+    "bram.alarm": {
+      "id": "bram.alarm", "type": "block", "name": "The disabled alarm", "enabled": true, "nextNodeId": "bram.alarm-choice",
+      "lines": [{ "id": "bram.alarm.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.alarm" }]
+    },
+    "bram.alarm-choice": {
+      "id": "bram.alarm-choice", "type": "decision", "name": "Respond to Bram", "prompt": "How do you answer Bram's admission?", "enabled": true,
+      "options": [
+        { "id": "bram.alarm.proof", "text": "Ask to see Mercer's work order", "enabled": true, "nextNodeId": "bram.work-order" },
+        { "id": "bram.alarm.press", "text": "Call the order a convenient invention", "enabled": true, "nextNodeId": "bram.hostile" }
+      ]
+    },
+    "bram.work-order": {
+      "id": "bram.work-order", "type": "block", "name": "The signed order", "enabled": true,
+      "lines": [{ "id": "bram.work-order.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.work-order" }]
+    },
+    "bram.hostile": {
+      "id": "bram.hostile", "type": "block", "name": "Bram refuses", "enabled": true,
+      "lines": [{ "id": "bram.hostile.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.hostile" }]
+    },
+    "bram.breaker": {
+      "id": "bram.breaker", "type": "block", "name": "The untouched breaker", "enabled": true,
+      "lines": [{ "id": "bram.breaker.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.breaker" }]
+    },
+    "bram.lock": {
+      "id": "bram.lock", "type": "block", "name": "Wax in the lock", "enabled": true,
+      "lines": [{ "id": "bram.lock.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.lock" }]
+    },
+    "bram.lamp": {
+      "id": "bram.lamp", "type": "block", "name": "The sabotaged lamp", "enabled": true,
+      "lines": [{ "id": "bram.lamp.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.lamp" }]
+    },
+    "bram.reconsider": {
+      "id": "bram.reconsider", "type": "block", "name": "Back to the facts", "enabled": true,
+      "lines": [{ "id": "bram.reconsider.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.reconsider" }]
+    },
+    "bram.wrong": {
+      "id": "bram.wrong", "type": "block", "name": "A wrong accusation", "enabled": true,
+      "lines": [{ "id": "bram.wrong.reply", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.wrong" }]
+    }
+  }
+}

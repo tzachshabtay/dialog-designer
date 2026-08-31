@@ -1,0 +1,18 @@
+{
+  "id": "character.lucien",
+  "kind": "image",
+  "prompt": "Full-body portrait sprite of Dr. Lucien Vale, elegant silver-haired historian in his late fifties, midnight blue three-piece suit, gloves and a slim clasped exhibition folio, polished charm with guarded eyes, painterly graphic-novel style, transparent background.",
+  "dimensions": { "width": 180, "height": 320 },
+  "settings": { "model": "gpt-image-2", "background": "transparent", "format": "png", "referenceAssetIds": ["background.library"] },
+  "activeVersion": "default",
+  "versions": {
+    "default": {
+      "name": "default",
+      "file": "/assets/character.lucien.default.svg",
+      "prompt": "Deterministic vector character portrait of Dr. Lucien Vale with a midnight suit and clasped folio.",
+      "createdAt": "2026-08-30T00:00:00.000Z",
+      "model": "manual-svg"
+    }
+  },
+  "tags": ["character", "suspect", "lucien"]
+}

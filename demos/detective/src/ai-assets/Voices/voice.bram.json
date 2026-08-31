@@ -1,0 +1,22 @@
+{
+  "id": "voice.bram",
+  "kind": "voice",
+  "prompt": "Weathered British working man in his late forties, rough baritone, blunt and defensive but fundamentally steady and honest.",
+  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
+  "voiceSettings": { "provider": "elevenlabs", "previewText": "Wires tell the truth. People generally need a little more testing." },
+  "linkedAnimationAssets": {
+    "intro": { "label": "Opening", "assetId": "line.bram.intro" },
+    "alarm": { "label": "Disabled alarm", "assetId": "line.bram.alarm" },
+    "work-order": { "label": "Work order", "assetId": "line.bram.work-order" },
+    "hostile": { "label": "Hostile", "assetId": "line.bram.hostile" },
+    "breaker": { "label": "Main breaker", "assetId": "line.bram.breaker" },
+    "lock": { "label": "Wax in lock", "assetId": "line.bram.lock" },
+    "lamp": { "label": "Sabotaged lamp", "assetId": "line.bram.lamp" },
+    "reconsider": { "label": "Reconsider", "assetId": "line.bram.reconsider" },
+    "wrong": { "label": "Wrong accusation", "assetId": "line.bram.wrong" },
+    "reveal": { "label": "Folio clasp", "assetId": "line.bram.reveal" }
+  },
+  "activeVersion": "",
+  "versions": {},
+  "tags": ["voice", "suspect", "bram"]
+}

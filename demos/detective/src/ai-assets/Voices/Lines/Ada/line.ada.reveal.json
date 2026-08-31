@@ -1,0 +1,1 @@
+{"id":"line.ada.reveal","kind":"voice-line","prompt":"Demand the folio be opened at the climax.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Open it.","direction":"Quiet, absolute command."},"activeVersion":"","versions":{},"tags":["dialog","reveal"]}

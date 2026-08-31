@@ -1,0 +1,24 @@
+{
+  "id": "voice.ada",
+  "kind": "voice",
+  "prompt": "Intelligent British woman in her late twenties, musical controlled delivery with a brittle edge, proud, emotionally precise.",
+  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
+  "voiceSettings": { "provider": "elevenlabs", "previewText": "You hear debt and imagine guilt. I hear a room full of people eager to be believed." },
+  "linkedAnimationAssets": {
+    "intro": { "label": "Opening", "assetId": "line.ada.intro" },
+    "debt": { "label": "The debt", "assetId": "line.ada.debt" },
+    "trust": { "label": "Trust", "assetId": "line.ada.trust" },
+    "defensive": { "label": "Defensive", "assetId": "line.ada.defensive" },
+    "clock": { "label": "Silent clock", "assetId": "line.ada.clock" },
+    "wax": { "label": "Blue wax", "assetId": "line.ada.wax" },
+    "threat": { "label": "Mercer's threat", "assetId": "line.ada.threat" },
+    "dark": { "label": "Sounds in darkness", "assetId": "line.ada.dark" },
+    "bram": { "label": "Bram's work order", "assetId": "line.ada.bram" },
+    "apology": { "label": "Accept apology", "assetId": "line.ada.apology" },
+    "wrong": { "label": "Wrong accusation", "assetId": "line.ada.wrong" },
+    "reveal": { "label": "Open the folio", "assetId": "line.ada.reveal" }
+  },
+  "activeVersion": "",
+  "versions": {},
+  "tags": ["voice", "suspect", "ada"]
+}

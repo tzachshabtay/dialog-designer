@@ -1,0 +1,19 @@
+{
+  "id": "voice.detective",
+  "kind": "voice",
+  "prompt": "Measured private detective, low and observant, concise authority, thoughtful rather than theatrical, 1930s mystery cadence.",
+  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
+  "voiceSettings": { "provider": "elevenlabs", "previewText": "A lie is only a borrowed alibi. Eventually, its owner asks for it back." },
+  "linkedAnimationAssets": {
+    "ada-opening": { "label": "Question Ada", "assetId": "line.detective.ada-opening" },
+    "bram-opening": { "label": "Question Bram", "assetId": "line.detective.bram-opening" },
+    "lucien-opening": { "label": "Question Lucien", "assetId": "line.detective.lucien-opening" },
+    "reveal": { "label": "Present the case", "assetId": "line.detective.reveal" },
+    "reveal-folio": { "label": "Folio clue", "assetId": "line.detective.reveal-folio" },
+    "reveal-container": { "label": "Container deduction", "assetId": "line.detective.reveal-container" },
+    "closing": { "label": "Close the case", "assetId": "line.detective.closing" }
+  },
+  "activeVersion": "",
+  "versions": {},
+  "tags": ["voice", "detective"]
+}

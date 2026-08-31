@@ -1,0 +1,25 @@
+{
+  "id": "voice.lucien",
+  "kind": "voice",
+  "prompt": "Cultivated silver-haired British historian, smooth resonant voice, impeccable diction and paternal charm hiding a vein of panic.",
+  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
+  "voiceSettings": { "provider": "elevenlabs", "previewText": "History is not what happened, Detective. It is what survives examination." },
+  "linkedAnimationAssets": {
+    "intro": { "label": "Opening", "assetId": "line.lucien.intro" },
+    "timeline": { "label": "False timeline", "assetId": "line.lucien.timeline" },
+    "watermark": { "label": "Watermark denial", "assetId": "line.lucien.watermark" },
+    "blame-ada": { "label": "Blame Ada", "assetId": "line.lucien.blame-ada" },
+    "blame-bram": { "label": "Blame Bram", "assetId": "line.lucien.blame-bram" },
+    "clock": { "label": "Clock confrontation", "assetId": "line.lucien.clock" },
+    "lamp": { "label": "Lamp confrontation", "assetId": "line.lucien.lamp" },
+    "wax": { "label": "Wax confrontation", "assetId": "line.lucien.wax" },
+    "motive": { "label": "Motive confrontation", "assetId": "line.lucien.motive" },
+    "folio": { "label": "Folio confrontation", "assetId": "line.lucien.folio" },
+    "early": { "label": "Early accusation", "assetId": "line.lucien.early" },
+    "refuse": { "label": "Refuse folio", "assetId": "line.lucien.refuse" },
+    "confession": { "label": "Confession", "assetId": "line.lucien.confession" }
+  },
+  "activeVersion": "",
+  "versions": {},
+  "tags": ["voice", "suspect", "lucien"]
+}

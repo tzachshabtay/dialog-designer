@@ -1,0 +1,78 @@
+{
+  "id": "dialog.ada",
+  "name": "Ada Mercer",
+  "entryNodeId": "ada.intro",
+  "enabled": true,
+  "tags": ["suspect", "ada"],
+  "metadata": { "suspectId": "ada", "subtitle": "The pianist · daughter of the collector" },
+  "nodes": {
+    "ada.intro": {
+      "id": "ada.intro", "type": "block", "name": "Opening", "enabled": true, "nextNodeId": "ada.menu",
+      "lines": [
+        { "id": "ada.intro.detective", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.ada-opening" },
+        { "id": "ada.intro.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.intro" }
+      ]
+    },
+    "ada.menu": {
+      "id": "ada.menu", "type": "decision", "name": "Interview topics", "prompt": "What will you ask Ada?", "enabled": true,
+      "options": [
+        { "id": "ada.ask.debt", "text": "Ask about her debts", "enabled": true, "nextNodeId": "ada.debt" },
+        { "id": "ada.ask.clock", "text": "Challenge Vale's nine o'clock chime", "enabled": true, "nextNodeId": "ada.clock" },
+        { "id": "ada.ask.wax", "text": "Ask about the blue sealing wax", "enabled": true, "nextNodeId": "ada.wax" },
+        { "id": "ada.ask.threat", "text": "Ask what Mercer said to Vale", "enabled": true, "nextNodeId": "ada.threat" },
+        { "id": "ada.ask.dark", "text": "Ask what she heard in the dark", "enabled": true, "nextNodeId": "ada.dark" },
+        { "id": "ada.ask.bram", "text": "Ask about Bram's work order", "enabled": true, "nextNodeId": "ada.bram" },
+        { "id": "ada.ask.apologize", "text": "Apologize and start again", "enabled": true, "nextNodeId": "ada.apology" },
+        { "id": "ada.accuse.wrong", "text": "Accuse Ada of taking the ledger", "enabled": true, "nextNodeId": "ada.wrong" },
+        { "id": "ada.leave", "text": "End the interview", "enabled": true }
+      ]
+    },
+    "ada.debt": {
+      "id": "ada.debt", "type": "block", "name": "The debt", "enabled": true, "nextNodeId": "ada.debt-choice",
+      "lines": [{ "id": "ada.debt.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.debt" }]
+    },
+    "ada.debt-choice": {
+      "id": "ada.debt-choice", "type": "decision", "name": "Respond to Ada", "prompt": "How do you use what Ada admitted?", "enabled": true,
+      "options": [
+        { "id": "ada.debt.protect", "text": "Keep it confidential; ask for her help", "enabled": true, "nextNodeId": "ada.trust" },
+        { "id": "ada.debt.press", "text": "Say the ledger would pay more than tuition", "enabled": true, "nextNodeId": "ada.defensive" }
+      ]
+    },
+    "ada.trust": {
+      "id": "ada.trust", "type": "block", "name": "A careful truce", "enabled": true,
+      "lines": [{ "id": "ada.trust.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.trust" }]
+    },
+    "ada.defensive": {
+      "id": "ada.defensive", "type": "block", "name": "Ada closes down", "enabled": true,
+      "lines": [{ "id": "ada.defensive.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.defensive" }]
+    },
+    "ada.clock": {
+      "id": "ada.clock", "type": "block", "name": "The silent clock", "enabled": true,
+      "lines": [{ "id": "ada.clock.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.clock" }]
+    },
+    "ada.wax": {
+      "id": "ada.wax", "type": "block", "name": "Borrowed blue wax", "enabled": true,
+      "lines": [{ "id": "ada.wax.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.wax" }]
+    },
+    "ada.threat": {
+      "id": "ada.threat", "type": "block", "name": "The watermark threat", "enabled": true,
+      "lines": [{ "id": "ada.threat.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.threat" }]
+    },
+    "ada.dark": {
+      "id": "ada.dark", "type": "block", "name": "Sounds in darkness", "enabled": true,
+      "lines": [{ "id": "ada.dark.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.dark" }]
+    },
+    "ada.bram": {
+      "id": "ada.bram", "type": "block", "name": "The signed work slip", "enabled": true,
+      "lines": [{ "id": "ada.bram.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.bram" }]
+    },
+    "ada.apology": {
+      "id": "ada.apology", "type": "block", "name": "Repairing trust", "enabled": true,
+      "lines": [{ "id": "ada.apology.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.apology" }]
+    },
+    "ada.wrong": {
+      "id": "ada.wrong", "type": "block", "name": "A wrong accusation", "enabled": true,
+      "lines": [{ "id": "ada.wrong.reply", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.wrong" }]
+    }
+  }
+}
