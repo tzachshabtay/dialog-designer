@@ -1,1 +1,72 @@
-{"id":"line.lucien.watermark","kind":"voice-line","prompt":"Dismiss the incriminating watermark as collector drama.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"A collector's melodrama. The watermark changes nothing about my research.","direction":"Smooth dismissal with a tiny tightening on watermark."},"activeVersion":"","versions":{},"tags":["dialog","lucien","lie"]}
+{
+  "id": "line.lucien.watermark",
+  "kind": "voice-line",
+  "prompt": "strained, scholarly condescension",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "An 1846 mark would contradict an 1812 date—if Edwin has read it correctly. One anomaly does not erase twenty years of scholarship.",
+    "direction": "strained, scholarly condescension",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-5",
+  "versions": {
+    "promoted-1788230047219-5": {
+      "name": "promoted-1788230047219-5",
+      "file": "/assets/line.lucien.watermark.promoted-1788230047219-5.mp3",
+      "prompt": "strained, scholarly condescension",
+      "createdAt": "2026-09-01T02:34:33.337Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "An 1846 mark would contradict an 1812 date—if Edwin has read it correctly. One anomaly does not erase twenty years of scholarship.",
+        "direction": "strained, scholarly condescension",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-5": {
+      "name": "promoted-1788308871354-5",
+      "file": "/assets/line.lucien.watermark.promoted-1788308871354-5.mp3",
+      "prompt": "strained, scholarly condescension",
+      "createdAt": "2026-09-02T00:28:11.613Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "An 1846 mark would contradict an 1812 date—if Edwin has read it correctly. One anomaly does not erase twenty years of scholarship.",
+        "direction": "strained, scholarly condescension",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-5",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "lie"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

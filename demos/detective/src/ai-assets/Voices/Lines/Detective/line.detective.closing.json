@@ -1,1 +1,71 @@
-{"id":"line.detective.closing","kind":"voice-line","prompt":"Finish the case on a restrained verbal turn.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.detective","text":"So you tried to bury the page.","direction":"Low, final, with disappointment rather than celebration."},"activeVersion":"","versions":{},"tags":["dialog","reveal"]}
+{
+  "id": "line.detective.closing",
+  "kind": "voice-line",
+  "prompt": "final, unwavering condemnation",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "The duplicate key is here beside the ledger. You stole it to bury the proof that your life's work was built on a forgery.",
+    "direction": "final, unwavering condemnation",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-12",
+  "versions": {
+    "promoted-1788229690995-12": {
+      "name": "promoted-1788229690995-12",
+      "file": "/assets/line.detective.closing.promoted-1788229690995-12.mp3",
+      "prompt": "final, unwavering condemnation",
+      "createdAt": "2026-09-01T02:29:18.066Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "The duplicate key is here beside the ledger. You stole it to bury the proof that your life's work was built on a forgery.",
+        "direction": "final, unwavering condemnation",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-12": {
+      "name": "promoted-1788308718588-12",
+      "file": "/assets/line.detective.closing.promoted-1788308718588-12.mp3",
+      "prompt": "final, unwavering condemnation",
+      "createdAt": "2026-09-02T00:26:14.983Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "The duplicate key is here beside the ledger. You stole it to bury the proof that your life's work was built on a forgery.",
+        "direction": "final, unwavering condemnation",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-12",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

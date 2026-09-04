@@ -1,0 +1,72 @@
+{
+  "id": "line.detective.case-questioning",
+  "kind": "voice-line",
+  "prompt": "methodical, commanding clarity",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "I'll question each of you separately. We need three answers: who lied about the time, how the case was opened during a room-only blackout, and why the ledger had to disappear. One answer may unlock the next question.",
+    "direction": "methodical, commanding clarity",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-5",
+  "versions": {
+    "promoted-1788229690995-5": {
+      "name": "promoted-1788229690995-5",
+      "file": "/assets/line.detective.case-questioning.promoted-1788229690995-5.mp3",
+      "prompt": "methodical, commanding clarity",
+      "createdAt": "2026-09-01T02:28:43.756Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "I'll question each of you separately. We need three answers: who lied about the time, how the case was opened during a room-only blackout, and why the ledger had to disappear. One answer may unlock the next question.",
+        "direction": "methodical, commanding clarity",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-5": {
+      "name": "promoted-1788308718588-5",
+      "file": "/assets/line.detective.case-questioning.promoted-1788308718588-5.mp3",
+      "prompt": "methodical, commanding clarity",
+      "createdAt": "2026-09-02T00:25:45.867Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "I'll question each of you separately. We need three answers: who lied about the time, how the case was opened during a room-only blackout, and why the ledger had to disappear. One answer may unlock the next question.",
+        "direction": "methodical, commanding clarity",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-5",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective",
+    "intro"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

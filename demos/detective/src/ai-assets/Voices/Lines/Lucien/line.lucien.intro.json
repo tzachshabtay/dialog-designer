@@ -1,1 +1,71 @@
-{"id":"line.lucien.intro","kind":"voice-line","prompt":"Politely redirect suspicion toward the obvious suspects.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Of course. Though Holt had keys, and Miss Mercer has creditors. One should begin with the simple facts.","direction":"Helpful paternal charm with a faintly rehearsed smoothness."},"activeVersion":"","versions":{},"tags":["dialog","lucien"]}
+{
+  "id": "line.lucien.intro",
+  "kind": "voice-line",
+  "prompt": "urbane, subtly accusatory",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Of course. Holt had access to the alarm, and Miss Mercer has creditors. One should begin with the simple facts.",
+    "direction": "urbane, subtly accusatory",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-3",
+  "versions": {
+    "promoted-1788230047219-3": {
+      "name": "promoted-1788230047219-3",
+      "file": "/assets/line.lucien.intro.promoted-1788230047219-3.mp3",
+      "prompt": "urbane, subtly accusatory",
+      "createdAt": "2026-09-01T02:34:23.494Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Of course. Holt had access to the alarm, and Miss Mercer has creditors. One should begin with the simple facts.",
+        "direction": "urbane, subtly accusatory",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-3": {
+      "name": "promoted-1788308871354-3",
+      "file": "/assets/line.lucien.intro.promoted-1788308871354-3.mp3",
+      "prompt": "urbane, subtly accusatory",
+      "createdAt": "2026-09-02T00:28:03.882Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Of course. Holt had access to the alarm, and Miss Mercer has creditors. One should begin with the simple facts.",
+        "direction": "urbane, subtly accusatory",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-3",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

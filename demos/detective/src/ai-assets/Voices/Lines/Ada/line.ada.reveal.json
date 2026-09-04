@@ -1,1 +1,71 @@
-{"id":"line.ada.reveal","kind":"voice-line","prompt":"Demand the folio be opened at the climax.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Open it.","direction":"Quiet, absolute command."},"activeVersion":"","versions":{},"tags":["dialog","reveal"]}
+{
+  "id": "line.ada.reveal",
+  "kind": "voice-line",
+  "prompt": "urgent, commanding resolve",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "Open the folio, Detective. If the clasp is straining around something rigid, then we should all see what Dr. Vale has hidden inside.",
+    "direction": "urgent, commanding resolve",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-13",
+  "versions": {
+    "promoted-1788229770463-13": {
+      "name": "promoted-1788229770463-13",
+      "file": "/assets/line.ada.reveal.promoted-1788229770463-13.mp3",
+      "prompt": "urgent, commanding resolve",
+      "createdAt": "2026-09-01T02:30:32.183Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Open the folio, Detective. If the clasp is straining around something rigid, then we should all see what Dr. Vale has hidden inside.",
+        "direction": "urgent, commanding resolve",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-13": {
+      "name": "promoted-1788308775025-13",
+      "file": "/assets/line.ada.reveal.promoted-1788308775025-13.mp3",
+      "prompt": "urgent, commanding resolve",
+      "createdAt": "2026-09-02T00:27:10.759Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Open the folio, Detective. If the clasp is straining around something rigid, then we should all see what Dr. Vale has hidden inside.",
+        "direction": "urgent, commanding resolve",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-13",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

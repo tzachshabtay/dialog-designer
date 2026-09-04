@@ -2,23 +2,103 @@
   "id": "voice.ada",
   "kind": "voice",
   "prompt": "Intelligent British woman in her late twenties, musical controlled delivery with a brittle edge, proud, emotionally precise.",
-  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
-  "voiceSettings": { "provider": "elevenlabs", "previewText": "You hear debt and imagine guilt. I hear a room full of people eager to be believed." },
-  "linkedAnimationAssets": {
-    "intro": { "label": "Opening", "assetId": "line.ada.intro" },
-    "debt": { "label": "The debt", "assetId": "line.ada.debt" },
-    "trust": { "label": "Trust", "assetId": "line.ada.trust" },
-    "defensive": { "label": "Defensive", "assetId": "line.ada.defensive" },
-    "clock": { "label": "Silent clock", "assetId": "line.ada.clock" },
-    "wax": { "label": "Blue wax", "assetId": "line.ada.wax" },
-    "threat": { "label": "Mercer's threat", "assetId": "line.ada.threat" },
-    "dark": { "label": "Sounds in darkness", "assetId": "line.ada.dark" },
-    "bram": { "label": "Bram's work order", "assetId": "line.ada.bram" },
-    "apology": { "label": "Accept apology", "assetId": "line.ada.apology" },
-    "wrong": { "label": "Wrong accusation", "assetId": "line.ada.wrong" },
-    "reveal": { "label": "Open the folio", "assetId": "line.ada.reveal" }
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false,
+    "durationSeconds": 2
   },
-  "activeVersion": "",
-  "versions": {},
-  "tags": ["voice", "suspect", "ada"]
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "previewText": "You hear debt and imagine guilt. I hear a room full of frightened people, each trimming the truth to protect whatever they value most.",
+    "generatedVoiceId": "tq6lmavYCYn0B8TkIgyi",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "linkedAnimationAssets": {
+    "case-presence": {
+      "label": "Case briefing · Ada",
+      "assetId": "line.ada.case-presence"
+    },
+    "intro": {
+      "label": "Opening",
+      "assetId": "line.ada.intro"
+    },
+    "debt": {
+      "label": "The debt",
+      "assetId": "line.ada.debt"
+    },
+    "trust": {
+      "label": "Trust",
+      "assetId": "line.ada.trust"
+    },
+    "defensive": {
+      "label": "Defensive",
+      "assetId": "line.ada.defensive"
+    },
+    "clock": {
+      "label": "Silent clock",
+      "assetId": "line.ada.clock"
+    },
+    "wax": {
+      "label": "Blue wax",
+      "assetId": "line.ada.wax"
+    },
+    "threat": {
+      "label": "Mercer's threat",
+      "assetId": "line.ada.threat"
+    },
+    "dark": {
+      "label": "Sounds in darkness",
+      "assetId": "line.ada.dark"
+    },
+    "bram": {
+      "label": "Bram's work order",
+      "assetId": "line.ada.bram"
+    },
+    "apology": {
+      "label": "Accept apology",
+      "assetId": "line.ada.apology"
+    },
+    "wrong": {
+      "label": "Wrong accusation",
+      "assetId": "line.ada.wrong"
+    },
+    "reveal": {
+      "label": "Open the folio",
+      "assetId": "line.ada.reveal"
+    }
+  },
+  "activeVersion": "promoted-1788225022778",
+  "versions": {
+    "promoted-1788225022778": {
+      "name": "promoted-1788225022778",
+      "file": "/assets/voice.ada.promoted-1788225022778.mp3",
+      "prompt": "Intelligent British woman in her late twenties, musical controlled delivery with a brittle edge, proud, emotionally precise.",
+      "createdAt": "2026-09-01T01:10:24.215Z",
+      "model": "eleven_multilingual_ttv_v2",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false,
+        "durationSeconds": 2
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "previewText": "You hear debt and imagine guilt. I hear a room full of frightened people, each trimming the truth to protect whatever they value most.",
+        "generatedVoiceId": "tq6lmavYCYn0B8TkIgyi",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "durationSeconds": 9.563625,
+      "notes": "Promoted from the AI asset designer."
+    }
+  },
+  "tags": [
+    "voice",
+    "suspect",
+    "ada"
+  ],
+  "settings": {},
+  "audioPlayback": {}
 }

@@ -1,1 +1,72 @@
-{"id":"line.ada.bram","kind":"voice-line","prompt":"Offer an observation that supports Bram's work order.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Father handed Holt a signed work slip before dinner. They argued afterward, but the paper was real.","direction":"Matter-of-fact, correcting an unfair suspicion."},"activeVersion":"","versions":{},"tags":["dialog","ada","clue"]}
+{
+  "id": "line.ada.bram",
+  "kind": "voice-line",
+  "prompt": "measured, reluctant certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "Father gave Holt a signed alarm-repair order before dinner. They argued afterward, but the order was genuine.",
+    "direction": "measured, reluctant certainty",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-10",
+  "versions": {
+    "promoted-1788229770463-10": {
+      "name": "promoted-1788229770463-10",
+      "file": "/assets/line.ada.bram.promoted-1788229770463-10.mp3",
+      "prompt": "measured, reluctant certainty",
+      "createdAt": "2026-09-01T02:30:18.493Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Father gave Holt a signed alarm-repair order before dinner. They argued afterward, but the order was genuine.",
+        "direction": "measured, reluctant certainty",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-10": {
+      "name": "promoted-1788308775025-10",
+      "file": "/assets/line.ada.bram.promoted-1788308775025-10.mp3",
+      "prompt": "measured, reluctant certainty",
+      "createdAt": "2026-09-02T00:26:58.811Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Father gave Holt a signed alarm-repair order before dinner. They argued afterward, but the order was genuine.",
+        "direction": "measured, reluctant certainty",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-10",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -1,1 +1,72 @@
-{"id":"line.bram.reconsider","kind":"voice-line","prompt":"Accept the detective's correction and resume helping.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"Facts before suspects this time. Hand me the lamp.","direction":"Still stern, but cooperation restored."},"activeVersion":"","versions":{},"tags":["dialog","bram","trust"]}
+{
+  "id": "line.bram.reconsider",
+  "kind": "voice-line",
+  "prompt": "grudging, renewed focus",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "Facts before suspects this time. Hand me the lamp, and I will trace the fault from the contacts back to whoever caused it.",
+    "direction": "grudging, renewed focus",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-9",
+  "versions": {
+    "promoted-1788229946338-9": {
+      "name": "promoted-1788229946338-9",
+      "file": "/assets/line.bram.reconsider.promoted-1788229946338-9.mp3",
+      "prompt": "grudging, renewed focus",
+      "createdAt": "2026-09-01T02:33:04.959Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Facts before suspects this time. Hand me the lamp, and I will trace the fault from the contacts back to whoever caused it.",
+        "direction": "grudging, renewed focus",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-9": {
+      "name": "promoted-1788308830791-9",
+      "file": "/assets/line.bram.reconsider.promoted-1788308830791-9.mp3",
+      "prompt": "grudging, renewed focus",
+      "createdAt": "2026-09-02T00:27:43.290Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Facts before suspects this time. Hand me the lamp, and I will trace the fault from the contacts back to whoever caused it.",
+        "direction": "grudging, renewed focus",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-9",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "trust"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

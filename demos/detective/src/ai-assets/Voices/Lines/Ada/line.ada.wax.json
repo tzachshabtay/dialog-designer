@@ -1,1 +1,72 @@
-{"id":"line.ada.wax","kind":"voice-line","prompt":"Connect the blue sealing wax to Lucien.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Mine is blue. Dr. Vale borrowed a stick Tuesday; he said a catalogue seal had split.","direction":"Recollection turning into alarm as the implication arrives."},"activeVersion":"","versions":{},"tags":["dialog","ada","clue"]}
+{
+  "id": "line.ada.wax",
+  "kind": "voice-line",
+  "prompt": "careful, quietly uneasy",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "My sealing wax is blue. Dr. Vale borrowed a stick on Tuesday; he said the seal on one of his catalogue folios had split.",
+    "direction": "careful, quietly uneasy",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-7",
+  "versions": {
+    "promoted-1788229770463-7": {
+      "name": "promoted-1788229770463-7",
+      "file": "/assets/line.ada.wax.promoted-1788229770463-7.mp3",
+      "prompt": "careful, quietly uneasy",
+      "createdAt": "2026-09-01T02:30:01.673Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "My sealing wax is blue. Dr. Vale borrowed a stick on Tuesday; he said the seal on one of his catalogue folios had split.",
+        "direction": "careful, quietly uneasy",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-7": {
+      "name": "promoted-1788308775025-7",
+      "file": "/assets/line.ada.wax.promoted-1788308775025-7.mp3",
+      "prompt": "careful, quietly uneasy",
+      "createdAt": "2026-09-02T00:26:45.195Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "My sealing wax is blue. Dr. Vale borrowed a stick on Tuesday; he said the seal on one of his catalogue folios had split.",
+        "direction": "careful, quietly uneasy",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-7",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

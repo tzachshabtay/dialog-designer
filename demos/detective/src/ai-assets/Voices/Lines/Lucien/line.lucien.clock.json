@@ -1,1 +1,72 @@
-{"id":"line.lucien.clock","kind":"voice-line","prompt":"Scramble for a replacement after the clock alibi collapses.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Then I heard another clock. A carriage clock, perhaps, from the hall.","direction":"First real hesitation; recover polish by the second sentence."},"activeVersion":"","versions":{},"tags":["dialog","lucien","confrontation"]}
+{
+  "id": "line.lucien.clock",
+  "kind": "voice-line",
+  "prompt": "flustered, hastily improvising",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Then I heard another clock, perhaps the carriage clock in the hall. The house has several timepieces, Detective; I could easily have mistaken one for another.",
+    "direction": "flustered, hastily improvising",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-8",
+  "versions": {
+    "promoted-1788230047219-8": {
+      "name": "promoted-1788230047219-8",
+      "file": "/assets/line.lucien.clock.promoted-1788230047219-8.mp3",
+      "prompt": "flustered, hastily improvising",
+      "createdAt": "2026-09-01T02:34:43.906Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Then I heard another clock, perhaps the carriage clock in the hall. The house has several timepieces, Detective; I could easily have mistaken one for another.",
+        "direction": "flustered, hastily improvising",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-8": {
+      "name": "promoted-1788308871354-8",
+      "file": "/assets/line.lucien.clock.promoted-1788308871354-8.mp3",
+      "prompt": "flustered, hastily improvising",
+      "createdAt": "2026-09-02T00:28:29.256Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Then I heard another clock, perhaps the carriage clock in the hall. The house has several timepieces, Detective; I could easily have mistaken one for another.",
+        "direction": "flustered, hastily improvising",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-8",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "confrontation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

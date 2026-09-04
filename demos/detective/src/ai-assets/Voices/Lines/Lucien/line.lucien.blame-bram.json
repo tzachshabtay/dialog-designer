@@ -1,1 +1,72 @@
-{"id":"line.lucien.blame-bram","kind":"voice-line","prompt":"Exploit Bram's dismissal and access to redirect suspicion.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Holt was dismissed this afternoon, yet remained beside an alarm only he knew was dead.","direction":"Reasonable and forensic, concealing satisfaction."},"activeVersion":"","versions":{},"tags":["dialog","lucien","deflection"]}
+{
+  "id": "line.lucien.blame-bram",
+  "kind": "voice-line",
+  "prompt": "cool, insinuating contempt",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Holt was dismissed this afternoon, yet stayed with access to a disconnected alarm and the display it protected.",
+    "direction": "cool, insinuating contempt",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-7",
+  "versions": {
+    "promoted-1788230047219-7": {
+      "name": "promoted-1788230047219-7",
+      "file": "/assets/line.lucien.blame-bram.promoted-1788230047219-7.mp3",
+      "prompt": "cool, insinuating contempt",
+      "createdAt": "2026-09-01T02:34:40.471Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Holt was dismissed this afternoon, yet stayed with access to a disconnected alarm and the display it protected.",
+        "direction": "cool, insinuating contempt",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-7": {
+      "name": "promoted-1788308871354-7",
+      "file": "/assets/line.lucien.blame-bram.promoted-1788308871354-7.mp3",
+      "prompt": "cool, insinuating contempt",
+      "createdAt": "2026-09-02T00:28:24.687Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Holt was dismissed this afternoon, yet stayed with access to a disconnected alarm and the display it protected.",
+        "direction": "cool, insinuating contempt",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-7",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "deflection"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

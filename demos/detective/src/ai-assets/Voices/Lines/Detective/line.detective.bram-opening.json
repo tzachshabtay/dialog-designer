@@ -1,1 +1,71 @@
-{"id":"line.detective.bram-opening","kind":"voice-line","prompt":"Firmly frame the suspicious facts around Bram.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.detective","text":"Bram Holt. A dead alarm and a dark room put you close to this.","direction":"Blunt, testing his reaction rather than pronouncing guilt."},"activeVersion":"","versions":{},"tags":["dialog","detective"]}
+{
+  "id": "line.detective.bram-opening",
+  "kind": "voice-line",
+  "prompt": "firm, skeptical scrutiny",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "Bram Holt. The display alarm was disabled, and the library went dark. Both put the electrician under scrutiny.",
+    "direction": "firm, skeptical scrutiny",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-7",
+  "versions": {
+    "promoted-1788229690995-7": {
+      "name": "promoted-1788229690995-7",
+      "file": "/assets/line.detective.bram-opening.promoted-1788229690995-7.mp3",
+      "prompt": "firm, skeptical scrutiny",
+      "createdAt": "2026-09-01T02:28:52.154Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Bram Holt. The display alarm was disabled, and the library went dark. Both put the electrician under scrutiny.",
+        "direction": "firm, skeptical scrutiny",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-7": {
+      "name": "promoted-1788308718588-7",
+      "file": "/assets/line.detective.bram-opening.promoted-1788308718588-7.mp3",
+      "prompt": "firm, skeptical scrutiny",
+      "createdAt": "2026-09-02T00:25:52.810Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Bram Holt. The display alarm was disabled, and the library went dark. Both put the electrician under scrutiny.",
+        "direction": "firm, skeptical scrutiny",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-7",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

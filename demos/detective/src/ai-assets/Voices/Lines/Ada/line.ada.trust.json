@@ -1,1 +1,72 @@
-{"id":"line.ada.trust","kind":"voice-line","prompt":"Accept the detective's discretion and offer cooperation.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"All right. You keep my confidence; I will give you the room exactly as I remember it.","direction":"A careful truce, still guarded but sincere."},"activeVersion":"","versions":{},"tags":["dialog","ada","trust"]}
+{
+  "id": "line.ada.trust",
+  "kind": "voice-line",
+  "prompt": "softening, quietly resolute",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "All right. You kept my confidence, so I will give you the room exactly as I remember it, sound by sound, without protecting anyone.",
+    "direction": "softening, quietly resolute",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-4",
+  "versions": {
+    "promoted-1788229770463-4": {
+      "name": "promoted-1788229770463-4",
+      "file": "/assets/line.ada.trust.promoted-1788229770463-4.mp3",
+      "prompt": "softening, quietly resolute",
+      "createdAt": "2026-09-01T02:29:50.219Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "All right. You kept my confidence, so I will give you the room exactly as I remember it, sound by sound, without protecting anyone.",
+        "direction": "softening, quietly resolute",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-4": {
+      "name": "promoted-1788308775025-4",
+      "file": "/assets/line.ada.trust.promoted-1788308775025-4.mp3",
+      "prompt": "softening, quietly resolute",
+      "createdAt": "2026-09-02T00:26:34.223Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "All right. You kept my confidence, so I will give you the room exactly as I remember it, sound by sound, without protecting anyone.",
+        "direction": "softening, quietly resolute",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-4",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "trust"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

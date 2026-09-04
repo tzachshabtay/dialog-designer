@@ -1,1 +1,72 @@
-{"id":"line.ada.threat","kind":"voice-line","prompt":"Recall the victim's threat and Vale's reaction.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Father told Vale, ‘At ten, the watermark ends the lie.’ Vale looked as though he had been struck.","direction":"Hushed and exact, ashamed she listened but sure of the words."},"activeVersion":"","versions":{},"tags":["dialog","ada","clue"]}
+{
+  "id": "line.ada.threat",
+  "kind": "voice-line",
+  "prompt": "grave, uneasy recollection",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "Father told Vale, ‘At ten, the 1846 watermark ends your 1812 lie.’ Vale looked as though he had been struck.",
+    "direction": "grave, uneasy recollection",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-8",
+  "versions": {
+    "promoted-1788229770463-8": {
+      "name": "promoted-1788229770463-8",
+      "file": "/assets/line.ada.threat.promoted-1788229770463-8.mp3",
+      "prompt": "grave, uneasy recollection",
+      "createdAt": "2026-09-01T02:30:06.761Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Father told Vale, ‘At ten, the 1846 watermark ends your 1812 lie.’ Vale looked as though he had been struck.",
+        "direction": "grave, uneasy recollection",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-8": {
+      "name": "promoted-1788308775025-8",
+      "file": "/assets/line.ada.threat.promoted-1788308775025-8.mp3",
+      "prompt": "grave, uneasy recollection",
+      "createdAt": "2026-09-02T00:26:49.293Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Father told Vale, ‘At ten, the 1846 watermark ends your 1812 lie.’ Vale looked as though he had been struck.",
+        "direction": "grave, uneasy recollection",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-8",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

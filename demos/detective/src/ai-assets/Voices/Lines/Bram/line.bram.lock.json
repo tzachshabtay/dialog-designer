@@ -1,1 +1,72 @@
-{"id":"line.bram.lock","kind":"voice-line","prompt":"Identify fresh blue wax inside the display lock.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"A clean impression would make a duplicate. There is fresh blue wax in the ward; see it on my thumbnail.","direction":"Focused craftsman explaining physical evidence."},"activeVersion":"","versions":{},"tags":["dialog","bram","clue"]}
+{
+  "id": "line.bram.lock",
+  "kind": "voice-line",
+  "prompt": "methodical, forensic precision",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "I trained as a locksmith before I took up wiring. Someone pressed wax into this lock to copy its ward pattern—the shape a key must match. Fresh blue wax is still inside; see it on my thumbnail.",
+    "direction": "methodical, forensic precision",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-7",
+  "versions": {
+    "promoted-1788229946338-7": {
+      "name": "promoted-1788229946338-7",
+      "file": "/assets/line.bram.lock.promoted-1788229946338-7.mp3",
+      "prompt": "methodical, forensic precision",
+      "createdAt": "2026-09-01T02:32:56.659Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "I trained as a locksmith before I took up wiring. Someone pressed wax into this lock to copy its ward pattern—the shape a key must match. Fresh blue wax is still inside; see it on my thumbnail.",
+        "direction": "methodical, forensic precision",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-7": {
+      "name": "promoted-1788308830791-7",
+      "file": "/assets/line.bram.lock.promoted-1788308830791-7.mp3",
+      "prompt": "methodical, forensic precision",
+      "createdAt": "2026-09-02T00:27:34.907Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "I trained as a locksmith before I took up wiring. Someone pressed wax into this lock to copy its ward pattern—the shape a key must match. Fresh blue wax is still inside; see it on my thumbnail.",
+        "direction": "methodical, forensic precision",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-7",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -1,1 +1,72 @@
-{"id":"line.ada.clock","kind":"voice-line","prompt":"Reveal the impossible clock detail precisely.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Impossible. I took out the pendulum at twenty to nine. Its ticking ruins my timing.","direction":"Immediate certainty, then a musician's irritation."},"activeVersion":"","versions":{},"tags":["dialog","ada","clue"]}
+{
+  "id": "line.ada.clock",
+  "kind": "voice-line",
+  "prompt": "calm, unshakable certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "It could not have chimed. I stopped the pendulum at twenty to nine; its ticking throws off my tempo.",
+    "direction": "calm, unshakable certainty",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-6",
+  "versions": {
+    "promoted-1788229770463-6": {
+      "name": "promoted-1788229770463-6",
+      "file": "/assets/line.ada.clock.promoted-1788229770463-6.mp3",
+      "prompt": "calm, unshakable certainty",
+      "createdAt": "2026-09-01T02:29:57.435Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "It could not have chimed. I stopped the pendulum at twenty to nine; its ticking throws off my tempo.",
+        "direction": "calm, unshakable certainty",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-6": {
+      "name": "promoted-1788308775025-6",
+      "file": "/assets/line.ada.clock.promoted-1788308775025-6.mp3",
+      "prompt": "calm, unshakable certainty",
+      "createdAt": "2026-09-02T00:26:41.248Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "It could not have chimed. I stopped the pendulum at twenty to nine; its ticking throws off my tempo.",
+        "direction": "calm, unshakable certainty",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-6",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

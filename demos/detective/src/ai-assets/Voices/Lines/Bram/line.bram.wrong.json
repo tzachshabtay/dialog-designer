@@ -1,1 +1,72 @@
-{"id":"line.bram.wrong","kind":"voice-line","prompt":"Reject a premature accusation with working-class contempt.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"You have motive, you say. Bring me method and proof, or stop wasting the dark.","direction":"Blunt anger, but the challenge is fair."},"activeVersion":"","versions":{},"tags":["dialog","bram","accusation"]}
+{
+  "id": "line.bram.wrong",
+  "kind": "voice-line",
+  "prompt": "hard, contemptuous challenge",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "You think dismissal gives me a motive. Bring me a method and evidence—or stop wasting time pretending suspicion is proof.",
+    "direction": "hard, contemptuous challenge",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-10",
+  "versions": {
+    "promoted-1788229946338-10": {
+      "name": "promoted-1788229946338-10",
+      "file": "/assets/line.bram.wrong.promoted-1788229946338-10.mp3",
+      "prompt": "hard, contemptuous challenge",
+      "createdAt": "2026-09-01T02:33:09.082Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "You think dismissal gives me a motive. Bring me a method and evidence—or stop wasting time pretending suspicion is proof.",
+        "direction": "hard, contemptuous challenge",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-10": {
+      "name": "promoted-1788308830791-10",
+      "file": "/assets/line.bram.wrong.promoted-1788308830791-10.mp3",
+      "prompt": "hard, contemptuous challenge",
+      "createdAt": "2026-09-02T00:27:47.867Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "You think dismissal gives me a motive. Bring me a method and evidence—or stop wasting time pretending suspicion is proof.",
+        "direction": "hard, contemptuous challenge",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-10",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "accusation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

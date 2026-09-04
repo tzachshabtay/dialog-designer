@@ -1,10 +1,17 @@
 {
   "id": "background.library",
   "kind": "image",
-  "prompt": "Wide 1930s private library at night, straight-on theatrical game backdrop, floor-to-ceiling bookshelves, rain-streaked center window, brass wall lamps, empty glass display case on a pedestal, three clear standing areas, deep navy and walnut palette, no people, no text.",
-  "dimensions": { "width": 960, "height": 640 },
-  "settings": { "model": "gpt-image-2", "background": "opaque", "format": "png" },
-  "activeVersion": "default",
+  "prompt": "a storm-lit 1930s private library with shelves, window, lamps on the sides, and an emptied display case in the back. only the 10% to the right and left should have item stacks, the center needs to be available for characters to stand on (no characters in this image, though)",
+  "dimensions": {
+    "width": 960,
+    "height": 640
+  },
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "opaque",
+    "format": "png"
+  },
+  "activeVersion": "promoted-1788319816398",
   "versions": {
     "default": {
       "name": "default",
@@ -12,7 +19,48 @@
       "prompt": "Deterministic vector illustration of a storm-lit 1930s private library with shelves, window, lamps and an emptied display case.",
       "createdAt": "2026-08-30T00:00:00.000Z",
       "model": "manual-svg"
+    },
+    "promoted-1788319134493": {
+      "name": "promoted-1788319134493",
+      "file": "/assets/background.library.promoted-1788319134493.png",
+      "prompt": "Deterministic vector illustration of a storm-lit 1930s private library with shelves, window, lamps and an emptied display case.",
+      "createdAt": "2026-09-02T03:18:54.535Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "opaque",
+        "format": "png"
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "default",
+      "notes": "Promoted from the AI asset designer."
+    },
+    "promoted-1788319816398": {
+      "name": "promoted-1788319816398",
+      "file": "/assets/background.library.promoted-1788319816398.png",
+      "prompt": "a storm-lit 1930s private library with shelves, window, lamps on the sides, and an emptied display case in the back. only the 10% to the right and left should have item stacks, the center needs to be available for characters to stand on (no characters in this image, though)",
+      "createdAt": "2026-09-02T03:30:16.463Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "opaque",
+        "format": "png"
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "promoted-1788319134493",
+      "notes": "Promoted from the AI asset designer."
     }
   },
-  "tags": ["background", "library", "mystery"]
+  "tags": [
+    "background",
+    "library",
+    "mystery"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
 }

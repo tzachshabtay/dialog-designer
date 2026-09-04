@@ -1,1 +1,72 @@
-{"id":"line.lucien.timeline","kind":"voice-line","prompt":"Give the crucial false account of the silent clock and Bram's toolbox.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"The mantel clock struck nine. On the first chime, darkness; on the second, Holt's tool case clicked beside the display.","direction":"Precise, polished, too certain in every detail."},"activeVersion":"","versions":{},"tags":["dialog","lucien","lie"]}
+{
+  "id": "line.lucien.timeline",
+  "kind": "voice-line",
+  "prompt": "smooth, rehearsed certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "The mantel clock struck nine. On the first chime, darkness; on the second, Holt's tool case clicked beside the display.",
+    "direction": "smooth, rehearsed certainty",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-4",
+  "versions": {
+    "promoted-1788230047219-4": {
+      "name": "promoted-1788230047219-4",
+      "file": "/assets/line.lucien.timeline.promoted-1788230047219-4.mp3",
+      "prompt": "smooth, rehearsed certainty",
+      "createdAt": "2026-09-01T02:34:27.935Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "The mantel clock struck nine. On the first chime, darkness; on the second, Holt's tool case clicked beside the display.",
+        "direction": "smooth, rehearsed certainty",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-4": {
+      "name": "promoted-1788308871354-4",
+      "file": "/assets/line.lucien.timeline.promoted-1788308871354-4.mp3",
+      "prompt": "smooth, rehearsed certainty",
+      "createdAt": "2026-09-02T00:28:07.335Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "The mantel clock struck nine. On the first chime, darkness; on the second, Holt's tool case clicked beside the display.",
+        "direction": "smooth, rehearsed certainty",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-4",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "lie"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -1,1 +1,72 @@
-{"id":"line.lucien.motive","kind":"voice-line","prompt":"Deny that the anachronistic watermark destroys his career.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Mercer enjoyed humiliating colleagues. He had insinuation, not proof.","direction":"Bitter flash breaking through cultivated restraint."},"activeVersion":"","versions":{},"tags":["dialog","lucien","confrontation"]}
+{
+  "id": "line.lucien.motive",
+  "kind": "voice-line",
+  "prompt": "defensive, emphatic denial",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "An 1846 watermark would challenge the ledger's date, not prove I knowingly authenticated a forgery. Edwin had a theory, not proof.",
+    "direction": "defensive, emphatic denial",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-11",
+  "versions": {
+    "promoted-1788230047219-11": {
+      "name": "promoted-1788230047219-11",
+      "file": "/assets/line.lucien.motive.promoted-1788230047219-11.mp3",
+      "prompt": "defensive, emphatic denial",
+      "createdAt": "2026-09-01T02:34:58.741Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "An 1846 watermark would challenge the ledger's date, not prove I knowingly authenticated a forgery. Edwin had a theory, not proof.",
+        "direction": "defensive, emphatic denial",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-11": {
+      "name": "promoted-1788308871354-11",
+      "file": "/assets/line.lucien.motive.promoted-1788308871354-11.mp3",
+      "prompt": "defensive, emphatic denial",
+      "createdAt": "2026-09-02T00:28:40.974Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "An 1846 watermark would challenge the ledger's date, not prove I knowingly authenticated a forgery. Edwin had a theory, not proof.",
+        "direction": "defensive, emphatic denial",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-11",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "confrontation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

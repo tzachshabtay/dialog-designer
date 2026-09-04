@@ -1,1 +1,71 @@
-{"id":"line.detective.reveal","kind":"voice-line","prompt":"Deliver the core deduction with gathering force.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.detective","text":"You planned around a clock that never chimed. Your lamp made the dark, and Ada's wax made the key.","direction":"Measured triumph, each clause landing as a separate piece of proof."},"activeVersion":"","versions":{},"tags":["dialog","reveal"]}
+{
+  "id": "line.detective.reveal",
+  "kind": "voice-line",
+  "prompt": "relentless, step-by-step accusation",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "You lied about the clock to place Bram by the case. Your copper marker shorted your lamp and this room alone. You used Ada's wax to copy the lock's ward pattern; from that impression you cut the duplicate key, opened the case in the dark, and hid the ledger in your folio.",
+    "direction": "relentless, step-by-step accusation",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-9",
+  "versions": {
+    "promoted-1788229690995-9": {
+      "name": "promoted-1788229690995-9",
+      "file": "/assets/line.detective.reveal.promoted-1788229690995-9.mp3",
+      "prompt": "relentless, step-by-step accusation",
+      "createdAt": "2026-09-01T02:29:04.147Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "You lied about the clock to place Bram by the case. Your copper marker shorted your lamp and this room alone. You used Ada's wax to copy the lock's ward pattern; from that impression you cut the duplicate key, opened the case in the dark, and hid the ledger in your folio.",
+        "direction": "relentless, step-by-step accusation",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-9": {
+      "name": "promoted-1788308718588-9",
+      "file": "/assets/line.detective.reveal.promoted-1788308718588-9.mp3",
+      "prompt": "relentless, step-by-step accusation",
+      "createdAt": "2026-09-02T00:26:05.889Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "You lied about the clock to place Bram by the case. Your copper marker shorted your lamp and this room alone. You used Ada's wax to copy the lock's ward pattern; from that impression you cut the duplicate key, opened the case in the dark, and hid the ledger in your folio.",
+        "direction": "relentless, step-by-step accusation",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-9",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

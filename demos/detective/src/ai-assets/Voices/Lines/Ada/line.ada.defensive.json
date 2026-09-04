@@ -1,1 +1,72 @@
-{"id":"line.ada.defensive","kind":"voice-line","prompt":"Close down after an unfair accusation.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"Then you have found your answer. Stop asking me for help.","direction":"Cold, wounded, and final."},"activeVersion":"","versions":{},"tags":["dialog","ada","hostile"]}
+{
+  "id": "line.ada.defensive",
+  "kind": "voice-line",
+  "prompt": "wounded, cold finality",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "Then you have found the answer you wanted, not the truth. Stop asking me for help until you are prepared to listen.",
+    "direction": "wounded, cold finality",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-5",
+  "versions": {
+    "promoted-1788229770463-5": {
+      "name": "promoted-1788229770463-5",
+      "file": "/assets/line.ada.defensive.promoted-1788229770463-5.mp3",
+      "prompt": "wounded, cold finality",
+      "createdAt": "2026-09-01T02:29:53.651Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Then you have found the answer you wanted, not the truth. Stop asking me for help until you are prepared to listen.",
+        "direction": "wounded, cold finality",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-5": {
+      "name": "promoted-1788308775025-5",
+      "file": "/assets/line.ada.defensive.promoted-1788308775025-5.mp3",
+      "prompt": "wounded, cold finality",
+      "createdAt": "2026-09-02T00:26:37.923Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Then you have found the answer you wanted, not the truth. Stop asking me for help until you are prepared to listen.",
+        "direction": "wounded, cold finality",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-5",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "hostile"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

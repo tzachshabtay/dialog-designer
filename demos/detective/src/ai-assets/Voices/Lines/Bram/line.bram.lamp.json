@@ -1,1 +1,72 @@
-{"id":"line.bram.lamp","kind":"voice-line","prompt":"Trace the deliberate short to Vale's reading lamp.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"Vale's reading lamp. A copper page marker was bent across the live contacts. Deliberate.","direction":"Low certainty, letting the final word land."},"activeVersion":"","versions":{},"tags":["dialog","bram","clue"]}
+{
+  "id": "line.bram.lamp",
+  "kind": "voice-line",
+  "prompt": "focused, mounting certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "The short began in Vale's reading lamp. His copper page marker was bent across the live contacts. That killed power to this room alone. Deliberate.",
+    "direction": "focused, mounting certainty",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-8",
+  "versions": {
+    "promoted-1788229946338-8": {
+      "name": "promoted-1788229946338-8",
+      "file": "/assets/line.bram.lamp.promoted-1788229946338-8.mp3",
+      "prompt": "focused, mounting certainty",
+      "createdAt": "2026-09-01T02:33:02.007Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "The short began in Vale's reading lamp. His copper page marker was bent across the live contacts. That killed power to this room alone. Deliberate.",
+        "direction": "focused, mounting certainty",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-8": {
+      "name": "promoted-1788308830791-8",
+      "file": "/assets/line.bram.lamp.promoted-1788308830791-8.mp3",
+      "prompt": "focused, mounting certainty",
+      "createdAt": "2026-09-02T00:27:38.577Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "The short began in Vale's reading lamp. His copper page marker was bent across the live contacts. That killed power to this room alone. Deliberate.",
+        "direction": "focused, mounting certainty",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-8",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

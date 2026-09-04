@@ -1,1 +1,71 @@
-{"id":"line.bram.reveal","kind":"voice-line","prompt":"Notice the strained folio clasp during the reveal.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"The clasp is under strain.","direction":"Quiet technical confirmation."},"activeVersion":"","versions":{},"tags":["dialog","reveal"]}
+{
+  "id": "line.bram.reveal",
+  "kind": "voice-line",
+  "prompt": "tense, careful warning",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "The clasp is under strain, as though something rigid has been forced inside the folio. Open it carefully; the catch may spring.",
+    "direction": "tense, careful warning",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-11",
+  "versions": {
+    "promoted-1788229946338-11": {
+      "name": "promoted-1788229946338-11",
+      "file": "/assets/line.bram.reveal.promoted-1788229946338-11.mp3",
+      "prompt": "tense, careful warning",
+      "createdAt": "2026-09-01T02:33:14.080Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "The clasp is under strain, as though something rigid has been forced inside the folio. Open it carefully; the catch may spring.",
+        "direction": "tense, careful warning",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-11": {
+      "name": "promoted-1788308830791-11",
+      "file": "/assets/line.bram.reveal.promoted-1788308830791-11.mp3",
+      "prompt": "tense, careful warning",
+      "createdAt": "2026-09-02T00:27:51.319Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "The clasp is under strain, as though something rigid has been forced inside the folio. Open it carefully; the catch may spring.",
+        "direction": "tense, careful warning",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-11",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

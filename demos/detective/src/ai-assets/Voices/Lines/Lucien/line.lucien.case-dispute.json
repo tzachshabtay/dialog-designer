@@ -1,0 +1,73 @@
+{
+  "id": "line.lucien.case-dispute",
+  "kind": "voice-line",
+  "prompt": "controlled, defensive authority",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "I dispute both the date and the conclusion, Detective. A single anomalous watermark is not enough to prove that the entire Raven Ledger is a forgery.",
+    "direction": "controlled, defensive authority",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-2",
+  "versions": {
+    "promoted-1788230047219-2": {
+      "name": "promoted-1788230047219-2",
+      "file": "/assets/line.lucien.case-dispute.promoted-1788230047219-2.mp3",
+      "prompt": "controlled, defensive authority",
+      "createdAt": "2026-09-01T02:34:17.928Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "I dispute both the date and the conclusion, Detective. A single anomalous watermark is not enough to prove that the entire Raven Ledger is a forgery.",
+        "direction": "controlled, defensive authority",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-2": {
+      "name": "promoted-1788308871354-2",
+      "file": "/assets/line.lucien.case-dispute.promoted-1788308871354-2.mp3",
+      "prompt": "controlled, defensive authority",
+      "createdAt": "2026-09-02T00:27:59.035Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "I dispute both the date and the conclusion, Detective. A single anomalous watermark is not enough to prove that the entire Raven Ledger is a forgery.",
+        "direction": "controlled, defensive authority",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-2",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "intro",
+    "motive"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

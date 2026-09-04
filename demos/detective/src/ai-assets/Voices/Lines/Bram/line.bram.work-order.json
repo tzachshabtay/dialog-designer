@@ -1,1 +1,72 @@
-{"id":"line.bram.work-order","kind":"voice-line","prompt":"Produce the signed work order as exculpatory evidence.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"Signed at six-ten. Mercer could sack me and still expect the job done properly.","direction":"Vindicated but bitter; emphasize the precise time."},"activeVersion":"","versions":{},"tags":["dialog","bram","clue"]}
+{
+  "id": "line.bram.work-order",
+  "kind": "voice-line",
+  "prompt": "terse, factual vindication",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "Signed at six-ten: disconnect the display alarm and replace its failing contacts. Edwin dismissed me after our argument and still expected the job finished.",
+    "direction": "terse, factual vindication",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-4",
+  "versions": {
+    "promoted-1788229946338-4": {
+      "name": "promoted-1788229946338-4",
+      "file": "/assets/line.bram.work-order.promoted-1788229946338-4.mp3",
+      "prompt": "terse, factual vindication",
+      "createdAt": "2026-09-01T02:32:43.040Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Signed at six-ten: disconnect the display alarm and replace its failing contacts. Edwin dismissed me after our argument and still expected the job finished.",
+        "direction": "terse, factual vindication",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-4": {
+      "name": "promoted-1788308830791-4",
+      "file": "/assets/line.bram.work-order.promoted-1788308830791-4.mp3",
+      "prompt": "terse, factual vindication",
+      "createdAt": "2026-09-02T00:27:24.413Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Signed at six-ten: disconnect the display alarm and replace its failing contacts. Edwin dismissed me after our argument and still expected the job finished.",
+        "direction": "terse, factual vindication",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-4",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

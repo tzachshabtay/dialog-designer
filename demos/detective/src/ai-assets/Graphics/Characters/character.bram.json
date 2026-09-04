@@ -1,10 +1,17 @@
 {
   "id": "character.bram",
   "kind": "image",
-  "prompt": "Full-body portrait sprite of Bram Holt, broad weathered estate electrician in his late forties, rolled shirtsleeves, charcoal waistcoat, leather tool satchel, wary but honest eyes, painterly graphic-novel style, transparent background.",
-  "dimensions": { "width": 180, "height": 320 },
-  "settings": { "model": "gpt-image-2", "background": "transparent", "format": "png", "referenceAssetIds": ["background.library"] },
-  "activeVersion": "default",
+  "prompt": "An electrician with work clothes and tool satchel, he is standing in a natural pose facing the camera.",
+  "dimensions": {
+    "width": 320,
+    "height": 420
+  },
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "format": "png"
+  },
+  "activeVersion": "promoted-1788492180743",
   "versions": {
     "default": {
       "name": "default",
@@ -12,7 +19,51 @@
       "prompt": "Deterministic vector character portrait of Bram Holt with work clothes and tool satchel.",
       "createdAt": "2026-08-30T00:00:00.000Z",
       "model": "manual-svg"
+    },
+    "promoted-1788319491850": {
+      "name": "promoted-1788319491850",
+      "file": "/assets/character.bram.promoted-1788319491850.png",
+      "prompt": "An electrician with work clothes and tool satchel, he is standing in a natural pose facing the camera.",
+      "createdAt": "2026-09-02T03:24:51.892Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "format": "png",
+        "referenceAssetIds": [
+          "background.library"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "default",
+      "notes": "Promoted from the AI asset designer."
+    },
+    "promoted-1788492180743": {
+      "name": "promoted-1788492180743",
+      "file": "/assets/character.bram.promoted-1788492180743.png",
+      "prompt": "An electrician with work clothes and tool satchel, he is standing in a natural pose facing the camera.",
+      "createdAt": "2026-09-04T03:23:00.794Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "format": "png"
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "promoted-1788319491850",
+      "notes": "Promoted from the AI asset designer."
     }
   },
-  "tags": ["character", "suspect", "bram"]
+  "tags": [
+    "character",
+    "suspect",
+    "bram"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
 }

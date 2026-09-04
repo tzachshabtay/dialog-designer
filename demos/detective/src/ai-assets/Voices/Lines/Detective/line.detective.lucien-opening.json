@@ -1,1 +1,71 @@
-{"id":"line.detective.lucien-opening","kind":"voice-line","prompt":"Open the historian interview with respectful precision.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.detective","text":"Dr. Vale. You authenticated the ledger. Start with the blackout.","direction":"Controlled and observant; do not reveal suspicion yet."},"activeVersion":"","versions":{},"tags":["dialog","detective"]}
+{
+  "id": "line.detective.lucien-opening",
+  "kind": "voice-line",
+  "prompt": "courteous, incisive authority",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "Dr. Vale, you authenticated the Raven Ledger and examined it tonight. Start with the blackout: where were you, and what did you hear in the dark?",
+    "direction": "courteous, incisive authority",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-8",
+  "versions": {
+    "promoted-1788229690995-8": {
+      "name": "promoted-1788229690995-8",
+      "file": "/assets/line.detective.lucien-opening.promoted-1788229690995-8.mp3",
+      "prompt": "courteous, incisive authority",
+      "createdAt": "2026-09-01T02:28:55.842Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Dr. Vale, you authenticated the Raven Ledger and examined it tonight. Start with the blackout: where were you, and what did you hear in the dark?",
+        "direction": "courteous, incisive authority",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-8": {
+      "name": "promoted-1788308718588-8",
+      "file": "/assets/line.detective.lucien-opening.promoted-1788308718588-8.mp3",
+      "prompt": "courteous, incisive authority",
+      "createdAt": "2026-09-02T00:25:58.270Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Dr. Vale, you authenticated the Raven Ledger and examined it tonight. Start with the blackout: where were you, and what did you hear in the dark?",
+        "direction": "courteous, incisive authority",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-8",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

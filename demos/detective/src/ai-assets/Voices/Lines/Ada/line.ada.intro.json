@@ -1,1 +1,71 @@
-{"id":"line.ada.intro","kind":"voice-line","prompt":"Acknowledge the obvious suspicion with brittle composure.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"And I have debts. I know how neatly that sounds.","direction":"Dry and controlled, hurt hidden beneath the wit."},"activeVersion":"","versions":{},"tags":["dialog","ada"]}
+{
+  "id": "line.ada.intro",
+  "kind": "voice-line",
+  "prompt": "guarded, brittle composure",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "Nothing once the lights failed. And yes, Father and I argued over money. I know how neatly that sounds.",
+    "direction": "guarded, brittle composure",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-2",
+  "versions": {
+    "promoted-1788229770463-2": {
+      "name": "promoted-1788229770463-2",
+      "file": "/assets/line.ada.intro.promoted-1788229770463-2.mp3",
+      "prompt": "guarded, brittle composure",
+      "createdAt": "2026-09-01T02:29:40.006Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Nothing once the lights failed. And yes, Father and I argued over money. I know how neatly that sounds.",
+        "direction": "guarded, brittle composure",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-2": {
+      "name": "promoted-1788308775025-2",
+      "file": "/assets/line.ada.intro.promoted-1788308775025-2.mp3",
+      "prompt": "guarded, brittle composure",
+      "createdAt": "2026-09-02T00:26:23.237Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "Nothing once the lights failed. And yes, Father and I argued over money. I know how neatly that sounds.",
+        "direction": "guarded, brittle composure",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-2",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

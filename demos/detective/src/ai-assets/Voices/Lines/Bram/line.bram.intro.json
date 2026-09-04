@@ -1,1 +1,71 @@
-{"id":"line.bram.intro","kind":"voice-line","prompt":"Reject the idea that suspicious facts equal guilt.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"An ugly fact is not the same thing as a guilty one.","direction":"Gruff restraint, accustomed to being blamed."},"activeVersion":"","versions":{},"tags":["dialog","bram"]}
+{
+  "id": "line.bram.intro",
+  "kind": "voice-line",
+  "prompt": "firm, controlled defensiveness",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "An ugly fact is not the same thing as a guilty one, Detective. Ask about the wiring, and I will tell you exactly what failed.",
+    "direction": "firm, controlled defensiveness",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-2",
+  "versions": {
+    "promoted-1788229946338-2": {
+      "name": "promoted-1788229946338-2",
+      "file": "/assets/line.bram.intro.promoted-1788229946338-2.mp3",
+      "prompt": "firm, controlled defensiveness",
+      "createdAt": "2026-09-01T02:32:34.343Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "An ugly fact is not the same thing as a guilty one, Detective. Ask about the wiring, and I will tell you exactly what failed.",
+        "direction": "firm, controlled defensiveness",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-2": {
+      "name": "promoted-1788308830791-2",
+      "file": "/assets/line.bram.intro.promoted-1788308830791-2.mp3",
+      "prompt": "firm, controlled defensiveness",
+      "createdAt": "2026-09-02T00:27:18.029Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "An ugly fact is not the same thing as a guilty one, Detective. Ask about the wiring, and I will tell you exactly what failed.",
+        "direction": "firm, controlled defensiveness",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-2",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -1,10 +1,17 @@
 {
   "id": "character.lucien",
   "kind": "image",
-  "prompt": "Full-body portrait sprite of Dr. Lucien Vale, elegant silver-haired historian in his late fifties, midnight blue three-piece suit, gloves and a slim clasped exhibition folio, polished charm with guarded eyes, painterly graphic-novel style, transparent background.",
-  "dimensions": { "width": 180, "height": 320 },
-  "settings": { "model": "gpt-image-2", "background": "transparent", "format": "png", "referenceAssetIds": ["background.library"] },
-  "activeVersion": "default",
+  "prompt": "Dr. Lucien Vale, old and respectable, with a midnight suit and clasped folio. He is standing in a natural position facing the camera.",
+  "dimensions": {
+    "width": 320,
+    "height": 420
+  },
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "format": "png"
+  },
+  "activeVersion": "promoted-1788492217832",
   "versions": {
     "default": {
       "name": "default",
@@ -12,7 +19,51 @@
       "prompt": "Deterministic vector character portrait of Dr. Lucien Vale with a midnight suit and clasped folio.",
       "createdAt": "2026-08-30T00:00:00.000Z",
       "model": "manual-svg"
+    },
+    "promoted-1788319574008": {
+      "name": "promoted-1788319574008",
+      "file": "/assets/character.lucien.promoted-1788319574008.png",
+      "prompt": "Dr. Lucien Vale, old and respectable, with a midnight suit and clasped folio. He is standing in a natural position facing the camera.",
+      "createdAt": "2026-09-02T03:26:14.054Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "format": "png",
+        "referenceAssetIds": [
+          "background.library"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "default",
+      "notes": "Promoted from the AI asset designer."
+    },
+    "promoted-1788492217832": {
+      "name": "promoted-1788492217832",
+      "file": "/assets/character.lucien.promoted-1788492217832.png",
+      "prompt": "Dr. Lucien Vale, old and respectable, with a midnight suit and clasped folio. He is standing in a natural position facing the camera.",
+      "createdAt": "2026-09-04T03:23:37.887Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "format": "png"
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "promoted-1788319574008",
+      "notes": "Promoted from the AI asset designer."
     }
   },
-  "tags": ["character", "suspect", "lucien"]
+  "tags": [
+    "character",
+    "suspect",
+    "lucien"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
 }

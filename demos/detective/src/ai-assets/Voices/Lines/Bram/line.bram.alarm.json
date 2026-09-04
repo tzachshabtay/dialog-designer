@@ -1,1 +1,72 @@
-{"id":"line.bram.alarm","kind":"voice-line","prompt":"Admit disabling the alarm while insisting there was an order.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"Mercer ordered it disconnected. The contacts were failing, and he wanted silence until I replaced them.","direction":"Reluctant admission, factual and unsentimental."},"activeVersion":"","versions":{},"tags":["dialog","bram","red-herring"]}
+{
+  "id": "line.bram.alarm",
+  "kind": "voice-line",
+  "prompt": "plainspoken, professional assurance",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "Edwin ordered it disconnected. The failing contacts kept sounding false alarms; I was to replace them before the presentation.",
+    "direction": "plainspoken, professional assurance",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-3",
+  "versions": {
+    "promoted-1788229946338-3": {
+      "name": "promoted-1788229946338-3",
+      "file": "/assets/line.bram.alarm.promoted-1788229946338-3.mp3",
+      "prompt": "plainspoken, professional assurance",
+      "createdAt": "2026-09-01T02:32:38.758Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Edwin ordered it disconnected. The failing contacts kept sounding false alarms; I was to replace them before the presentation.",
+        "direction": "plainspoken, professional assurance",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-3": {
+      "name": "promoted-1788308830791-3",
+      "file": "/assets/line.bram.alarm.promoted-1788308830791-3.mp3",
+      "prompt": "plainspoken, professional assurance",
+      "createdAt": "2026-09-02T00:27:21.165Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Edwin ordered it disconnected. The failing contacts kept sounding false alarms; I was to replace them before the presentation.",
+        "direction": "plainspoken, professional assurance",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-3",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "red-herring"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

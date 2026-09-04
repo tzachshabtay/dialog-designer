@@ -1,0 +1,72 @@
+{
+  "id": "line.detective.case-victim",
+  "kind": "voice-line",
+  "prompt": "grave, crystal-clear authority",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "Edwin Mercer, owner of Blackwood House, is tonight's victim. He is unharmed, but the rare Raven Ledger in his care has been stolen.",
+    "direction": "grave, crystal-clear authority",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-1",
+  "versions": {
+    "promoted-1788229690995-1": {
+      "name": "promoted-1788229690995-1",
+      "file": "/assets/line.detective.case-victim.promoted-1788229690995-1.mp3",
+      "prompt": "grave, crystal-clear authority",
+      "createdAt": "2026-09-01T02:28:17.036Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Edwin Mercer, owner of Blackwood House, is tonight's victim. He is unharmed, but the rare Raven Ledger in his care has been stolen.",
+        "direction": "grave, crystal-clear authority",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-1": {
+      "name": "promoted-1788308718588-1",
+      "file": "/assets/line.detective.case-victim.promoted-1788308718588-1.mp3",
+      "prompt": "grave, crystal-clear authority",
+      "createdAt": "2026-09-02T00:25:22.659Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Edwin Mercer, owner of Blackwood House, is tonight's victim. He is unharmed, but the rare Raven Ledger in his care has been stolen.",
+        "direction": "grave, crystal-clear authority",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-1",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective",
+    "intro"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

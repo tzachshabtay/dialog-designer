@@ -1,1 +1,72 @@
-{"id":"line.bram.breaker","kind":"voice-line","prompt":"Explain that the blackout was local and the main breaker untouched.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"Nothing tripped at the main board. Only this room died. The fault began in here.","direction":"Technical confidence, clipped phrases."},"activeVersion":"","versions":{},"tags":["dialog","bram","clue"]}
+{
+  "id": "line.bram.breaker",
+  "kind": "voice-line",
+  "prompt": "precise, technical certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "The main breaker never tripped. Only the library circuit failed, so the short began inside this room.",
+    "direction": "precise, technical certainty",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-6",
+  "versions": {
+    "promoted-1788229946338-6": {
+      "name": "promoted-1788229946338-6",
+      "file": "/assets/line.bram.breaker.promoted-1788229946338-6.mp3",
+      "prompt": "precise, technical certainty",
+      "createdAt": "2026-09-01T02:32:51.258Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "The main breaker never tripped. Only the library circuit failed, so the short began inside this room.",
+        "direction": "precise, technical certainty",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-6": {
+      "name": "promoted-1788308830791-6",
+      "file": "/assets/line.bram.breaker.promoted-1788308830791-6.mp3",
+      "prompt": "precise, technical certainty",
+      "createdAt": "2026-09-02T00:27:30.195Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "The main breaker never tripped. Only the library circuit failed, so the short began inside this room.",
+        "direction": "precise, technical certainty",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-6",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

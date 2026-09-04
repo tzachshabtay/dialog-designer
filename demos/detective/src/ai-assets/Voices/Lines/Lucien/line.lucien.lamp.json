@@ -1,1 +1,72 @@
-{"id":"line.lucien.lamp","kind":"voice-line","prompt":"Deflect the lamp sabotage evidence onto an unnamed planter.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Anyone could have planted the copper marker. Its location proves only that someone wished to implicate me.","direction":"Controlled legalism, pace slightly faster than before."},"activeVersion":"","versions":{},"tags":["dialog","lucien","confrontation"]}
+{
+  "id": "line.lucien.lamp",
+  "kind": "voice-line",
+  "prompt": "dismissive, aggrieved deflection",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Anyone could have planted the copper marker. Its location proves only that someone wished to implicate me.",
+    "direction": "dismissive, aggrieved deflection",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-9",
+  "versions": {
+    "promoted-1788230047219-9": {
+      "name": "promoted-1788230047219-9",
+      "file": "/assets/line.lucien.lamp.promoted-1788230047219-9.mp3",
+      "prompt": "dismissive, aggrieved deflection",
+      "createdAt": "2026-09-01T02:34:48.291Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Anyone could have planted the copper marker. Its location proves only that someone wished to implicate me.",
+        "direction": "dismissive, aggrieved deflection",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-9": {
+      "name": "promoted-1788308871354-9",
+      "file": "/assets/line.lucien.lamp.promoted-1788308871354-9.mp3",
+      "prompt": "dismissive, aggrieved deflection",
+      "createdAt": "2026-09-02T00:28:31.850Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Anyone could have planted the copper marker. Its location proves only that someone wished to implicate me.",
+        "direction": "dismissive, aggrieved deflection",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-9",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "confrontation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

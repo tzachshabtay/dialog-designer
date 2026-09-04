@@ -1,0 +1,73 @@
+{
+  "id": "line.detective.case-watermark",
+  "kind": "voice-line",
+  "prompt": "measured, ominous clarity",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "Edwin's presentation concerned a watermark dated 1846. If genuine, it proves the supposedly 1812 ledger is a modern forgery—and ruins the scholarship on which Dr. Vale built his career.",
+    "direction": "measured, ominous clarity",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-4",
+  "versions": {
+    "promoted-1788229690995-4": {
+      "name": "promoted-1788229690995-4",
+      "file": "/assets/line.detective.case-watermark.promoted-1788229690995-4.mp3",
+      "prompt": "measured, ominous clarity",
+      "createdAt": "2026-09-01T02:28:37.752Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Edwin's presentation concerned a watermark dated 1846. If genuine, it proves the supposedly 1812 ledger is a modern forgery—and ruins the scholarship on which Dr. Vale built his career.",
+        "direction": "measured, ominous clarity",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-4": {
+      "name": "promoted-1788308718588-4",
+      "file": "/assets/line.detective.case-watermark.promoted-1788308718588-4.mp3",
+      "prompt": "measured, ominous clarity",
+      "createdAt": "2026-09-02T00:25:39.154Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Edwin's presentation concerned a watermark dated 1846. If genuine, it proves the supposedly 1812 ledger is a modern forgery—and ruins the scholarship on which Dr. Vale built his career.",
+        "direction": "measured, ominous clarity",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-4",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective",
+    "intro",
+    "motive"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

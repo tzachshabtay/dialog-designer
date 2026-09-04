@@ -1,1 +1,72 @@
-{"id":"line.detective.reveal-container","kind":"voice-line","prompt":"Infer the hiding place when the optional auditory clue was missed.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.detective","text":"That folio is the only container in this room no one inspected.","direction":"Cool logical certainty."},"activeVersion":"","versions":{},"tags":["dialog","reveal","conditional"]}
+{
+  "id": "line.detective.reveal-container",
+  "kind": "voice-line",
+  "prompt": "cool, deductive certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "Your folio is the only container here you refused to have searched, and its rigid sides could conceal the ledger.",
+    "direction": "cool, deductive certainty",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-11",
+  "versions": {
+    "promoted-1788229690995-11": {
+      "name": "promoted-1788229690995-11",
+      "file": "/assets/line.detective.reveal-container.promoted-1788229690995-11.mp3",
+      "prompt": "cool, deductive certainty",
+      "createdAt": "2026-09-01T02:29:13.314Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Your folio is the only container here you refused to have searched, and its rigid sides could conceal the ledger.",
+        "direction": "cool, deductive certainty",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-11": {
+      "name": "promoted-1788308718588-11",
+      "file": "/assets/line.detective.reveal-container.promoted-1788308718588-11.mp3",
+      "prompt": "cool, deductive certainty",
+      "createdAt": "2026-09-02T00:26:11.915Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Your folio is the only container here you refused to have searched, and its rigid sides could conceal the ledger.",
+        "direction": "cool, deductive certainty",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-11",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal",
+    "conditional"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -1,1 +1,72 @@
-{"id":"line.lucien.wax","kind":"voice-line","prompt":"Deny the wax connection by blaming Bram.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Then Holt used her wax. Surely even you can see how neatly it fits him.","direction":"Patronizing, with strain under the final words."},"activeVersion":"","versions":{},"tags":["dialog","lucien","confrontation"]}
+{
+  "id": "line.lucien.wax",
+  "kind": "voice-line",
+  "prompt": "urgent, accusatory deflection",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Then Holt must have used her wax to copy the lock's pattern. He understands mechanisms, worked beside the display, and surely even you can see how neatly it fits him.",
+    "direction": "urgent, accusatory deflection",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-10",
+  "versions": {
+    "promoted-1788230047219-10": {
+      "name": "promoted-1788230047219-10",
+      "file": "/assets/line.lucien.wax.promoted-1788230047219-10.mp3",
+      "prompt": "urgent, accusatory deflection",
+      "createdAt": "2026-09-01T02:34:52.941Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Then Holt must have used her wax to copy the lock's pattern. He understands mechanisms, worked beside the display, and surely even you can see how neatly it fits him.",
+        "direction": "urgent, accusatory deflection",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-10": {
+      "name": "promoted-1788308871354-10",
+      "file": "/assets/line.lucien.wax.promoted-1788308871354-10.mp3",
+      "prompt": "urgent, accusatory deflection",
+      "createdAt": "2026-09-02T00:28:36.614Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Then Holt must have used her wax to copy the lock's pattern. He understands mechanisms, worked beside the display, and surely even you can see how neatly it fits him.",
+        "direction": "urgent, accusatory deflection",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-10",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "confrontation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -2,18 +2,98 @@
   "id": "voice.detective",
   "kind": "voice",
   "prompt": "Measured private detective, low and observant, concise authority, thoughtful rather than theatrical, 1930s mystery cadence.",
-  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
-  "voiceSettings": { "provider": "elevenlabs", "previewText": "A lie is only a borrowed alibi. Eventually, its owner asks for it back." },
-  "linkedAnimationAssets": {
-    "ada-opening": { "label": "Question Ada", "assetId": "line.detective.ada-opening" },
-    "bram-opening": { "label": "Question Bram", "assetId": "line.detective.bram-opening" },
-    "lucien-opening": { "label": "Question Lucien", "assetId": "line.detective.lucien-opening" },
-    "reveal": { "label": "Present the case", "assetId": "line.detective.reveal" },
-    "reveal-folio": { "label": "Folio clue", "assetId": "line.detective.reveal-folio" },
-    "reveal-container": { "label": "Container deduction", "assetId": "line.detective.reveal-container" },
-    "closing": { "label": "Close the case", "assetId": "line.detective.closing" }
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false,
+    "durationSeconds": 2
   },
-  "activeVersion": "",
-  "versions": {},
-  "tags": ["voice", "detective"]
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "previewText": "A lie is only a borrowed alibi. Eventually, its owner asks for it back, and by then the smallest contradiction can bring the whole story down.",
+    "generatedVoiceId": "be3zS5FjdFJ6Tw02SmY8",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "linkedAnimationAssets": {
+    "case-victim": {
+      "label": "Case briefing · victim",
+      "assetId": "line.detective.case-victim"
+    },
+    "case-locked-room": {
+      "label": "Case briefing · locked room",
+      "assetId": "line.detective.case-locked-room"
+    },
+    "case-blackout": {
+      "label": "Case briefing · blackout",
+      "assetId": "line.detective.case-blackout"
+    },
+    "case-watermark": {
+      "label": "Case briefing · watermark",
+      "assetId": "line.detective.case-watermark"
+    },
+    "case-questioning": {
+      "label": "Case briefing · questions",
+      "assetId": "line.detective.case-questioning"
+    },
+    "ada-opening": {
+      "label": "Question Ada",
+      "assetId": "line.detective.ada-opening"
+    },
+    "bram-opening": {
+      "label": "Question Bram",
+      "assetId": "line.detective.bram-opening"
+    },
+    "lucien-opening": {
+      "label": "Question Lucien",
+      "assetId": "line.detective.lucien-opening"
+    },
+    "reveal": {
+      "label": "Present the case",
+      "assetId": "line.detective.reveal"
+    },
+    "reveal-folio": {
+      "label": "Folio clue",
+      "assetId": "line.detective.reveal-folio"
+    },
+    "reveal-container": {
+      "label": "Container deduction",
+      "assetId": "line.detective.reveal-container"
+    },
+    "closing": {
+      "label": "Close the case",
+      "assetId": "line.detective.closing"
+    }
+  },
+  "activeVersion": "promoted-1788224979435",
+  "versions": {
+    "promoted-1788224979435": {
+      "name": "promoted-1788224979435",
+      "file": "/assets/voice.detective.promoted-1788224979435.mp3",
+      "prompt": "Measured private detective, low and observant, concise authority, thoughtful rather than theatrical, 1930s mystery cadence.",
+      "createdAt": "2026-09-01T01:09:41.280Z",
+      "model": "eleven_multilingual_ttv_v2",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false,
+        "durationSeconds": 2
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "previewText": "A lie is only a borrowed alibi. Eventually, its owner asks for it back, and by then the smallest contradiction can bring the whole story down.",
+        "generatedVoiceId": "be3zS5FjdFJ6Tw02SmY8",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "durationSeconds": 10.45175,
+      "notes": "Promoted from the AI asset designer."
+    }
+  },
+  "tags": [
+    "voice",
+    "detective"
+  ],
+  "settings": {},
+  "audioPlayback": {}
 }

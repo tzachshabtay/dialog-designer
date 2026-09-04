@@ -1,1 +1,72 @@
-{"id":"line.bram.hostile","kind":"voice-line","prompt":"Withdraw technical help after a careless accusation.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.bram","text":"If you have already measured the rope, inspect the wiring yourself.","direction":"Hard, offended, dangerously quiet."},"activeVersion":"","versions":{},"tags":["dialog","bram","hostile"]}
+{
+  "id": "line.bram.hostile",
+  "kind": "voice-line",
+  "prompt": "clipped, offended refusal",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "If you have already decided I am lying, inspect the wiring yourself. I will not help you dress up a guess and call it evidence.",
+    "direction": "clipped, offended refusal",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-5",
+  "versions": {
+    "promoted-1788229946338-5": {
+      "name": "promoted-1788229946338-5",
+      "file": "/assets/line.bram.hostile.promoted-1788229946338-5.mp3",
+      "prompt": "clipped, offended refusal",
+      "createdAt": "2026-09-01T02:32:46.894Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "If you have already decided I am lying, inspect the wiring yourself. I will not help you dress up a guess and call it evidence.",
+        "direction": "clipped, offended refusal",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-5": {
+      "name": "promoted-1788308830791-5",
+      "file": "/assets/line.bram.hostile.promoted-1788308830791-5.mp3",
+      "prompt": "clipped, offended refusal",
+      "createdAt": "2026-09-02T00:27:27.907Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "If you have already decided I am lying, inspect the wiring yourself. I will not help you dress up a guess and call it evidence.",
+        "direction": "clipped, offended refusal",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-5",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "hostile"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

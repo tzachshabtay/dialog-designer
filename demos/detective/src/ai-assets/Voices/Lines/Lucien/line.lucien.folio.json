@@ -1,1 +1,72 @@
-{"id":"line.lucien.folio","kind":"voice-line","prompt":"Reject Ada's auditory clue about the folio.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Miss Mercer hears exactly what assists her, and forgets exactly what does not.","direction":"Cruel composure, attacking the witness instead of the fact."},"activeVersion":"","versions":{},"tags":["dialog","lucien","confrontation"]}
+{
+  "id": "line.lucien.folio",
+  "kind": "voice-line",
+  "prompt": "cutting, contemptuous dismissal",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Miss Mercer hears exactly what assists her and forgets exactly what does not. A clasp closing in darkness could have belonged to anyone in this room.",
+    "direction": "cutting, contemptuous dismissal",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-12",
+  "versions": {
+    "promoted-1788230047219-12": {
+      "name": "promoted-1788230047219-12",
+      "file": "/assets/line.lucien.folio.promoted-1788230047219-12.mp3",
+      "prompt": "cutting, contemptuous dismissal",
+      "createdAt": "2026-09-01T02:35:03.402Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Miss Mercer hears exactly what assists her and forgets exactly what does not. A clasp closing in darkness could have belonged to anyone in this room.",
+        "direction": "cutting, contemptuous dismissal",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-12": {
+      "name": "promoted-1788308871354-12",
+      "file": "/assets/line.lucien.folio.promoted-1788308871354-12.mp3",
+      "prompt": "cutting, contemptuous dismissal",
+      "createdAt": "2026-09-02T00:28:46.192Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Miss Mercer hears exactly what assists her and forgets exactly what does not. A clasp closing in darkness could have belonged to anyone in this room.",
+        "direction": "cutting, contemptuous dismissal",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-12",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "confrontation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

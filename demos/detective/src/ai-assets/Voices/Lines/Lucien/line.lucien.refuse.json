@@ -1,1 +1,72 @@
-{"id":"line.lucien.refuse","kind":"voice-line","prompt":"Refuse the final demand to open the folio.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"My folio is private correspondence. You have no authority to open it.","direction":"The polish finally cracking into fear."},"activeVersion":"","versions":{},"tags":["dialog","lucien","reveal"]}
+{
+  "id": "line.lucien.refuse",
+  "kind": "voice-line",
+  "prompt": "icy, indignant refusal",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "My folio contains private correspondence from colleagues and clients. Your theory gives you neither cause nor authority to search through those papers.",
+    "direction": "icy, indignant refusal",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-14",
+  "versions": {
+    "promoted-1788230047219-14": {
+      "name": "promoted-1788230047219-14",
+      "file": "/assets/line.lucien.refuse.promoted-1788230047219-14.mp3",
+      "prompt": "icy, indignant refusal",
+      "createdAt": "2026-09-01T02:35:15.182Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "My folio contains private correspondence from colleagues and clients. Your theory gives you neither cause nor authority to search through those papers.",
+        "direction": "icy, indignant refusal",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-14": {
+      "name": "promoted-1788308871354-14",
+      "file": "/assets/line.lucien.refuse.promoted-1788308871354-14.mp3",
+      "prompt": "icy, indignant refusal",
+      "createdAt": "2026-09-02T00:28:55.382Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "My folio contains private correspondence from colleagues and clients. Your theory gives you neither cause nor authority to search through those papers.",
+        "direction": "icy, indignant refusal",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-14",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "reveal"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

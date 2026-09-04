@@ -1,0 +1,72 @@
+{
+  "id": "line.detective.case-locked-room",
+  "kind": "voice-line",
+  "prompt": "measured, precise narration",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "At two minutes to nine, Edwin stepped into the hall to collect his guests. The library door locked behind him, leaving only Ada Mercer, Bram Holt, and Dr. Lucien Vale inside.",
+    "direction": "measured, precise narration",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-2",
+  "versions": {
+    "promoted-1788229690995-2": {
+      "name": "promoted-1788229690995-2",
+      "file": "/assets/line.detective.case-locked-room.promoted-1788229690995-2.mp3",
+      "prompt": "measured, precise narration",
+      "createdAt": "2026-09-01T02:28:24.133Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "At two minutes to nine, Edwin stepped into the hall to collect his guests. The library door locked behind him, leaving only Ada Mercer, Bram Holt, and Dr. Lucien Vale inside.",
+        "direction": "measured, precise narration",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-2": {
+      "name": "promoted-1788308718588-2",
+      "file": "/assets/line.detective.case-locked-room.promoted-1788308718588-2.mp3",
+      "prompt": "measured, precise narration",
+      "createdAt": "2026-09-02T00:25:27.411Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "At two minutes to nine, Edwin stepped into the hall to collect his guests. The library door locked behind him, leaving only Ada Mercer, Bram Holt, and Dr. Lucien Vale inside.",
+        "direction": "measured, precise narration",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-2",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective",
+    "intro"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

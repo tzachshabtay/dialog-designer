@@ -1,0 +1,72 @@
+{
+  "id": "line.bram.case-presence",
+  "kind": "voice-line",
+  "prompt": "reserved, workmanlike formality",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.bram",
+    "text": "Bram Holt, estate electrician. Mr. Mercer ordered me to disconnect the faulty display alarm and install new contacts before the presentation.",
+    "direction": "reserved, workmanlike formality",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "activeVersion": "promoted-1788308830791-1",
+  "versions": {
+    "promoted-1788229946338-1": {
+      "name": "promoted-1788229946338-1",
+      "file": "/assets/line.bram.case-presence.promoted-1788229946338-1.mp3",
+      "prompt": "reserved, workmanlike formality",
+      "createdAt": "2026-09-01T02:32:30.674Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Bram Holt, estate electrician. Mr. Mercer ordered me to disconnect the faulty display alarm and install new contacts before the presentation.",
+        "direction": "reserved, workmanlike formality",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308830791-1": {
+      "name": "promoted-1788308830791-1",
+      "file": "/assets/line.bram.case-presence.promoted-1788308830791-1.mp3",
+      "prompt": "reserved, workmanlike formality",
+      "createdAt": "2026-09-02T00:27:14.894Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.bram",
+        "text": "Bram Holt, estate electrician. Mr. Mercer ordered me to disconnect the faulty display alarm and install new contacts before the presentation.",
+        "direction": "reserved, workmanlike formality",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "parentVersion": "promoted-1788229946338-1",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "bram",
+    "intro"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

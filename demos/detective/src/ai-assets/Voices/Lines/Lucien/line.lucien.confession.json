@@ -1,1 +1,71 @@
-{"id":"line.lucien.confession","kind":"voice-line","prompt":"Confess the career-ending motive after the ledger is found.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"That page would have buried everything I built.","direction":"Hollow, exhausted, no charm remaining."},"activeVersion":"","versions":{},"tags":["dialog","reveal"]}
+{
+  "id": "line.lucien.confession",
+  "kind": "voice-line",
+  "prompt": "shattered, bitter vulnerability",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "That watermark would have destroyed everything I built: my reputation, my scholarship, and every conclusion the academic world accepted on my authority.",
+    "direction": "shattered, bitter vulnerability",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-15",
+  "versions": {
+    "promoted-1788230047219-15": {
+      "name": "promoted-1788230047219-15",
+      "file": "/assets/line.lucien.confession.promoted-1788230047219-15.mp3",
+      "prompt": "shattered, bitter vulnerability",
+      "createdAt": "2026-09-01T02:35:19.903Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "That watermark would have destroyed everything I built: my reputation, my scholarship, and every conclusion the academic world accepted on my authority.",
+        "direction": "shattered, bitter vulnerability",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-15": {
+      "name": "promoted-1788308871354-15",
+      "file": "/assets/line.lucien.confession.promoted-1788308871354-15.mp3",
+      "prompt": "shattered, bitter vulnerability",
+      "createdAt": "2026-09-02T00:28:58.948Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "That watermark would have destroyed everything I built: my reputation, my scholarship, and every conclusion the academic world accepted on my authority.",
+        "direction": "shattered, bitter vulnerability",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-15",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

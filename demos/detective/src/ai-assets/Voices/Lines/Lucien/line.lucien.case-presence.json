@@ -1,0 +1,72 @@
+{
+  "id": "line.lucien.case-presence",
+  "kind": "voice-line",
+  "prompt": "formal, self-important composure",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Dr. Lucien Vale. I authenticated the Raven Ledger twenty years ago. Edwin invited me to examine it before he presented his new findings.",
+    "direction": "formal, self-important composure",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-1",
+  "versions": {
+    "promoted-1788230047219-1": {
+      "name": "promoted-1788230047219-1",
+      "file": "/assets/line.lucien.case-presence.promoted-1788230047219-1.mp3",
+      "prompt": "formal, self-important composure",
+      "createdAt": "2026-09-01T02:34:12.778Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Dr. Lucien Vale. I authenticated the Raven Ledger twenty years ago. Edwin invited me to examine it before he presented his new findings.",
+        "direction": "formal, self-important composure",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-1": {
+      "name": "promoted-1788308871354-1",
+      "file": "/assets/line.lucien.case-presence.promoted-1788308871354-1.mp3",
+      "prompt": "formal, self-important composure",
+      "createdAt": "2026-09-02T00:27:55.302Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Dr. Lucien Vale. I authenticated the Raven Ledger twenty years ago. Edwin invited me to examine it before he presented his new findings.",
+        "direction": "formal, self-important composure",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-1",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "intro"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

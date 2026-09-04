@@ -1,1 +1,72 @@
-{"id":"line.lucien.early","kind":"voice-line","prompt":"Dismiss an accusation unsupported by a complete case.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"An accusation without timeline, method, and motive is theatre, Detective. I expected scholarship.","direction":"Amused superiority masking a moment of fear."},"activeVersion":"","versions":{},"tags":["dialog","lucien","accusation"]}
+{
+  "id": "line.lucien.early",
+  "kind": "voice-line",
+  "prompt": "scornful, theatrical dismissal",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "You have suspicions and contradictions, Detective, but not a case. Bring me evidence that explains the clock, the darkness, and the missing ledger—or spare us the theatre.",
+    "direction": "scornful, theatrical dismissal",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-13",
+  "versions": {
+    "promoted-1788230047219-13": {
+      "name": "promoted-1788230047219-13",
+      "file": "/assets/line.lucien.early.promoted-1788230047219-13.mp3",
+      "prompt": "scornful, theatrical dismissal",
+      "createdAt": "2026-09-01T02:35:10.013Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "You have suspicions and contradictions, Detective, but not a case. Bring me evidence that explains the clock, the darkness, and the missing ledger—or spare us the theatre.",
+        "direction": "scornful, theatrical dismissal",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-13": {
+      "name": "promoted-1788308871354-13",
+      "file": "/assets/line.lucien.early.promoted-1788308871354-13.mp3",
+      "prompt": "scornful, theatrical dismissal",
+      "createdAt": "2026-09-02T00:28:51.743Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "You have suspicions and contradictions, Detective, but not a case. Bring me evidence that explains the clock, the darkness, and the missing ledger—or spare us the theatre.",
+        "direction": "scornful, theatrical dismissal",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-13",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "accusation"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

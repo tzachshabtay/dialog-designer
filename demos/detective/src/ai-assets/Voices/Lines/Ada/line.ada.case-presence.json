@@ -1,0 +1,72 @@
+{
+  "id": "line.ada.case-presence",
+  "kind": "voice-line",
+  "prompt": "formal, poised restraint",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "I'm Ada Mercer, Edwin's daughter. I was rehearsing at the library piano before Father's ten o'clock presentation.",
+    "direction": "formal, poised restraint",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-1",
+  "versions": {
+    "promoted-1788229770463-1": {
+      "name": "promoted-1788229770463-1",
+      "file": "/assets/line.ada.case-presence.promoted-1788229770463-1.mp3",
+      "prompt": "formal, poised restraint",
+      "createdAt": "2026-09-01T02:29:35.116Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "I'm Ada Mercer, Edwin's daughter. I was rehearsing at the library piano before Father's ten o'clock presentation.",
+        "direction": "formal, poised restraint",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-1": {
+      "name": "promoted-1788308775025-1",
+      "file": "/assets/line.ada.case-presence.promoted-1788308775025-1.mp3",
+      "prompt": "formal, poised restraint",
+      "createdAt": "2026-09-02T00:26:18.989Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "I'm Ada Mercer, Edwin's daughter. I was rehearsing at the library piano before Father's ten o'clock presentation.",
+        "direction": "formal, poised restraint",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-1",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "intro"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

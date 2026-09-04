@@ -2,21 +2,95 @@
   "id": "voice.bram",
   "kind": "voice",
   "prompt": "Weathered British working man in his late forties, rough baritone, blunt and defensive but fundamentally steady and honest.",
-  "audioSettings": { "provider": "elevenlabs", "format": "mp3", "loop": false },
-  "voiceSettings": { "provider": "elevenlabs", "previewText": "Wires tell the truth. People generally need a little more testing." },
-  "linkedAnimationAssets": {
-    "intro": { "label": "Opening", "assetId": "line.bram.intro" },
-    "alarm": { "label": "Disabled alarm", "assetId": "line.bram.alarm" },
-    "work-order": { "label": "Work order", "assetId": "line.bram.work-order" },
-    "hostile": { "label": "Hostile", "assetId": "line.bram.hostile" },
-    "breaker": { "label": "Main breaker", "assetId": "line.bram.breaker" },
-    "lock": { "label": "Wax in lock", "assetId": "line.bram.lock" },
-    "lamp": { "label": "Sabotaged lamp", "assetId": "line.bram.lamp" },
-    "reconsider": { "label": "Reconsider", "assetId": "line.bram.reconsider" },
-    "wrong": { "label": "Wrong accusation", "assetId": "line.bram.wrong" },
-    "reveal": { "label": "Folio clasp", "assetId": "line.bram.reveal" }
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false,
+    "durationSeconds": 2
   },
-  "activeVersion": "",
-  "versions": {},
-  "tags": ["voice", "suspect", "bram"]
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "previewText": "Wires tell the truth. People generally need a little more testing, especially when darkness gives them the chance to hide what they have done.",
+    "generatedVoiceId": "TBvzzADcRcbhbWVJ8QRL",
+    "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+  },
+  "linkedAnimationAssets": {
+    "case-presence": {
+      "label": "Case briefing · Bram",
+      "assetId": "line.bram.case-presence"
+    },
+    "intro": {
+      "label": "Opening",
+      "assetId": "line.bram.intro"
+    },
+    "alarm": {
+      "label": "Disabled alarm",
+      "assetId": "line.bram.alarm"
+    },
+    "work-order": {
+      "label": "Work order",
+      "assetId": "line.bram.work-order"
+    },
+    "hostile": {
+      "label": "Hostile",
+      "assetId": "line.bram.hostile"
+    },
+    "breaker": {
+      "label": "Main breaker",
+      "assetId": "line.bram.breaker"
+    },
+    "lock": {
+      "label": "Wax in lock",
+      "assetId": "line.bram.lock"
+    },
+    "lamp": {
+      "label": "Sabotaged lamp",
+      "assetId": "line.bram.lamp"
+    },
+    "reconsider": {
+      "label": "Reconsider",
+      "assetId": "line.bram.reconsider"
+    },
+    "wrong": {
+      "label": "Wrong accusation",
+      "assetId": "line.bram.wrong"
+    },
+    "reveal": {
+      "label": "Folio clasp",
+      "assetId": "line.bram.reveal"
+    }
+  },
+  "activeVersion": "promoted-1788225060720",
+  "versions": {
+    "promoted-1788225060720": {
+      "name": "promoted-1788225060720",
+      "file": "/assets/voice.bram.promoted-1788225060720.mp3",
+      "prompt": "Weathered British working man in his late forties, rough baritone, blunt and defensive but fundamentally steady and honest.",
+      "createdAt": "2026-09-01T01:11:02.141Z",
+      "model": "eleven_multilingual_ttv_v2",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false,
+        "durationSeconds": 2
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "previewText": "Wires tell the truth. People generally need a little more testing, especially when darkness gives them the chance to hide what they have done.",
+        "generatedVoiceId": "TBvzzADcRcbhbWVJ8QRL",
+        "voiceId": "TBvzzADcRcbhbWVJ8QRL"
+      },
+      "durationSeconds": 8.5448125,
+      "notes": "Promoted from the AI asset designer."
+    }
+  },
+  "tags": [
+    "voice",
+    "suspect",
+    "bram"
+  ],
+  "settings": {},
+  "audioPlayback": {}
 }

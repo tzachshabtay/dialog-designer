@@ -1,0 +1,73 @@
+{
+  "id": "line.detective.case-blackout",
+  "kind": "voice-line",
+  "prompt": "controlled, mounting intrigue",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "At nine, this room alone went dark for thirty seconds. The door remained locked, the windows stayed latched, and the original display-case key never left Edwin's pocket. Yet when he returned, the case was open and the ledger was gone.",
+    "direction": "controlled, mounting intrigue",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-3",
+  "versions": {
+    "promoted-1788229690995-3": {
+      "name": "promoted-1788229690995-3",
+      "file": "/assets/line.detective.case-blackout.promoted-1788229690995-3.mp3",
+      "prompt": "controlled, mounting intrigue",
+      "createdAt": "2026-09-01T02:28:32.412Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "At nine, this room alone went dark for thirty seconds. The door remained locked, the windows stayed latched, and the original display-case key never left Edwin's pocket. Yet when he returned, the case was open and the ledger was gone.",
+        "direction": "controlled, mounting intrigue",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-3": {
+      "name": "promoted-1788308718588-3",
+      "file": "/assets/line.detective.case-blackout.promoted-1788308718588-3.mp3",
+      "prompt": "controlled, mounting intrigue",
+      "createdAt": "2026-09-02T00:25:33.771Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "At nine, this room alone went dark for thirty seconds. The door remained locked, the windows stayed latched, and the original display-case key never left Edwin's pocket. Yet when he returned, the case was open and the ledger was gone.",
+        "direction": "controlled, mounting intrigue",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-3",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "detective",
+    "intro",
+    "locked-room"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

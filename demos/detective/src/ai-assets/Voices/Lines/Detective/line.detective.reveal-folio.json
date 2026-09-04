@@ -1,1 +1,72 @@
-{"id":"line.detective.reveal-folio","kind":"voice-line","prompt":"Name the optional auditory clue decisively.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.detective","text":"Ada heard your folio snap shut while the case stood open.","direction":"Crisp and certain, closing the hiding-place argument."},"activeVersion":"","versions":{},"tags":["dialog","reveal","conditional"]}
+{
+  "id": "line.detective.reveal-folio",
+  "kind": "voice-line",
+  "prompt": "sharp, triumphant certainty",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.detective",
+    "text": "Ada heard the display glass rise, then your folio clasp snap shut. She heard the exact moment you hid the ledger.",
+    "direction": "sharp, triumphant certainty",
+    "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+  },
+  "activeVersion": "promoted-1788308718588-10",
+  "versions": {
+    "promoted-1788229690995-10": {
+      "name": "promoted-1788229690995-10",
+      "file": "/assets/line.detective.reveal-folio.promoted-1788229690995-10.mp3",
+      "prompt": "sharp, triumphant certainty",
+      "createdAt": "2026-09-01T02:29:08.756Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Ada heard the display glass rise, then your folio clasp snap shut. She heard the exact moment you hid the ledger.",
+        "direction": "sharp, triumphant certainty",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308718588-10": {
+      "name": "promoted-1788308718588-10",
+      "file": "/assets/line.detective.reveal-folio.promoted-1788308718588-10.mp3",
+      "prompt": "sharp, triumphant certainty",
+      "createdAt": "2026-09-02T00:26:08.807Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.detective",
+        "text": "Ada heard the display glass rise, then your folio clasp snap shut. She heard the exact moment you hid the ledger.",
+        "direction": "sharp, triumphant certainty",
+        "voiceId": "be3zS5FjdFJ6Tw02SmY8"
+      },
+      "parentVersion": "promoted-1788229690995-10",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "reveal",
+    "conditional"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

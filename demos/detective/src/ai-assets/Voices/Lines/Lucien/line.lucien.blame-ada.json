@@ -1,1 +1,72 @@
-{"id":"line.lucien.blame-ada","kind":"voice-line","prompt":"Exploit Ada's debt to redirect suspicion.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.lucien","text":"Ada's quarrel was audible from the hall. Sentiment does not settle a conservatory account.","direction":"Sympathetic on the surface, quietly poisonous underneath."},"activeVersion":"","versions":{},"tags":["dialog","lucien","deflection"]}
+{
+  "id": "line.lucien.blame-ada",
+  "kind": "voice-line",
+  "prompt": "silky, opportunistic insinuation",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.lucien",
+    "text": "Ada's quarrel was audible from the hall, Detective. Her creditors have not vanished, and sentiment does not settle an overdue conservatory account.",
+    "direction": "silky, opportunistic insinuation",
+    "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+  },
+  "activeVersion": "promoted-1788308871354-6",
+  "versions": {
+    "promoted-1788230047219-6": {
+      "name": "promoted-1788230047219-6",
+      "file": "/assets/line.lucien.blame-ada.promoted-1788230047219-6.mp3",
+      "prompt": "silky, opportunistic insinuation",
+      "createdAt": "2026-09-01T02:34:36.666Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Ada's quarrel was audible from the hall, Detective. Her creditors have not vanished, and sentiment does not settle an overdue conservatory account.",
+        "direction": "silky, opportunistic insinuation",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308871354-6": {
+      "name": "promoted-1788308871354-6",
+      "file": "/assets/line.lucien.blame-ada.promoted-1788308871354-6.mp3",
+      "prompt": "silky, opportunistic insinuation",
+      "createdAt": "2026-09-02T00:28:20.272Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.lucien",
+        "text": "Ada's quarrel was audible from the hall, Detective. Her creditors have not vanished, and sentiment does not settle an overdue conservatory account.",
+        "direction": "silky, opportunistic insinuation",
+        "voiceId": "y8vZkYfEq4BEWRqNMIBq"
+      },
+      "parentVersion": "promoted-1788230047219-6",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "lucien",
+    "deflection"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

@@ -1,1 +1,72 @@
-{"id":"line.ada.dark","kind":"voice-line","prompt":"Describe the sounds heard in darkness.","audioSettings":{"provider":"elevenlabs","format":"mp3","loop":false},"voiceSettings":{"provider":"elevenlabs","voiceAssetId":"voice.ada","text":"A lamp switch. Glass lifting. Then Vale's folio clasp snapped shut.","direction":"Eyes closed in recollection, separated beats, growing certainty."},"activeVersion":"","versions":{},"tags":["dialog","ada","clue"]}
+{
+  "id": "line.ada.dark",
+  "kind": "voice-line",
+  "prompt": "hushed, precise recollection",
+  "audioSettings": {
+    "provider": "elevenlabs",
+    "format": "mp3",
+    "loop": false
+  },
+  "voiceSettings": {
+    "provider": "elevenlabs",
+    "voiceAssetId": "voice.ada",
+    "text": "A lamp switch clicked. The display glass lifted. Then a folio clasp snapped. Vale's has a sharp brass catch; I had heard it all evening.",
+    "direction": "hushed, precise recollection",
+    "voiceId": "tq6lmavYCYn0B8TkIgyi"
+  },
+  "activeVersion": "promoted-1788308775025-9",
+  "versions": {
+    "promoted-1788229770463-9": {
+      "name": "promoted-1788229770463-9",
+      "file": "/assets/line.ada.dark.promoted-1788229770463-9.mp3",
+      "prompt": "hushed, precise recollection",
+      "createdAt": "2026-09-01T02:30:11.436Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "A lamp switch clicked. The display glass lifted. Then a folio clasp snapped. Vale's has a sharp brass catch; I had heard it all evening.",
+        "direction": "hushed, precise recollection",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    },
+    "promoted-1788308775025-9": {
+      "name": "promoted-1788308775025-9",
+      "file": "/assets/line.ada.dark.promoted-1788308775025-9.mp3",
+      "prompt": "hushed, precise recollection",
+      "createdAt": "2026-09-02T00:26:54.465Z",
+      "model": "eleven_v3",
+      "settings": {},
+      "audioSettings": {
+        "provider": "elevenlabs",
+        "format": "mp3",
+        "loop": false
+      },
+      "audioPlayback": {},
+      "voiceSettings": {
+        "provider": "elevenlabs",
+        "voiceAssetId": "voice.ada",
+        "text": "A lamp switch clicked. The display glass lifted. Then a folio clasp snapped. Vale's has a sharp brass catch; I had heard it all evening.",
+        "direction": "hushed, precise recollection",
+        "voiceId": "tq6lmavYCYn0B8TkIgyi"
+      },
+      "parentVersion": "promoted-1788229770463-9",
+      "notes": "Regenerated from the selected base voice with Regenerate all lines."
+    }
+  },
+  "tags": [
+    "dialog",
+    "ada",
+    "clue"
+  ],
+  "settings": {},
+  "audioPlayback": {}
+}

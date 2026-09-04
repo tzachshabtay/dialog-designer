@@ -1,10 +1,17 @@
 {
   "id": "character.ada",
   "kind": "image",
-  "prompt": "Full-body portrait sprite of Ada Mercer, sharp intelligent woman pianist in her late twenties, dark red 1930s evening dress, controlled posture masking anxiety, tasteful jewelry, painterly graphic-novel style, transparent background.",
-  "dimensions": { "width": 180, "height": 320 },
-  "settings": { "model": "gpt-image-2", "background": "transparent", "format": "png", "referenceAssetIds": ["background.library"] },
-  "activeVersion": "default",
+  "prompt": "A female pianist in a dark red 1930s evening dress. no piano, she is standing in a natural pose facing the camera.",
+  "dimensions": {
+    "width": 320,
+    "height": 420
+  },
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "format": "png"
+  },
+  "activeVersion": "promoted-1788492141177",
   "versions": {
     "default": {
       "name": "default",
@@ -12,7 +19,51 @@
       "prompt": "Deterministic vector character portrait of Ada Mercer in a dark red 1930s evening dress.",
       "createdAt": "2026-08-30T00:00:00.000Z",
       "model": "manual-svg"
+    },
+    "promoted-1788319411742": {
+      "name": "promoted-1788319411742",
+      "file": "/assets/character.ada.promoted-1788319411742.png",
+      "prompt": "A female pianist in a dark red 1930s evening dress. no piano, she is standing in a natural pose facing the camera.",
+      "createdAt": "2026-09-02T03:23:31.798Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "format": "png",
+        "referenceAssetIds": [
+          "background.library"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "default",
+      "notes": "Promoted from the AI asset designer."
+    },
+    "promoted-1788492141177": {
+      "name": "promoted-1788492141177",
+      "file": "/assets/character.ada.promoted-1788492141177.png",
+      "prompt": "A female pianist in a dark red 1930s evening dress. no piano, she is standing in a natural pose facing the camera.",
+      "createdAt": "2026-09-04T03:22:21.232Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "format": "png"
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "parentVersion": "promoted-1788319411742",
+      "notes": "Promoted from the AI asset designer."
     }
   },
-  "tags": ["character", "suspect", "ada"]
+  "tags": [
+    "character",
+    "suspect",
+    "ada"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
 }
