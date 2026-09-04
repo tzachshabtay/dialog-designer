@@ -4,6 +4,84 @@ export const dialogs = defineDialogManifest(
 {
   "schemaVersion": 1,
   "dialogs": {
+    "dialog.intro": {
+      "id": "dialog.intro",
+      "name": "The Facts of the Case",
+      "entryNodeId": "case.intro",
+      "enabled": true,
+      "tags": [
+        "case",
+        "intro",
+        "mandatory"
+      ],
+      "metadata": {
+        "subtitle": "Blackwood House · the locked-library theft"
+      },
+      "nodes": {
+        "case.intro": {
+          "id": "case.intro",
+          "type": "block",
+          "name": "The facts of the case",
+          "enabled": true,
+          "lines": [
+            {
+              "id": "case.intro.victim",
+              "enabled": true,
+              "voiceAssetId": "voice.detective",
+              "lineAssetId": "line.detective.case-victim"
+            },
+            {
+              "id": "case.intro.locked-room",
+              "enabled": true,
+              "voiceAssetId": "voice.detective",
+              "lineAssetId": "line.detective.case-locked-room"
+            },
+            {
+              "id": "case.intro.blackout",
+              "enabled": true,
+              "voiceAssetId": "voice.detective",
+              "lineAssetId": "line.detective.case-blackout"
+            },
+            {
+              "id": "case.intro.ada",
+              "enabled": true,
+              "voiceAssetId": "voice.ada",
+              "lineAssetId": "line.ada.case-presence"
+            },
+            {
+              "id": "case.intro.bram",
+              "enabled": true,
+              "voiceAssetId": "voice.bram",
+              "lineAssetId": "line.bram.case-presence"
+            },
+            {
+              "id": "case.intro.lucien",
+              "enabled": true,
+              "voiceAssetId": "voice.lucien",
+              "lineAssetId": "line.lucien.case-presence"
+            },
+            {
+              "id": "case.intro.watermark",
+              "enabled": true,
+              "voiceAssetId": "voice.detective",
+              "lineAssetId": "line.detective.case-watermark"
+            },
+            {
+              "id": "case.intro.dispute",
+              "enabled": true,
+              "voiceAssetId": "voice.lucien",
+              "lineAssetId": "line.lucien.case-dispute"
+            },
+            {
+              "id": "case.intro.questions",
+              "enabled": true,
+              "voiceAssetId": "voice.detective",
+              "lineAssetId": "line.detective.case-questioning"
+            }
+          ]
+        }
+      }
+    },
     "dialog.ada": {
       "id": "dialog.ada",
       "name": "Ada Mercer",
@@ -43,54 +121,54 @@ export const dialogs = defineDialogManifest(
           "id": "ada.menu",
           "type": "decision",
           "name": "Interview topics",
-          "prompt": "What will you ask Ada?",
+          "prompt": "Which part of Ada's account will you test?",
           "enabled": true,
           "options": [
             {
               "id": "ada.ask.debt",
-              "text": "Ask about her debts",
+              "text": "Ask what her argument with Edwin was about",
               "enabled": true,
               "nextNodeId": "ada.debt"
             },
             {
               "id": "ada.ask.clock",
-              "text": "Challenge Vale's nine o'clock chime",
+              "text": "Tell her Vale claims the mantel clock chimed",
               "enabled": true,
               "nextNodeId": "ada.clock"
             },
             {
               "id": "ada.ask.wax",
-              "text": "Ask about the blue sealing wax",
+              "text": "Show her the blue wax found in the lock",
               "enabled": true,
               "nextNodeId": "ada.wax"
             },
             {
               "id": "ada.ask.threat",
-              "text": "Ask what Mercer said to Vale",
+              "text": "Ask what Edwin said to Vale before leaving",
               "enabled": true,
               "nextNodeId": "ada.threat"
             },
             {
               "id": "ada.ask.dark",
-              "text": "Ask what she heard in the dark",
+              "text": "Have her reconstruct the sounds in the dark",
               "enabled": true,
               "nextNodeId": "ada.dark"
             },
             {
               "id": "ada.ask.bram",
-              "text": "Ask about Bram's work order",
+              "text": "Ask whether Bram's repair order was genuine",
               "enabled": true,
               "nextNodeId": "ada.bram"
             },
             {
               "id": "ada.ask.apologize",
-              "text": "Apologize and start again",
+              "text": "Admit the accusation was premature",
               "enabled": true,
               "nextNodeId": "ada.apology"
             },
             {
               "id": "ada.accuse.wrong",
-              "text": "Accuse Ada of taking the ledger",
+              "text": "Accuse Ada based on her debt",
               "enabled": true,
               "nextNodeId": "ada.wrong"
             },
@@ -120,18 +198,18 @@ export const dialogs = defineDialogManifest(
           "id": "ada.debt-choice",
           "type": "decision",
           "name": "Respond to Ada",
-          "prompt": "How do you use what Ada admitted?",
+          "prompt": "Ada admits the debt and pawn ticket. How do you respond?",
           "enabled": true,
           "options": [
             {
               "id": "ada.debt.protect",
-              "text": "Keep it confidential; ask for her help",
+              "text": "Treat the debt as private, not proof",
               "enabled": true,
               "nextNodeId": "ada.trust"
             },
             {
               "id": "ada.debt.press",
-              "text": "Say the ledger would pay more than tuition",
+              "text": "Claim the debt gives her a motive to steal",
               "enabled": true,
               "nextNodeId": "ada.defensive"
             }
@@ -304,42 +382,42 @@ export const dialogs = defineDialogManifest(
           "id": "bram.menu",
           "type": "decision",
           "name": "Interview topics",
-          "prompt": "What will you ask Bram?",
+          "prompt": "Which part of Bram's technical account will you test?",
           "enabled": true,
           "options": [
             {
               "id": "bram.ask.alarm",
-              "text": "Ask why the display alarm was dead",
+              "text": "Ask why he disabled the display alarm",
               "enabled": true,
               "nextNodeId": "bram.alarm"
             },
             {
               "id": "bram.ask.breaker",
-              "text": "Ask what tripped the power",
+              "text": "Ask whether the main breaker caused the blackout",
               "enabled": true,
               "nextNodeId": "bram.breaker"
             },
             {
               "id": "bram.ask.lock",
-              "text": "Have him inspect the display lock",
+              "text": "Ask how the locked display case was opened",
               "enabled": true,
               "nextNodeId": "bram.lock"
             },
             {
               "id": "bram.ask.lamp",
-              "text": "Trace the fault inside the room",
+              "text": "Have him trace the short circuit inside the room",
               "enabled": true,
               "nextNodeId": "bram.lamp"
             },
             {
               "id": "bram.ask.reconsider",
-              "text": "Withdraw the accusation and ask for facts",
+              "text": "Withdraw the accusation and ask for his help",
               "enabled": true,
               "nextNodeId": "bram.reconsider"
             },
             {
               "id": "bram.accuse.wrong",
-              "text": "Accuse Bram of taking the ledger",
+              "text": "Accuse Bram based on access and dismissal",
               "enabled": true,
               "nextNodeId": "bram.wrong"
             },
@@ -369,18 +447,18 @@ export const dialogs = defineDialogManifest(
           "id": "bram.alarm-choice",
           "type": "decision",
           "name": "Respond to Bram",
-          "prompt": "How do you answer Bram's admission?",
+          "prompt": "Bram says Edwin authorized the alarm shutdown. What next?",
           "enabled": true,
           "options": [
             {
               "id": "bram.alarm.proof",
-              "text": "Ask to see Mercer's work order",
+              "text": "Ask to see Edwin's signed work order",
               "enabled": true,
               "nextNodeId": "bram.work-order"
             },
             {
               "id": "bram.alarm.press",
-              "text": "Call the order a convenient invention",
+              "text": "Call the work order a lie",
               "enabled": true,
               "nextNodeId": "bram.hostile"
             }
@@ -525,72 +603,72 @@ export const dialogs = defineDialogManifest(
           "id": "lucien.menu",
           "type": "decision",
           "name": "Interview topics",
-          "prompt": "What will you ask Dr. Vale?",
+          "prompt": "Which part of Vale's account will you test?",
           "enabled": true,
           "options": [
             {
               "id": "lucien.ask.timeline",
-              "text": "Have him recount the blackout",
+              "text": "Ask for the exact sequence during the blackout",
               "enabled": true,
               "nextNodeId": "lucien.timeline"
             },
             {
               "id": "lucien.ask.watermark",
-              "text": "Ask why Mercer mentioned a watermark",
+              "text": "Ask what the 1846 watermark would prove",
               "enabled": true,
               "nextNodeId": "lucien.watermark"
             },
             {
               "id": "lucien.ask.blame-ada",
-              "text": "Let him make the case against Ada",
+              "text": "Hear his case against Ada",
               "enabled": true,
               "nextNodeId": "lucien.blame-ada"
             },
             {
               "id": "lucien.ask.blame-bram",
-              "text": "Let him make the case against Bram",
+              "text": "Hear his case against Bram",
               "enabled": true,
               "nextNodeId": "lucien.blame-bram"
             },
             {
               "id": "lucien.confront.clock",
-              "text": "Expose the impossible clock chime",
+              "text": "Tell him Ada stopped the clock before nine",
               "enabled": true,
               "nextNodeId": "lucien.clock"
             },
             {
               "id": "lucien.confront.lamp",
-              "text": "Confront him with the sabotaged lamp",
+              "text": "Show him the copper marker from his lamp",
               "enabled": true,
               "nextNodeId": "lucien.lamp"
             },
             {
               "id": "lucien.confront.wax",
-              "text": "Connect his wax to the duplicate key",
+              "text": "Connect Ada's wax to the duplicate key",
               "enabled": true,
               "nextNodeId": "lucien.wax"
             },
             {
               "id": "lucien.confront.motive",
-              "text": "Explain what the watermark proves",
+              "text": "Explain why an 1846 mark ruins his 1812 claim",
               "enabled": true,
               "nextNodeId": "lucien.motive"
             },
             {
               "id": "lucien.ask.folio",
-              "text": "Ask why his folio snapped shut",
+              "text": "Ask why his folio clasp shut in the dark",
               "enabled": true,
               "nextNodeId": "lucien.folio"
             },
             {
               "id": "lucien.accuse.early",
-              "text": "Accuse Vale without a complete case",
+              "text": "Accuse Vale before proving the full case",
               "enabled": true,
               "nextNodeId": "lucien.early"
             },
             {
               "id": "lucien.accuse.final",
-              "text": "Present the complete case against Vale",
+              "text": "Accuse Vale with timeline, method, and motive",
               "enabled": true,
               "nextNodeId": "lucien.refuse"
             },
@@ -760,18 +838,18 @@ export const dialogs = defineDialogManifest(
           "id": "lucien.final-choice",
           "type": "decision",
           "name": "The last move",
-          "prompt": "Vale refuses to open the folio.",
+          "prompt": "Vale refuses. The complete case gives you grounds to search his folio.",
           "enabled": true,
           "options": [
             {
               "id": "lucien.final.open",
-              "text": "Ask Bram to open it",
+              "text": "Present the evidence and inspect the folio",
               "enabled": true,
               "nextNodeId": "lucien.reveal"
             },
             {
               "id": "lucien.final.wait",
-              "text": "Not yet — return to the interviews",
+              "text": "Step back and continue questioning",
               "enabled": true
             }
           ]
@@ -830,6 +908,9 @@ export const dialogs = defineDialogManifest(
     }
   },
   "dialogPaths": {
+    "dialog.intro": [
+      "Case"
+    ],
     "dialog.ada": [
       "Suspects"
     ],

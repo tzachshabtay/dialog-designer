@@ -68,6 +68,79 @@ export const assets = defineAiAssets(
     "audioPlayback": {},
     "voiceSettings": {}
   },
+  "character.ada.idle": {
+    "id": "character.ada.idle",
+    "kind": "spritesheet",
+    "prompt": "Ada Mercer idle loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+    "dimensions": {
+      "width": 640,
+      "height": 840
+    },
+    "frameGrid": {
+      "frameCount": 4,
+      "frameWidth": 320,
+      "frameHeight": 420,
+      "columns": 2,
+      "rows": 2
+    },
+    "animations": [
+      {
+        "key": "character.ada.idle",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "frameRate": 3,
+        "repeat": -1
+      }
+    ],
+    "settings": {
+      "model": "gpt-image-2",
+      "background": "transparent",
+      "quality": "low",
+      "format": "png",
+      "frameAlignment": "center",
+      "referenceAssetIds": [
+        "character.ada"
+      ]
+    },
+    "activeVersion": "first-draft-1788492896050-1",
+    "versions": {
+      "first-draft-1788492896050-1": {
+        "name": "first-draft-1788492896050-1",
+        "file": "/assets/character.ada.idle.first-draft-1788492896050-1.png",
+        "prompt": "Ada Mercer idle loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+        "createdAt": "2026-09-04T03:34:56.056Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.ada"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "notes": "Auto-generated first draft for a missing asset."
+      }
+    },
+    "tags": [
+      "character",
+      "suspect",
+      "ada",
+      "animation",
+      "idle"
+    ],
+    "audioSettings": {},
+    "audioPlayback": {},
+    "voiceSettings": {}
+  },
   "character.ada": {
     "id": "character.ada",
     "kind": "image",
@@ -80,6 +153,16 @@ export const assets = defineAiAssets(
       "model": "gpt-image-2",
       "background": "transparent",
       "format": "png"
+    },
+    "linkedAnimationAssets": {
+      "idle": {
+        "label": "Idle",
+        "assetId": "character.ada.idle"
+      },
+      "speaking": {
+        "label": "Speaking",
+        "assetId": "character.ada.speaking"
+      }
     },
     "activeVersion": "promoted-1788492141177",
     "versions": {
@@ -137,6 +220,152 @@ export const assets = defineAiAssets(
     "audioPlayback": {},
     "voiceSettings": {}
   },
+  "character.ada.speaking": {
+    "id": "character.ada.speaking",
+    "kind": "spritesheet",
+    "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "dimensions": {
+      "width": 640,
+      "height": 840
+    },
+    "frameGrid": {
+      "frameCount": 4,
+      "frameWidth": 320,
+      "frameHeight": 420,
+      "columns": 2,
+      "rows": 2
+    },
+    "animations": [
+      {
+        "key": "character.ada.speaking",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "frameRate": 6,
+        "repeat": -1
+      }
+    ],
+    "settings": {
+      "model": "gpt-image-2",
+      "background": "transparent",
+      "quality": "low",
+      "format": "png",
+      "frameAlignment": "center",
+      "referenceAssetIds": [
+        "character.ada"
+      ]
+    },
+    "activeVersion": "first-draft-1788492914672-2",
+    "versions": {
+      "first-draft-1788492914672-2": {
+        "name": "first-draft-1788492914672-2",
+        "file": "/assets/character.ada.speaking.first-draft-1788492914672-2.png",
+        "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-04T03:35:14.692Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.ada"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "notes": "Auto-generated first draft for a missing asset."
+      }
+    },
+    "tags": [
+      "character",
+      "suspect",
+      "ada",
+      "animation",
+      "speaking"
+    ],
+    "audioSettings": {},
+    "audioPlayback": {},
+    "voiceSettings": {}
+  },
+  "character.bram.idle": {
+    "id": "character.bram.idle",
+    "kind": "spritesheet",
+    "prompt": "Bram Holt idle loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a small weight shift through the shoulders, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+    "dimensions": {
+      "width": 640,
+      "height": 840
+    },
+    "frameGrid": {
+      "frameCount": 4,
+      "frameWidth": 320,
+      "frameHeight": 420,
+      "columns": 2,
+      "rows": 2
+    },
+    "animations": [
+      {
+        "key": "character.bram.idle",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "frameRate": 3,
+        "repeat": -1
+      }
+    ],
+    "settings": {
+      "model": "gpt-image-2",
+      "background": "transparent",
+      "quality": "low",
+      "format": "png",
+      "frameAlignment": "center",
+      "referenceAssetIds": [
+        "character.bram"
+      ]
+    },
+    "activeVersion": "first-draft-1788492931191-3",
+    "versions": {
+      "first-draft-1788492931191-3": {
+        "name": "first-draft-1788492931191-3",
+        "file": "/assets/character.bram.idle.first-draft-1788492931191-3.png",
+        "prompt": "Bram Holt idle loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a small weight shift through the shoulders, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+        "createdAt": "2026-09-04T03:35:31.209Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.bram"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "notes": "Auto-generated first draft for a missing asset."
+      }
+    },
+    "tags": [
+      "character",
+      "suspect",
+      "bram",
+      "animation",
+      "idle"
+    ],
+    "audioSettings": {},
+    "audioPlayback": {},
+    "voiceSettings": {}
+  },
   "character.bram": {
     "id": "character.bram",
     "kind": "image",
@@ -149,6 +378,16 @@ export const assets = defineAiAssets(
       "model": "gpt-image-2",
       "background": "transparent",
       "format": "png"
+    },
+    "linkedAnimationAssets": {
+      "idle": {
+        "label": "Idle",
+        "assetId": "character.bram.idle"
+      },
+      "speaking": {
+        "label": "Speaking",
+        "assetId": "character.bram.speaking"
+      }
     },
     "activeVersion": "promoted-1788492180743",
     "versions": {
@@ -206,6 +445,152 @@ export const assets = defineAiAssets(
     "audioPlayback": {},
     "voiceSettings": {}
   },
+  "character.bram.speaking": {
+    "id": "character.bram.speaking",
+    "kind": "spritesheet",
+    "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "dimensions": {
+      "width": 640,
+      "height": 840
+    },
+    "frameGrid": {
+      "frameCount": 4,
+      "frameWidth": 320,
+      "frameHeight": 420,
+      "columns": 2,
+      "rows": 2
+    },
+    "animations": [
+      {
+        "key": "character.bram.speaking",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "frameRate": 6,
+        "repeat": -1
+      }
+    ],
+    "settings": {
+      "model": "gpt-image-2",
+      "background": "transparent",
+      "quality": "low",
+      "format": "png",
+      "frameAlignment": "center",
+      "referenceAssetIds": [
+        "character.bram"
+      ]
+    },
+    "activeVersion": "first-draft-1788492947395-4",
+    "versions": {
+      "first-draft-1788492947395-4": {
+        "name": "first-draft-1788492947395-4",
+        "file": "/assets/character.bram.speaking.first-draft-1788492947395-4.png",
+        "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-04T03:35:47.414Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.bram"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "notes": "Auto-generated first draft for a missing asset."
+      }
+    },
+    "tags": [
+      "character",
+      "suspect",
+      "bram",
+      "animation",
+      "speaking"
+    ],
+    "audioSettings": {},
+    "audioPlayback": {},
+    "voiceSettings": {}
+  },
+  "character.lucien.idle": {
+    "id": "character.lucien.idle",
+    "kind": "spritesheet",
+    "prompt": "Dr. Lucien Vale idle loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a minute posture adjustment, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, keep both hands and the folio controlled, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+    "dimensions": {
+      "width": 640,
+      "height": 840
+    },
+    "frameGrid": {
+      "frameCount": 4,
+      "frameWidth": 320,
+      "frameHeight": 420,
+      "columns": 2,
+      "rows": 2
+    },
+    "animations": [
+      {
+        "key": "character.lucien.idle",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "frameRate": 3,
+        "repeat": -1
+      }
+    ],
+    "settings": {
+      "model": "gpt-image-2",
+      "background": "transparent",
+      "quality": "low",
+      "format": "png",
+      "frameAlignment": "center",
+      "referenceAssetIds": [
+        "character.lucien"
+      ]
+    },
+    "activeVersion": "first-draft-1788492964595-5",
+    "versions": {
+      "first-draft-1788492964595-5": {
+        "name": "first-draft-1788492964595-5",
+        "file": "/assets/character.lucien.idle.first-draft-1788492964595-5.png",
+        "prompt": "Dr. Lucien Vale idle loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a minute posture adjustment, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, keep both hands and the folio controlled, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+        "createdAt": "2026-09-04T03:36:04.614Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.lucien"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "notes": "Auto-generated first draft for a missing asset."
+      }
+    },
+    "tags": [
+      "character",
+      "suspect",
+      "lucien",
+      "animation",
+      "idle"
+    ],
+    "audioSettings": {},
+    "audioPlayback": {},
+    "voiceSettings": {}
+  },
   "character.lucien": {
     "id": "character.lucien",
     "kind": "image",
@@ -218,6 +603,16 @@ export const assets = defineAiAssets(
       "model": "gpt-image-2",
       "background": "transparent",
       "format": "png"
+    },
+    "linkedAnimationAssets": {
+      "idle": {
+        "label": "Idle",
+        "assetId": "character.lucien.idle"
+      },
+      "speaking": {
+        "label": "Speaking",
+        "assetId": "character.lucien.speaking"
+      }
     },
     "activeVersion": "promoted-1788492217832",
     "versions": {
@@ -275,10 +670,83 @@ export const assets = defineAiAssets(
     "audioPlayback": {},
     "voiceSettings": {}
   },
+  "character.lucien.speaking": {
+    "id": "character.lucien.speaking",
+    "kind": "spritesheet",
+    "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "dimensions": {
+      "width": 640,
+      "height": 840
+    },
+    "frameGrid": {
+      "frameCount": 4,
+      "frameWidth": 320,
+      "frameHeight": 420,
+      "columns": 2,
+      "rows": 2
+    },
+    "animations": [
+      {
+        "key": "character.lucien.speaking",
+        "frames": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "frameRate": 6,
+        "repeat": -1
+      }
+    ],
+    "settings": {
+      "model": "gpt-image-2",
+      "background": "transparent",
+      "quality": "low",
+      "format": "png",
+      "frameAlignment": "center",
+      "referenceAssetIds": [
+        "character.lucien"
+      ]
+    },
+    "activeVersion": "first-draft-1788492979963-6",
+    "versions": {
+      "first-draft-1788492979963-6": {
+        "name": "first-draft-1788492979963-6",
+        "file": "/assets/character.lucien.speaking.first-draft-1788492979963-6.png",
+        "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-04T03:36:19.968Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.lucien"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "notes": "Auto-generated first draft for a missing asset."
+      }
+    },
+    "tags": [
+      "character",
+      "suspect",
+      "lucien",
+      "animation",
+      "speaking"
+    ],
+    "audioSettings": {},
+    "audioPlayback": {},
+    "voiceSettings": {}
+  },
   "audio.music.noir": {
     "id": "audio.music.noir",
     "kind": "music",
-    "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+    "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
     "audioSettings": {
       "provider": "elevenlabs",
       "format": "mp3",
@@ -290,7 +758,7 @@ export const assets = defineAiAssets(
       "original": {
         "name": "original",
         "file": "/assets/audio.music.noir.original.wav",
-        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
         "createdAt": "2026-09-01T00:00:00.000Z",
         "model": "procedural-synthesis",
         "settings": {},
@@ -310,7 +778,7 @@ export const assets = defineAiAssets(
       "promoted-1788318888645": {
         "name": "promoted-1788318888645",
         "file": "/assets/audio.music.noir.promoted-1788318888645.mp3",
-        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
         "createdAt": "2026-09-02T03:14:48.943Z",
         "model": "uploaded",
         "settings": {},
@@ -332,7 +800,7 @@ export const assets = defineAiAssets(
       "promoted-1788318918236": {
         "name": "promoted-1788318918236",
         "file": "/assets/audio.music.noir.promoted-1788318918236.mp3",
-        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
         "createdAt": "2026-09-02T03:15:18.349Z",
         "model": "uploaded",
         "settings": {},
@@ -357,7 +825,7 @@ export const assets = defineAiAssets(
       "promoted-1788318943446": {
         "name": "promoted-1788318943446",
         "file": "/assets/audio.music.noir.promoted-1788318943446.mp3",
-        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+        "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
         "createdAt": "2026-09-02T03:15:43.544Z",
         "model": "uploaded",
         "settings": {},
@@ -368,7 +836,7 @@ export const assets = defineAiAssets(
           "loop": true
         },
         "audioPlayback": {
-          "volume": 1.04,
+          "volume": 0.18,
           "loop": true,
           "trimStartSeconds": 0,
           "trimEndSeconds": 298.4135,
@@ -382,7 +850,7 @@ export const assets = defineAiAssets(
     },
     "settings": {},
     "audioPlayback": {
-      "volume": 1.04,
+      "volume": 0.18,
       "loop": true,
       "trimStartSeconds": 0,
       "trimEndSeconds": 298.4135,
@@ -4483,7 +4951,19 @@ assets.assetPaths = {
     "Graphics",
     "Background"
   ],
+  "character.ada.idle": [
+    "Graphics",
+    "Characters"
+  ],
   "character.ada": [
+    "Graphics",
+    "Characters"
+  ],
+  "character.ada.speaking": [
+    "Graphics",
+    "Characters"
+  ],
+  "character.bram.idle": [
     "Graphics",
     "Characters"
   ],
@@ -4491,7 +4971,19 @@ assets.assetPaths = {
     "Graphics",
     "Characters"
   ],
+  "character.bram.speaking": [
+    "Graphics",
+    "Characters"
+  ],
+  "character.lucien.idle": [
+    "Graphics",
+    "Characters"
+  ],
   "character.lucien": [
+    "Graphics",
+    "Characters"
+  ],
+  "character.lucien.speaking": [
     "Graphics",
     "Characters"
   ],

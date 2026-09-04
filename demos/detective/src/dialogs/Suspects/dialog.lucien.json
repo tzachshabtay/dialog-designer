@@ -3,94 +3,339 @@
   "name": "Dr. Lucien Vale",
   "entryNodeId": "lucien.intro",
   "enabled": true,
-  "tags": ["suspect", "lucien"],
-  "metadata": { "suspectId": "lucien", "subtitle": "The historian · authenticator of the ledger" },
+  "tags": [
+    "suspect",
+    "lucien"
+  ],
+  "metadata": {
+    "suspectId": "lucien",
+    "subtitle": "The historian · authenticator of the ledger"
+  },
   "nodes": {
     "lucien.intro": {
-      "id": "lucien.intro", "type": "block", "name": "Opening", "enabled": true, "nextNodeId": "lucien.menu",
+      "id": "lucien.intro",
+      "type": "block",
+      "name": "Opening",
+      "enabled": true,
+      "nextNodeId": "lucien.menu",
       "lines": [
-        { "id": "lucien.intro.detective", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.lucien-opening" },
-        { "id": "lucien.intro.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.intro" }
+        {
+          "id": "lucien.intro.detective",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.lucien-opening"
+        },
+        {
+          "id": "lucien.intro.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.intro"
+        }
       ]
     },
     "lucien.menu": {
-      "id": "lucien.menu", "type": "decision", "name": "Interview topics", "prompt": "What will you ask Dr. Vale?", "enabled": true,
+      "id": "lucien.menu",
+      "type": "decision",
+      "name": "Interview topics",
+      "prompt": "Which part of Vale's account will you test?",
+      "enabled": true,
       "options": [
-        { "id": "lucien.ask.timeline", "text": "Have him recount the blackout", "enabled": true, "nextNodeId": "lucien.timeline" },
-        { "id": "lucien.ask.watermark", "text": "Ask why Mercer mentioned a watermark", "enabled": true, "nextNodeId": "lucien.watermark" },
-        { "id": "lucien.ask.blame-ada", "text": "Let him make the case against Ada", "enabled": true, "nextNodeId": "lucien.blame-ada" },
-        { "id": "lucien.ask.blame-bram", "text": "Let him make the case against Bram", "enabled": true, "nextNodeId": "lucien.blame-bram" },
-        { "id": "lucien.confront.clock", "text": "Expose the impossible clock chime", "enabled": true, "nextNodeId": "lucien.clock" },
-        { "id": "lucien.confront.lamp", "text": "Confront him with the sabotaged lamp", "enabled": true, "nextNodeId": "lucien.lamp" },
-        { "id": "lucien.confront.wax", "text": "Connect his wax to the duplicate key", "enabled": true, "nextNodeId": "lucien.wax" },
-        { "id": "lucien.confront.motive", "text": "Explain what the watermark proves", "enabled": true, "nextNodeId": "lucien.motive" },
-        { "id": "lucien.ask.folio", "text": "Ask why his folio snapped shut", "enabled": true, "nextNodeId": "lucien.folio" },
-        { "id": "lucien.accuse.early", "text": "Accuse Vale without a complete case", "enabled": true, "nextNodeId": "lucien.early" },
-        { "id": "lucien.accuse.final", "text": "Present the complete case against Vale", "enabled": true, "nextNodeId": "lucien.refuse" },
-        { "id": "lucien.leave", "text": "End the interview", "enabled": true }
+        {
+          "id": "lucien.ask.timeline",
+          "text": "Ask for the exact sequence during the blackout",
+          "enabled": true,
+          "nextNodeId": "lucien.timeline"
+        },
+        {
+          "id": "lucien.ask.watermark",
+          "text": "Ask what the 1846 watermark would prove",
+          "enabled": true,
+          "nextNodeId": "lucien.watermark"
+        },
+        {
+          "id": "lucien.ask.blame-ada",
+          "text": "Hear his case against Ada",
+          "enabled": true,
+          "nextNodeId": "lucien.blame-ada"
+        },
+        {
+          "id": "lucien.ask.blame-bram",
+          "text": "Hear his case against Bram",
+          "enabled": true,
+          "nextNodeId": "lucien.blame-bram"
+        },
+        {
+          "id": "lucien.confront.clock",
+          "text": "Tell him Ada stopped the clock before nine",
+          "enabled": true,
+          "nextNodeId": "lucien.clock"
+        },
+        {
+          "id": "lucien.confront.lamp",
+          "text": "Show him the copper marker from his lamp",
+          "enabled": true,
+          "nextNodeId": "lucien.lamp"
+        },
+        {
+          "id": "lucien.confront.wax",
+          "text": "Connect Ada's wax to the duplicate key",
+          "enabled": true,
+          "nextNodeId": "lucien.wax"
+        },
+        {
+          "id": "lucien.confront.motive",
+          "text": "Explain why an 1846 mark ruins his 1812 claim",
+          "enabled": true,
+          "nextNodeId": "lucien.motive"
+        },
+        {
+          "id": "lucien.ask.folio",
+          "text": "Ask why his folio clasp shut in the dark",
+          "enabled": true,
+          "nextNodeId": "lucien.folio"
+        },
+        {
+          "id": "lucien.accuse.early",
+          "text": "Accuse Vale before proving the full case",
+          "enabled": true,
+          "nextNodeId": "lucien.early"
+        },
+        {
+          "id": "lucien.accuse.final",
+          "text": "Accuse Vale with timeline, method, and motive",
+          "enabled": true,
+          "nextNodeId": "lucien.refuse"
+        },
+        {
+          "id": "lucien.leave",
+          "text": "End the interview",
+          "enabled": true
+        }
       ]
     },
     "lucien.timeline": {
-      "id": "lucien.timeline", "type": "block", "name": "A rehearsed timeline", "enabled": true,
-      "lines": [{ "id": "lucien.timeline.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.timeline" }]
+      "id": "lucien.timeline",
+      "type": "block",
+      "name": "A rehearsed timeline",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.timeline.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.timeline"
+        }
+      ]
     },
     "lucien.watermark": {
-      "id": "lucien.watermark", "type": "block", "name": "The watermark", "enabled": true,
-      "lines": [{ "id": "lucien.watermark.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.watermark" }]
+      "id": "lucien.watermark",
+      "type": "block",
+      "name": "The watermark",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.watermark.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.watermark"
+        }
+      ]
     },
     "lucien.blame-ada": {
-      "id": "lucien.blame-ada", "type": "block", "name": "Deflect toward Ada", "enabled": true,
-      "lines": [{ "id": "lucien.blame-ada.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.blame-ada" }]
+      "id": "lucien.blame-ada",
+      "type": "block",
+      "name": "Deflect toward Ada",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.blame-ada.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.blame-ada"
+        }
+      ]
     },
     "lucien.blame-bram": {
-      "id": "lucien.blame-bram", "type": "block", "name": "Deflect toward Bram", "enabled": true,
-      "lines": [{ "id": "lucien.blame-bram.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.blame-bram" }]
+      "id": "lucien.blame-bram",
+      "type": "block",
+      "name": "Deflect toward Bram",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.blame-bram.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.blame-bram"
+        }
+      ]
     },
     "lucien.clock": {
-      "id": "lucien.clock", "type": "block", "name": "The clock contradiction", "enabled": true,
-      "lines": [{ "id": "lucien.clock.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.clock" }]
+      "id": "lucien.clock",
+      "type": "block",
+      "name": "The clock contradiction",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.clock.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.clock"
+        }
+      ]
     },
     "lucien.lamp": {
-      "id": "lucien.lamp", "type": "block", "name": "The copper marker", "enabled": true,
-      "lines": [{ "id": "lucien.lamp.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.lamp" }]
+      "id": "lucien.lamp",
+      "type": "block",
+      "name": "The copper marker",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.lamp.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.lamp"
+        }
+      ]
     },
     "lucien.wax": {
-      "id": "lucien.wax", "type": "block", "name": "The duplicate key", "enabled": true,
-      "lines": [{ "id": "lucien.wax.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.wax" }]
+      "id": "lucien.wax",
+      "type": "block",
+      "name": "The duplicate key",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.wax.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.wax"
+        }
+      ]
     },
     "lucien.motive": {
-      "id": "lucien.motive", "type": "block", "name": "A career built on a lie", "enabled": true,
-      "lines": [{ "id": "lucien.motive.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.motive" }]
+      "id": "lucien.motive",
+      "type": "block",
+      "name": "A career built on a lie",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.motive.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.motive"
+        }
+      ]
     },
     "lucien.folio": {
-      "id": "lucien.folio", "type": "block", "name": "The clasped folio", "enabled": true,
-      "lines": [{ "id": "lucien.folio.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.folio" }]
+      "id": "lucien.folio",
+      "type": "block",
+      "name": "The clasped folio",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.folio.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.folio"
+        }
+      ]
     },
     "lucien.early": {
-      "id": "lucien.early", "type": "block", "name": "An early accusation", "enabled": true,
-      "lines": [{ "id": "lucien.early.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.early" }]
+      "id": "lucien.early",
+      "type": "block",
+      "name": "An early accusation",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "lucien.early.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.early"
+        }
+      ]
     },
     "lucien.refuse": {
-      "id": "lucien.refuse", "type": "block", "name": "Open the folio", "enabled": true, "nextNodeId": "lucien.final-choice",
-      "lines": [{ "id": "lucien.refuse.reply", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.refuse" }]
+      "id": "lucien.refuse",
+      "type": "block",
+      "name": "Open the folio",
+      "enabled": true,
+      "nextNodeId": "lucien.final-choice",
+      "lines": [
+        {
+          "id": "lucien.refuse.reply",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.refuse"
+        }
+      ]
     },
     "lucien.final-choice": {
-      "id": "lucien.final-choice", "type": "decision", "name": "The last move", "prompt": "Vale refuses to open the folio.", "enabled": true,
+      "id": "lucien.final-choice",
+      "type": "decision",
+      "name": "The last move",
+      "prompt": "Vale refuses. The complete case gives you grounds to search his folio.",
+      "enabled": true,
       "options": [
-        { "id": "lucien.final.open", "text": "Ask Bram to open it", "enabled": true, "nextNodeId": "lucien.reveal" },
-        { "id": "lucien.final.wait", "text": "Not yet — return to the interviews", "enabled": true }
+        {
+          "id": "lucien.final.open",
+          "text": "Present the evidence and inspect the folio",
+          "enabled": true,
+          "nextNodeId": "lucien.reveal"
+        },
+        {
+          "id": "lucien.final.wait",
+          "text": "Step back and continue questioning",
+          "enabled": true
+        }
       ]
     },
     "lucien.reveal": {
-      "id": "lucien.reveal", "type": "block", "name": "The Silent Ledger", "enabled": true,
+      "id": "lucien.reveal",
+      "type": "block",
+      "name": "The Silent Ledger",
+      "enabled": true,
       "lines": [
-        { "id": "lucien.reveal.case", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.reveal" },
-        { "id": "lucien.reveal.folio-clue", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.reveal-folio" },
-        { "id": "lucien.reveal.container", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.reveal-container" },
-        { "id": "lucien.reveal.bram", "enabled": true, "voiceAssetId": "voice.bram", "lineAssetId": "line.bram.reveal" },
-        { "id": "lucien.reveal.ada", "enabled": true, "voiceAssetId": "voice.ada", "lineAssetId": "line.ada.reveal" },
-        { "id": "lucien.reveal.confession", "enabled": true, "voiceAssetId": "voice.lucien", "lineAssetId": "line.lucien.confession" },
-        { "id": "lucien.reveal.close", "enabled": true, "voiceAssetId": "voice.detective", "lineAssetId": "line.detective.closing" }
+        {
+          "id": "lucien.reveal.case",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.reveal"
+        },
+        {
+          "id": "lucien.reveal.folio-clue",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.reveal-folio"
+        },
+        {
+          "id": "lucien.reveal.container",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.reveal-container"
+        },
+        {
+          "id": "lucien.reveal.bram",
+          "enabled": true,
+          "voiceAssetId": "voice.bram",
+          "lineAssetId": "line.bram.reveal"
+        },
+        {
+          "id": "lucien.reveal.ada",
+          "enabled": true,
+          "voiceAssetId": "voice.ada",
+          "lineAssetId": "line.ada.reveal"
+        },
+        {
+          "id": "lucien.reveal.confession",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.confession"
+        },
+        {
+          "id": "lucien.reveal.close",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.closing"
+        }
       ]
     }
   }

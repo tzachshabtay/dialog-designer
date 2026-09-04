@@ -1,0 +1,73 @@
+{
+  "id": "character.bram.speaking",
+  "kind": "spritesheet",
+  "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+  "dimensions": {
+    "width": 640,
+    "height": 840
+  },
+  "frameGrid": {
+    "frameCount": 4,
+    "frameWidth": 320,
+    "frameHeight": 420,
+    "columns": 2,
+    "rows": 2
+  },
+  "animations": [
+    {
+      "key": "character.bram.speaking",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameRate": 6,
+      "repeat": -1
+    }
+  ],
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "quality": "low",
+    "format": "png",
+    "frameAlignment": "center",
+    "referenceAssetIds": [
+      "character.bram"
+    ]
+  },
+  "activeVersion": "first-draft-1788492947395-4",
+  "versions": {
+    "first-draft-1788492947395-4": {
+      "name": "first-draft-1788492947395-4",
+      "file": "/assets/character.bram.speaking.first-draft-1788492947395-4.png",
+      "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+      "createdAt": "2026-09-04T03:35:47.414Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "quality": "low",
+        "format": "png",
+        "frameAlignment": "center",
+        "referenceAssetIds": [
+          "character.bram"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "notes": "Auto-generated first draft for a missing asset."
+    }
+  },
+  "tags": [
+    "character",
+    "suspect",
+    "bram",
+    "animation",
+    "speaking"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
+}

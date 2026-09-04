@@ -11,6 +11,16 @@
     "background": "transparent",
     "format": "png"
   },
+  "linkedAnimationAssets": {
+    "idle": {
+      "label": "Idle",
+      "assetId": "character.lucien.idle"
+    },
+    "speaking": {
+      "label": "Speaking",
+      "assetId": "character.lucien.speaking"
+    }
+  },
   "activeVersion": "promoted-1788492217832",
   "versions": {
     "default": {

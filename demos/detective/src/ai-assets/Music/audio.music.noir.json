@@ -1,7 +1,7 @@
 {
   "id": "audio.music.noir",
   "kind": "music",
-  "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+  "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
   "audioSettings": {
     "provider": "elevenlabs",
     "format": "mp3",
@@ -13,7 +13,7 @@
     "original": {
       "name": "original",
       "file": "/assets/audio.music.noir.original.wav",
-      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
       "createdAt": "2026-09-01T00:00:00.000Z",
       "model": "procedural-synthesis",
       "settings": {},
@@ -33,7 +33,7 @@
     "promoted-1788318888645": {
       "name": "promoted-1788318888645",
       "file": "/assets/audio.music.noir.promoted-1788318888645.mp3",
-      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
       "createdAt": "2026-09-02T03:14:48.943Z",
       "model": "uploaded",
       "settings": {},
@@ -55,7 +55,7 @@
     "promoted-1788318918236": {
       "name": "promoted-1788318918236",
       "file": "/assets/audio.music.noir.promoted-1788318918236.mp3",
-      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
       "createdAt": "2026-09-02T03:15:18.349Z",
       "model": "uploaded",
       "settings": {},
@@ -80,7 +80,7 @@
     "promoted-1788318943446": {
       "name": "promoted-1788318943446",
       "file": "/assets/audio.music.noir.promoted-1788318943446.mp3",
-      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, restrained, and loopable.",
+      "prompt": "Original deterministic procedural film-noir score: brushed drums, upright bass, minor-key piano, and muted brass; instrumental, with no vocals, restrained, and loopable.",
       "createdAt": "2026-09-02T03:15:43.544Z",
       "model": "uploaded",
       "settings": {},
@@ -91,7 +91,7 @@
         "loop": true
       },
       "audioPlayback": {
-        "volume": 1.04,
+        "volume": 0.18,
         "loop": true,
         "trimStartSeconds": 0,
         "trimEndSeconds": 298.4135,
@@ -105,7 +105,7 @@
   },
   "settings": {},
   "audioPlayback": {
-    "volume": 1.04,
+    "volume": 0.18,
     "loop": true,
     "trimStartSeconds": 0,
     "trimEndSeconds": 298.4135,

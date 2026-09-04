@@ -11,6 +11,16 @@
     "background": "transparent",
     "format": "png"
   },
+  "linkedAnimationAssets": {
+    "idle": {
+      "label": "Idle",
+      "assetId": "character.ada.idle"
+    },
+    "speaking": {
+      "label": "Speaking",
+      "assetId": "character.ada.speaking"
+    }
+  },
   "activeVersion": "promoted-1788492141177",
   "versions": {
     "default": {

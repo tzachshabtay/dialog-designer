@@ -17,8 +17,9 @@ The repository contains four publishable packages:
   designer installation helpers. It does not render or advance conversations.
 
 The `demos/detective` workspace is a complete Phaser mystery, **The Silent
-Ledger**, with three suspects, evidence-dependent topics, reversible hostility,
-disabled branches, and a final accusation.
+Ledger**, with a mandatory ensemble case briefing, three suspects,
+evidence-dependent topics, reversible hostility, disabled branches, and a
+final accusation.
 
 ## Dialog model
 

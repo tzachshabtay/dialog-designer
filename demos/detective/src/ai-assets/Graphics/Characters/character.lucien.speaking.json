@@ -1,0 +1,73 @@
+{
+  "id": "character.lucien.speaking",
+  "kind": "spritesheet",
+  "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+  "dimensions": {
+    "width": 640,
+    "height": 840
+  },
+  "frameGrid": {
+    "frameCount": 4,
+    "frameWidth": 320,
+    "frameHeight": 420,
+    "columns": 2,
+    "rows": 2
+  },
+  "animations": [
+    {
+      "key": "character.lucien.speaking",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameRate": 6,
+      "repeat": -1
+    }
+  ],
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "quality": "low",
+    "format": "png",
+    "frameAlignment": "center",
+    "referenceAssetIds": [
+      "character.lucien"
+    ]
+  },
+  "activeVersion": "first-draft-1788492979963-6",
+  "versions": {
+    "first-draft-1788492979963-6": {
+      "name": "first-draft-1788492979963-6",
+      "file": "/assets/character.lucien.speaking.first-draft-1788492979963-6.png",
+      "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+      "createdAt": "2026-09-04T03:36:19.968Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "quality": "low",
+        "format": "png",
+        "frameAlignment": "center",
+        "referenceAssetIds": [
+          "character.lucien"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "notes": "Auto-generated first draft for a missing asset."
+    }
+  },
+  "tags": [
+    "character",
+    "suspect",
+    "lucien",
+    "animation",
+    "speaking"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
+}

@@ -3,7 +3,9 @@ import {
   AiAssetDebugClient,
   AiAssetRuntime,
   installAiAssetDesigner,
+  loadAiAudioAsset,
   loadAiAssetSet,
+  type AiAssetAnimationPlayback,
   type AiAssetDesigner
 } from "@ai-game-assets/phaser";
 import type {
@@ -30,6 +32,9 @@ const graphicAssetIds = [
   "character.lucien"
 ];
 
+const noirMusicAssetId = "audio.music.noir";
+const musicDuckRatio = 0.42;
+
 const palette = {
   ink: 0x080c13,
   panel: 0x111925,
@@ -51,13 +56,17 @@ type DetectiveSceneOptions = {
 };
 
 type SuspectId = "ada" | "bram" | "lucien";
+type SuspectAnimationState = "idle" | "speaking";
 
 type SuspectView = {
   id: SuspectId;
   dialogId: string;
-  image: Phaser.GameObjects.Image;
+  assetId: string;
+  image: Phaser.GameObjects.Sprite;
   baseScaleX: number;
   baseScaleY: number;
+  animationState: SuspectAnimationState;
+  animationPlayback?: AiAssetAnimationPlayback;
   glow: Phaser.GameObjects.Ellipse;
   label: Phaser.GameObjects.Text;
 };
@@ -121,6 +130,12 @@ const speakerColors: Record<string, string> = {
   "voice.lucien": "#9ebce8"
 };
 
+const suspectByVoice: Record<string, SuspectId> = {
+  "voice.ada": "ada",
+  "voice.bram": "bram",
+  "voice.lucien": "lucien"
+};
+
 export class DetectiveScene extends Phaser.Scene {
   private aiAssets: AiAssetManifest;
   private dialogs: DialogDesignerManifest;
@@ -151,6 +166,17 @@ export class DetectiveScene extends Phaser.Scene {
   private instructionText!: Phaser.GameObjects.Text;
   private choiceButtons: Phaser.GameObjects.Container[] = [];
   private activeVoice?: Phaser.Sound.BaseSound;
+  private readonly voiceSounds = new Set<Phaser.Sound.BaseSound>();
+  private backgroundMusic?: Phaser.Sound.BaseSound;
+  private backgroundMusicVolume = 0.18;
+  private caseStarted = false;
+  private caseStartPending = false;
+  private shuttingDown = false;
+  private caseStartUnlockHandler?: () => void;
+  private landingScreen?: Phaser.GameObjects.Container;
+  private landingButton?: Phaser.GameObjects.Rectangle;
+  private landingButtonText?: Phaser.GameObjects.Text;
+  private landingStatus?: Phaser.GameObjects.Text;
   private toast!: Phaser.GameObjects.Text;
   private toastTimer?: Phaser.Time.TimerEvent;
   private ledgerCard?: Phaser.GameObjects.Container;
@@ -177,6 +203,12 @@ export class DetectiveScene extends Phaser.Scene {
       this.aiAssets,
       this.assetBaseUrl ? { baseUrl: this.assetBaseUrl } : {}
     );
+    loadAiAudioAsset(
+      this,
+      this.aiAssets,
+      noirMusicAssetId,
+      this.assetBaseUrl ? { baseUrl: this.assetBaseUrl } : {}
+    );
   }
 
   create(): void {
@@ -197,11 +229,19 @@ export class DetectiveScene extends Phaser.Scene {
     this.installDesigners();
     this.syncEnablement();
     this.updateEvidence();
+    this.showCaseLanding();
 
     this.input.keyboard?.on("keydown-SPACE", this.advanceCurrentLine, this);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
+      this.shuttingDown = true;
       this.input.keyboard?.off("keydown-SPACE", this.advanceCurrentLine, this);
-      this.activeVoice?.stop();
+      if (this.caseStartUnlockHandler) {
+        this.sound.off(Phaser.Sound.Events.UNLOCKED, this.caseStartUnlockHandler);
+        this.caseStartUnlockHandler = undefined;
+      }
+      this.stopVoiceLines();
+      this.destroySuspectAnimations();
+      this.stopBackgroundMusic();
       this.toastTimer?.destroy();
       this.assetDesigner?.destroy();
       this.dialogDesigner?.destroy();
@@ -301,10 +341,18 @@ export class DetectiveScene extends Phaser.Scene {
   }
 
   private createSuspects(): void {
+    const characterFloorY = 540;
     for (const definition of suspectDefinitions) {
-      const glow = this.add.ellipse(definition.x, 500, 178, 38, definition.accent, 0.15)
+      const glow = this.add.ellipse(
+        definition.x,
+        characterFloorY,
+        178,
+        38,
+        definition.accent,
+        0.15
+      )
         .setDepth(3);
-      const image = this.add.image(
+      const image = this.add.sprite(
         definition.x,
         548,
         this.aiRuntime.key(definition.assetId)
@@ -326,16 +374,24 @@ export class DetectiveScene extends Phaser.Scene {
       const view: SuspectView = {
         id: definition.id,
         dialogId: definition.dialogId,
+        assetId: definition.assetId,
         image,
         baseScaleX: image.scaleX,
         baseScaleY: image.scaleY,
+        animationState: "idle",
         glow,
         label
       };
       this.suspects.set(definition.id, view);
+      this.playSuspectAnimation(view, "idle", true);
 
       image.on("pointerover", () => {
-        if (this.dialogIsActive() || this.designerOpen || this.has("case.solved")) return;
+        if (
+          !this.has("case.intro_complete")
+          || this.dialogIsActive()
+          || this.designerOpen
+          || this.has("case.solved")
+        ) return;
         image.setScale(view.baseScaleX * 1.035, view.baseScaleY * 1.035);
         glow.setAlpha(0.48).setScale(1.08);
         label.setColor("#ffe1a1");
@@ -346,6 +402,67 @@ export class DetectiveScene extends Phaser.Scene {
         label.setColor("#f6ead7");
       });
       image.on("pointerdown", () => this.startInterview(definition.id));
+    }
+  }
+
+  private playSuspectAnimation(
+    suspect: SuspectView,
+    state: SuspectAnimationState,
+    forceRestart = false
+  ): void {
+    if (!forceRestart && suspect.animationState === state && suspect.animationPlayback) return;
+
+    suspect.animationPlayback?.destroy();
+    suspect.image.stop();
+    suspect.image.setDisplaySize(162, 288).setOrigin(0.5, 1).setRotation(0);
+    suspect.animationState = state;
+    suspect.animationPlayback = this.aiRuntime.playAnimation(
+      suspect.image,
+      suspect.assetId,
+      state,
+      {
+        forceRestart,
+        frameTransform: {
+          eventName: Phaser.Animations.Events.ANIMATION_UPDATE,
+          originX: 0.5,
+          originY: 1
+        },
+        frameTransformSize: { width: 162, height: 288 }
+      }
+    );
+  }
+
+  private setSpeakingSuspect(suspectId: SuspectId | undefined): void {
+    for (const suspect of this.suspects.values()) {
+      this.playSuspectAnimation(
+        suspect,
+        suspect.id === suspectId ? "speaking" : "idle"
+      );
+    }
+  }
+
+  private refreshSuspectAnimationAsset(assetId: string): void {
+    for (const suspect of this.suspects.values()) {
+      const baseAsset = this.aiAssets.assets[suspect.assetId];
+      const linkedAssetIds = Object.values(baseAsset?.linkedAnimationAssets ?? {})
+        .map((animation) => animation.assetId);
+      if (assetId === suspect.assetId || linkedAssetIds.includes(assetId)) {
+        this.playSuspectAnimation(suspect, suspect.animationState, true);
+      }
+    }
+  }
+
+  private refreshAllSuspectAnimations(): void {
+    for (const suspect of this.suspects.values()) {
+      this.playSuspectAnimation(suspect, suspect.animationState, true);
+    }
+  }
+
+  private destroySuspectAnimations(): void {
+    for (const suspect of this.suspects.values()) {
+      suspect.animationPlayback?.destroy();
+      suspect.animationPlayback = undefined;
+      suspect.image.stop();
     }
   }
 
@@ -425,13 +542,20 @@ export class DetectiveScene extends Phaser.Scene {
         client: this.aiAssetDebugClient,
         title: "Assets",
         restartOnPromote: false,
-        onPreview: callbacks.onPreview,
+        onPreview: (assetId, textureKey, asset) => {
+          callbacks.onPreview(assetId, textureKey, asset);
+          this.refreshSuspectAnimationAsset(assetId);
+        },
         onTilesetAnimationPreview: callbacks.onTilesetAnimationPreview,
-        onAssetReady: callbacks.onAssetReady,
+        onAssetReady: (assetId, textureKey, asset) => {
+          callbacks.onAssetReady(assetId, textureKey, asset);
+          this.refreshSuspectAnimationAsset(assetId);
+        },
         onManifestUpdated: (manifest) => {
           callbacks.onManifestUpdated(manifest);
           this.adoptAiAssetManifest(manifest);
           this.dialogDesigner?.designer.setAiAssets(this.aiAssets);
+          this.refreshAllSuspectAnimations();
         }
       });
     }
@@ -442,14 +566,18 @@ export class DetectiveScene extends Phaser.Scene {
       aiAssets: this.aiAssets,
       client: this.dialogDebugClient,
       title: "Dialogs",
-      defaultDialogId: "dialog.ada",
+      defaultDialogId: "dialog.intro",
       onOpenChange: (isOpen) => {
         this.designerOpen = isOpen;
         if (isOpen) {
           this.instructionText.setText("Dialog Designer active · game input paused");
         } else {
           this.instructionText.setText(
-            this.dialogIsActive()
+            !this.caseStarted
+              ? "Begin the investigation to hear the case briefing"
+              : !this.has("case.intro_complete")
+              ? "The facts of the case · click or press Space to continue"
+              : this.dialogIsActive()
               ? "Follow the contradictions. Every subject changes what the others can say."
               : "Click a suspect to continue questioning"
           );
@@ -477,9 +605,166 @@ export class DetectiveScene extends Phaser.Scene {
     this.runtime.setAiAssets(this.aiAssets);
   }
 
+  private showCaseLanding(): void {
+    const shade = this.add.rectangle(480, 320, 960, 640, 0x05080d, 0.94)
+      .setInteractive();
+    const frame = this.add.rectangle(480, 320, 724, 458, 0x0d151f, 0.98)
+      .setStrokeStyle(2, palette.gold, 0.75);
+    const innerFrame = this.add.rectangle(480, 320, 702, 436, 0x111925, 0.78)
+      .setStrokeStyle(1, 0xffffff, 0.08);
+    const eyebrow = this.add.text(480, 151, "BLACKWOOD HOUSE · A DIALOG DESIGNER MYSTERY", {
+      fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+      fontSize: "12px",
+      fontStyle: "bold",
+      color: "#9dafbd",
+      letterSpacing: 2
+    }).setOrigin(0.5);
+    const title = this.add.text(480, 211, "THE SILENT LEDGER", {
+      fontFamily: "Georgia, 'Times New Roman', serif",
+      fontSize: "48px",
+      fontStyle: "bold",
+      color: "#f0d18d",
+      stroke: "#080c13",
+      strokeThickness: 6,
+      letterSpacing: 3
+    }).setOrigin(0.5);
+    const divider = this.add.rectangle(480, 264, 330, 1, palette.gold, 0.65);
+    const premise = this.add.text(
+      480,
+      316,
+      "A locked library. A stolen ledger. Three suspects whose stories cannot all be true.\nListen carefully, follow the contradictions, and name the thief.",
+      {
+        fontFamily: "Georgia, 'Times New Roman', serif",
+        fontSize: "20px",
+        color: "#e9e0d0",
+        align: "center",
+        lineSpacing: 9,
+        wordWrap: { width: 610, useAdvancedWrap: true }
+      }
+    ).setOrigin(0.5);
+
+    const button = this.add.rectangle(480, 421, 326, 54, 0x24374a, 1)
+      .setStrokeStyle(2, palette.gold, 1)
+      .setInteractive({ useHandCursor: true });
+    const buttonText = this.add.text(480, 421, "BEGIN THE INVESTIGATION", {
+      fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+      fontSize: "14px",
+      fontStyle: "bold",
+      color: "#fff0c8",
+      letterSpacing: 1.5
+    }).setOrigin(0.5);
+    const status = this.add.text(480, 467, "Click the button or press Space · audio begins after your gesture", {
+      fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif",
+      fontSize: "11px",
+      color: "#8294a3"
+    }).setOrigin(0.5);
+
+    button.on("pointerover", () => {
+      if (!this.caseStartPending) button.setFillStyle(0x314b63, 1);
+    });
+    button.on("pointerout", () => {
+      if (!this.caseStartPending) button.setFillStyle(0x24374a, 1);
+    });
+    button.on("pointerdown", () => this.requestCaseStart());
+
+    this.landingButton = button;
+    this.landingButtonText = buttonText;
+    this.landingStatus = status;
+    this.landingScreen = this.add.container(0, 0, [
+      shade,
+      frame,
+      innerFrame,
+      eyebrow,
+      title,
+      divider,
+      premise,
+      button,
+      buttonText,
+      status
+    ]).setDepth(100).setAlpha(0);
+    this.tweens.add({
+      targets: this.landingScreen,
+      alpha: 1,
+      duration: 420,
+      ease: "Sine.Out"
+    });
+    this.instructionText.setText("Begin the investigation to hear the case briefing");
+  }
+
+  private requestCaseStart(): void {
+    if (this.caseStarted || this.caseStartPending || this.designerOpen || this.shuttingDown) return;
+    this.caseStartPending = true;
+    this.landingButton?.disableInteractive().setFillStyle(0x1b2938, 1);
+    this.landingButtonText?.setText("OPENING THE CASE…");
+    this.landingStatus?.setText("Unlocking audio and preparing the briefing");
+
+    const start = () => this.completeCaseStart();
+    const soundManager = this.sound;
+    if (soundManager instanceof Phaser.Sound.WebAudioSoundManager) {
+      void soundManager.context.resume().then(() => {
+        if (soundManager.context.state !== "running") {
+          throw new Error(`Audio context remained ${soundManager.context.state}.`);
+        }
+        start();
+      }).catch((error) => this.handleCaseStartFailure(error));
+      return;
+    }
+
+    if (this.sound.locked) {
+      this.caseStartUnlockHandler = () => {
+        this.caseStartUnlockHandler = undefined;
+        start();
+      };
+      this.sound.once(Phaser.Sound.Events.UNLOCKED, this.caseStartUnlockHandler);
+      return;
+    }
+
+    start();
+  }
+
+  private completeCaseStart(): void {
+    if (this.caseStarted || this.shuttingDown) return;
+    this.caseStartPending = false;
+    this.caseStarted = true;
+    this.startBackgroundMusic();
+    this.startCaseIntro();
+
+    const landing = this.landingScreen;
+    this.landingScreen = undefined;
+    this.landingButton = undefined;
+    this.landingButtonText = undefined;
+    this.landingStatus = undefined;
+    if (!landing) return;
+    this.tweens.add({
+      targets: landing,
+      alpha: 0,
+      duration: 360,
+      ease: "Sine.In",
+      onComplete: () => landing.destroy(true)
+    });
+  }
+
+  private handleCaseStartFailure(error: unknown): void {
+    if (this.shuttingDown) return;
+    this.caseStartPending = false;
+    this.landingButton?.setInteractive({ useHandCursor: true }).setFillStyle(0x24374a, 1);
+    this.landingButtonText?.setText("TRY AGAIN");
+    this.landingStatus?.setText("Audio could not start · click to retry").setColor("#efb2b6");
+    console.warn("Could not start the detective demo audio.", error);
+  }
+
+  private startCaseIntro(): void {
+    this.selectedSuspect = undefined;
+    this.setSuspectFocus(undefined);
+    this.setDialogVisible(true);
+    this.instructionText.setText("The facts of the case · click or press Space to continue");
+    this.runtime.start("dialog.intro");
+  }
+
   private startInterview(suspectId: SuspectId): void {
     if (
-      this.dialogIsActive()
+      !this.has("case.intro_complete")
+      || this.dialogIsActive()
       || this.designerOpen
       || this.has("case.solved")
       || this.time.now < this.suspectInputLockedUntil
@@ -504,17 +789,16 @@ export class DetectiveScene extends Phaser.Scene {
       .setText(speakerNames[turn.line.voiceAssetId] ?? turn.line.voiceAssetId)
       .setColor(speakerColors[turn.line.voiceAssetId] ?? "#e5bb6b");
     this.directionText
-      .setVisible(Boolean(turn.resolved.direction))
-      .setText(turn.resolved.direction ? `PERFORMANCE · ${turn.resolved.direction}` : "");
+      .setVisible(false)
+      .setText("");
     this.advanceHint.setVisible(true);
     this.advanceZone.setVisible(true).setInteractive({ useHandCursor: true });
     this.playVoiceLine(turn);
-    if (turn.nodeId === "lucien.reveal" && turn.lineIndex >= 3) this.showLedgerCard();
+    if (turn.line.id === "lucien.reveal.confession") this.showLedgerCard();
   }
 
   private showDecision(turn: DialogDecisionTurn): void {
-    this.activeVoice?.stop();
-    this.activeVoice = undefined;
+    this.stopVoiceLines();
     this.destroyChoiceButtons();
     this.setDialogVisible(true);
     this.speakerText.setVisible(true).setText("DETECTIVE").setColor("#e5bb6b");
@@ -587,25 +871,108 @@ export class DetectiveScene extends Phaser.Scene {
   }
 
   private playVoiceLine(turn: DialogLineTurn): void {
-    this.activeVoice?.stop();
-    this.activeVoice = undefined;
+    if (this.shuttingDown) return;
+    this.stopVoiceLines();
+    this.setSpeakingSuspect(suspectByVoice[turn.line.voiceAssetId]);
     if (!turn.resolved.audio) return;
     const key = dialogAudioKey(turn.line.lineAssetId);
     if (!this.cache.audio.exists(key)) return;
-    this.activeVoice = this.sound.add(key, {
+    const voice = this.sound.add(key, {
       volume: turn.resolved.audio.playback?.volume ?? 0.9,
       rate: turn.resolved.audio.playback?.playbackRate ?? 1
     });
-    this.activeVoice.play();
+    this.activeVoice = voice;
+    this.voiceSounds.add(voice);
+    voice.once(Phaser.Sound.Events.COMPLETE, () => {
+      if (!this.voiceSounds.delete(voice)) return;
+      if (this.activeVoice === voice) {
+        this.activeVoice = undefined;
+        this.setSpeakingSuspect(undefined);
+      }
+      voice.destroy();
+      if (this.voiceSounds.size === 0) this.setMusicDucked(false);
+    });
+    this.setMusicDucked(true);
+    let started = false;
+    try {
+      started = voice.play();
+    } catch (error) {
+      console.warn(`Could not play dialog audio ${key}.`, error);
+    }
+    if (!started) {
+      this.voiceSounds.delete(voice);
+      if (this.activeVoice === voice) this.activeVoice = undefined;
+      voice.destroy();
+      if (this.voiceSounds.size === 0) this.setMusicDucked(false);
+    }
   }
 
   private advanceCurrentLine(): void {
     if (this.designerOpen) return;
+    if (!this.caseStarted) {
+      this.requestCaseStart();
+      return;
+    }
     const turn = this.runtime.current();
     if (turn?.type !== "line") return;
-    this.activeVoice?.stop();
-    this.activeVoice = undefined;
+    this.stopVoiceLines();
     this.runtime.advance();
+  }
+
+  private stopVoiceLines(): void {
+    const voices = [...this.voiceSounds];
+    this.voiceSounds.clear();
+    this.activeVoice = undefined;
+    for (const voice of voices) {
+      voice.stop();
+      voice.destroy();
+    }
+    if (!this.shuttingDown) this.setSpeakingSuspect(undefined);
+    if (this.voiceSounds.size === 0) this.setMusicDucked(false);
+  }
+
+  private startBackgroundMusic(): void {
+    if (this.shuttingDown || this.backgroundMusic || !this.cache.audio.exists(noirMusicAssetId)) return;
+    const asset = this.aiAssets.assets[noirMusicAssetId];
+    const version = asset?.versions[asset.activeVersion];
+    const playback = { ...asset?.audioPlayback, ...version?.audioPlayback };
+    this.backgroundMusicVolume = Phaser.Math.Clamp(playback.volume ?? 0.18, 0, 1);
+    const music = this.sound.add(noirMusicAssetId);
+    this.backgroundMusic = music;
+    let started = false;
+    try {
+      started = music.play({
+        loop: playback.loop ?? true,
+        rate: playback.playbackRate ?? 1,
+        seek: playback.trimStartSeconds ?? 0,
+        volume: this.backgroundMusicVolume
+      });
+    } catch (error) {
+      console.warn("Could not play the film-noir background score.", error);
+    }
+    if (!started) {
+      music.destroy();
+      this.backgroundMusic = undefined;
+    }
+  }
+
+  private stopBackgroundMusic(): void {
+    const music = this.backgroundMusic;
+    this.backgroundMusic = undefined;
+    if (!music) return;
+    music.stop();
+    music.destroy();
+  }
+
+  private setMusicDucked(ducked: boolean): void {
+    const music = this.backgroundMusic as (Phaser.Sound.BaseSound & {
+      setVolume?: (value: number) => Phaser.Sound.BaseSound;
+      volume?: number;
+    }) | undefined;
+    if (!music) return;
+    const volume = this.backgroundMusicVolume * (ducked ? musicDuckRatio : 1);
+    if (music.setVolume) music.setVolume(volume);
+    else music.volume = volume;
   }
 
   private handleOptionSelected(optionId: string): void {
@@ -689,7 +1056,7 @@ export class DetectiveScene extends Phaser.Scene {
       "ada.saw_work_order": "Red herring weakened · Bram's order was real",
       "bram.alarm_work_order": "Red herring cleared · the alarm repair was authorized",
       "bram.breaker_untouched": "Clue linked · the blackout began inside the room",
-      "bram.wax_in_lock": "Clue linked · fresh blue wax in the lock",
+      "bram.wax_in_lock": "Clue linked · wax copied the lock's ward pattern",
       "bram.lamp_sabotaged": "Clue linked · Vale's lamp caused the blackout",
       "lucien.clock_claim": "New contradiction available · ask Ada about the chime",
       "lucien.watermark_denial": "New motive path available · ask Ada what she heard"
@@ -704,7 +1071,17 @@ export class DetectiveScene extends Phaser.Scene {
   }
 
   private handleDialogEnd(dialogId: string): void {
+    this.stopVoiceLines();
     this.suspectInputLockedUntil = this.time.now + 180;
+    if (dialogId === "dialog.intro") {
+      this.facts.add("case.intro_complete");
+      this.syncEnablement();
+      this.setDialogVisible(false);
+      this.setSuspectFocus(undefined);
+      this.instructionText.setText("Click a suspect to begin questioning");
+      this.showToast("QUESTIONING OPEN · choose a suspect", palette.gold);
+      return;
+    }
     const suspectId = dialogId.replace("dialog.", "") as SuspectId;
     if (this.suspects.has(suspectId)) this.facts.add(`talked.${suspectId}`);
     this.syncEnablement();
@@ -724,8 +1101,15 @@ export class DetectiveScene extends Phaser.Scene {
 
   private syncEnablement(): void {
     this.runtime.clearEnabledOverrides();
+    this.setEnabled(
+      { type: "dialog", dialogId: "dialog.intro" },
+      !this.has("case.intro_complete") && !this.has("case.solved")
+    );
     for (const dialogId of ["dialog.ada", "dialog.bram", "dialog.lucien"]) {
-      this.setEnabled({ type: "dialog", dialogId }, !this.has("case.solved"));
+      this.setEnabled(
+        { type: "dialog", dialogId },
+        this.has("case.intro_complete") && !this.has("case.solved")
+      );
     }
     this.setEnabled(
       { type: "node", dialogId: "dialog.ada", nodeId: "ada.intro" },
@@ -746,14 +1130,14 @@ export class DetectiveScene extends Phaser.Scene {
     this.option("dialog.ada", "ada.menu", "ada.ask.threat", this.has("ada.trusted") && !this.used("ada.ask.threat"));
     this.option("dialog.ada", "ada.menu", "ada.ask.dark", this.has("ada.trusted") && !this.used("ada.ask.dark"));
     this.option("dialog.ada", "ada.menu", "ada.ask.bram", this.has("ada.trusted") && !this.used("ada.ask.bram"));
-    this.option("dialog.ada", "ada.menu", "ada.ask.apologize", this.has("ada.defensive") && (this.has("talked.lucien") || this.proofState().timeline) && !this.used("ada.ask.apologize"));
+    this.option("dialog.ada", "ada.menu", "ada.ask.apologize", this.has("ada.defensive") && !this.used("ada.ask.apologize"));
     this.option("dialog.ada", "ada.menu", "ada.accuse.wrong", !this.used("ada.accuse.wrong"));
 
     this.option("dialog.bram", "bram.menu", "bram.ask.alarm", !this.used("bram.ask.alarm"));
     this.option("dialog.bram", "bram.menu", "bram.ask.breaker", !this.used("bram.ask.breaker"));
     this.option("dialog.bram", "bram.menu", "bram.ask.lock", this.has("bram.trusted") && !this.used("bram.ask.lock"));
     this.option("dialog.bram", "bram.menu", "bram.ask.lamp", this.has("bram.trusted") && this.has("bram.breaker_untouched") && !this.used("bram.ask.lamp"));
-    this.option("dialog.bram", "bram.menu", "bram.ask.reconsider", this.has("bram.hostile") && (this.proofState().timeline || this.has("ada.saw_work_order")) && !this.used("bram.ask.reconsider"));
+    this.option("dialog.bram", "bram.menu", "bram.ask.reconsider", this.has("bram.hostile") && !this.used("bram.ask.reconsider"));
     this.option("dialog.bram", "bram.menu", "bram.accuse.wrong", !this.used("bram.accuse.wrong"));
 
     const proof = this.proofState();
@@ -831,6 +1215,7 @@ export class DetectiveScene extends Phaser.Scene {
     this.modalShade.setVisible(visible);
     this.panel.setVisible(visible);
     if (!visible) {
+      this.stopVoiceLines();
       this.destroyChoiceButtons();
       this.speakerText.setVisible(false);
       this.lineText.setVisible(false);
@@ -876,11 +1261,19 @@ export class DetectiveScene extends Phaser.Scene {
 
   private showToast(message: string, color = palette.teal, duration = 1900): void {
     this.toastTimer?.destroy();
+    this.tweens.killTweensOf(this.toast);
     this.toast
       .setText(message)
       .setBackgroundColor(`#${color.toString(16).padStart(6, "0")}`)
       .setAlpha(1);
-    this.toastTimer = this.time.delayedCall(duration, () => this.toast.setAlpha(0));
+    this.toastTimer = this.time.delayedCall(duration + 1000, () => {
+      this.tweens.add({
+        targets: this.toast,
+        alpha: 0,
+        duration: 450,
+        ease: "Sine.Out"
+      });
+    });
   }
 
   private showLedgerCard(): void {

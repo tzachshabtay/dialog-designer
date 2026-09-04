@@ -1,0 +1,73 @@
+{
+  "id": "character.ada.speaking",
+  "kind": "spritesheet",
+  "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+  "dimensions": {
+    "width": 640,
+    "height": 840
+  },
+  "frameGrid": {
+    "frameCount": 4,
+    "frameWidth": 320,
+    "frameHeight": 420,
+    "columns": 2,
+    "rows": 2
+  },
+  "animations": [
+    {
+      "key": "character.ada.speaking",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameRate": 6,
+      "repeat": -1
+    }
+  ],
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "quality": "low",
+    "format": "png",
+    "frameAlignment": "center",
+    "referenceAssetIds": [
+      "character.ada"
+    ]
+  },
+  "activeVersion": "first-draft-1788492914672-2",
+  "versions": {
+    "first-draft-1788492914672-2": {
+      "name": "first-draft-1788492914672-2",
+      "file": "/assets/character.ada.speaking.first-draft-1788492914672-2.png",
+      "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+      "createdAt": "2026-09-04T03:35:14.692Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "quality": "low",
+        "format": "png",
+        "frameAlignment": "center",
+        "referenceAssetIds": [
+          "character.ada"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "notes": "Auto-generated first draft for a missing asset."
+    }
+  },
+  "tags": [
+    "character",
+    "suspect",
+    "ada",
+    "animation",
+    "speaking"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
+}

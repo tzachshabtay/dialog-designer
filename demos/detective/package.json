@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "generate": "node scripts/write-assets-module.mjs && node scripts/write-dialogs-module.mjs",
+    "generate": "node scripts/write-noir-score.mjs && node scripts/write-assets-module.mjs && node scripts/write-dialogs-module.mjs",
     "test": "npm run generate && node scripts/verify-demo.mjs",
     "dev": "npm run generate && vite --host 127.0.0.1",
     "dev:server": "npm run generate && node dev-server.mjs",
@@ -13,9 +13,9 @@
     "typecheck": "npm run generate && tsc --noEmit"
   },
   "dependencies": {
-    "@ai-game-assets/core": "^0.7.0",
-    "@ai-game-assets/dev": "^0.7.0",
-    "@ai-game-assets/phaser": "^0.7.0",
+    "@ai-game-assets/core": "^0.8.2",
+    "@ai-game-assets/dev": "^0.8.2",
+    "@ai-game-assets/phaser": "^0.8.2",
     "@dialog-designer/core": "0.1.0",
     "@dialog-designer/dev": "0.1.0",
     "@dialog-designer/phaser": "0.1.0",

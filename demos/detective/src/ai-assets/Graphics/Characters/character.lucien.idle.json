@@ -1,0 +1,73 @@
+{
+  "id": "character.lucien.idle",
+  "kind": "spritesheet",
+  "prompt": "Dr. Lucien Vale idle loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a minute posture adjustment, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, keep both hands and the folio controlled, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+  "dimensions": {
+    "width": 640,
+    "height": 840
+  },
+  "frameGrid": {
+    "frameCount": 4,
+    "frameWidth": 320,
+    "frameHeight": 420,
+    "columns": 2,
+    "rows": 2
+  },
+  "animations": [
+    {
+      "key": "character.lucien.idle",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameRate": 3,
+      "repeat": -1
+    }
+  ],
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "quality": "low",
+    "format": "png",
+    "frameAlignment": "center",
+    "referenceAssetIds": [
+      "character.lucien"
+    ]
+  },
+  "activeVersion": "first-draft-1788492964595-5",
+  "versions": {
+    "first-draft-1788492964595-5": {
+      "name": "first-draft-1788492964595-5",
+      "file": "/assets/character.lucien.idle.first-draft-1788492964595-5.png",
+      "prompt": "Dr. Lucien Vale idle loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a minute posture adjustment, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, keep both hands and the folio controlled, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+      "createdAt": "2026-09-04T03:36:04.614Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "quality": "low",
+        "format": "png",
+        "frameAlignment": "center",
+        "referenceAssetIds": [
+          "character.lucien"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "notes": "Auto-generated first draft for a missing asset."
+    }
+  },
+  "tags": [
+    "character",
+    "suspect",
+    "lucien",
+    "animation",
+    "idle"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
+}

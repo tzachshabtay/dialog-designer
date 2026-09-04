@@ -1,0 +1,73 @@
+{
+  "id": "character.ada.idle",
+  "kind": "spritesheet",
+  "prompt": "Ada Mercer idle loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+  "dimensions": {
+    "width": 640,
+    "height": 840
+  },
+  "frameGrid": {
+    "frameCount": 4,
+    "frameWidth": 320,
+    "frameHeight": 420,
+    "columns": 2,
+    "rows": 2
+  },
+  "animations": [
+    {
+      "key": "character.ada.idle",
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "frameRate": 3,
+      "repeat": -1
+    }
+  ],
+  "settings": {
+    "model": "gpt-image-2",
+    "background": "transparent",
+    "quality": "low",
+    "format": "png",
+    "frameAlignment": "center",
+    "referenceAssetIds": [
+      "character.ada"
+    ]
+  },
+  "activeVersion": "first-draft-1788492896050-1",
+  "versions": {
+    "first-draft-1788492896050-1": {
+      "name": "first-draft-1788492896050-1",
+      "file": "/assets/character.ada.idle.first-draft-1788492896050-1.png",
+      "prompt": "Ada Mercer idle loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+      "createdAt": "2026-09-04T03:34:56.056Z",
+      "model": "gpt-image-2",
+      "settings": {
+        "model": "gpt-image-2",
+        "background": "transparent",
+        "quality": "low",
+        "format": "png",
+        "frameAlignment": "center",
+        "referenceAssetIds": [
+          "character.ada"
+        ]
+      },
+      "audioSettings": {},
+      "audioPlayback": {},
+      "voiceSettings": {},
+      "notes": "Auto-generated first draft for a missing asset."
+    }
+  },
+  "tags": [
+    "character",
+    "suspect",
+    "ada",
+    "animation",
+    "idle"
+  ],
+  "audioSettings": {},
+  "audioPlayback": {},
+  "voiceSettings": {}
+}

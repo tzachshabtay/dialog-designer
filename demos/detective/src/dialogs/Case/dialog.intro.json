@@ -1,0 +1,78 @@
+{
+  "id": "dialog.intro",
+  "name": "The Facts of the Case",
+  "entryNodeId": "case.intro",
+  "enabled": true,
+  "tags": [
+    "case",
+    "intro",
+    "mandatory"
+  ],
+  "metadata": {
+    "subtitle": "Blackwood House · the locked-library theft"
+  },
+  "nodes": {
+    "case.intro": {
+      "id": "case.intro",
+      "type": "block",
+      "name": "The facts of the case",
+      "enabled": true,
+      "lines": [
+        {
+          "id": "case.intro.victim",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.case-victim"
+        },
+        {
+          "id": "case.intro.locked-room",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.case-locked-room"
+        },
+        {
+          "id": "case.intro.blackout",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.case-blackout"
+        },
+        {
+          "id": "case.intro.ada",
+          "enabled": true,
+          "voiceAssetId": "voice.ada",
+          "lineAssetId": "line.ada.case-presence"
+        },
+        {
+          "id": "case.intro.bram",
+          "enabled": true,
+          "voiceAssetId": "voice.bram",
+          "lineAssetId": "line.bram.case-presence"
+        },
+        {
+          "id": "case.intro.lucien",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.case-presence"
+        },
+        {
+          "id": "case.intro.watermark",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.case-watermark"
+        },
+        {
+          "id": "case.intro.dispute",
+          "enabled": true,
+          "voiceAssetId": "voice.lucien",
+          "lineAssetId": "line.lucien.case-dispute"
+        },
+        {
+          "id": "case.intro.questions",
+          "enabled": true,
+          "voiceAssetId": "voice.detective",
+          "lineAssetId": "line.detective.case-questioning"
+        }
+      ]
+    }
+  }
+}

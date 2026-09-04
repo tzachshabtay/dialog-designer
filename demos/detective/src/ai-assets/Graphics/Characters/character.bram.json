@@ -11,6 +11,16 @@
     "background": "transparent",
     "format": "png"
   },
+  "linkedAnimationAssets": {
+    "idle": {
+      "label": "Idle",
+      "assetId": "character.bram.idle"
+    },
+    "speaking": {
+      "label": "Speaking",
+      "assetId": "character.bram.speaking"
+    }
+  },
   "activeVersion": "promoted-1788492180743",
   "versions": {
     "default": {
