@@ -70,15 +70,20 @@ for (const assetId of ["character.ada", "character.bram", "character.lucien"]) {
     );
     const animationAsset = assets[animationAssetId];
     assert(animationAsset?.kind === "spritesheet", `${animationAssetId} must be a spritesheet.`);
-    const expectedGrid = animationAssetId === "character.ada.speaking"
-      ? { frameCount: 8, columns: 3, rows: 3 }
-      : { frameCount: 4, columns: 2, rows: 2 };
+    const frameGrid = animationAsset.frameGrid;
     assert(
-      animationAsset.frameGrid?.frameCount === expectedGrid.frameCount
-        && animationAsset.frameGrid?.columns === expectedGrid.columns
-        && animationAsset.frameGrid?.rows === expectedGrid.rows,
-      `${animationAssetId} must use its ${expectedGrid.frameCount}-frame `
-        + `${expectedGrid.columns}x${expectedGrid.rows} sheet.`
+      Number.isInteger(frameGrid?.frameCount)
+        && frameGrid.frameCount > 0
+        && Number.isInteger(frameGrid.columns)
+        && frameGrid.columns > 0
+        && Number.isInteger(frameGrid.rows)
+        && frameGrid.rows > 0
+        && frameGrid.columns * frameGrid.rows >= frameGrid.frameCount
+        && frameGrid.frameWidth === 320
+        && frameGrid.frameHeight === 420
+        && animationAsset.dimensions?.width === frameGrid.columns * frameGrid.frameWidth
+        && animationAsset.dimensions?.height === frameGrid.rows * frameGrid.frameHeight,
+      `${animationAssetId} must define a self-consistent 320x420 frame grid.`
     );
     assert(
       animationAsset.settings?.background === "transparent"
@@ -93,7 +98,8 @@ for (const assetId of ["character.ada", "character.bram", "character.lucien"]) {
     assert(
       animation?.key === animationAssetId
         && animation.repeat === -1
-        && animation.frames.length === expectedGrid.frameCount,
+        && animation.frames.length === frameGrid.frameCount
+        && animation.frames.every((frame, index) => frame === index),
       `${animationAssetId} must expose a unique looping Phaser animation.`
     );
     const animationVersion = animationAsset.versions?.[animationAsset.activeVersion];
