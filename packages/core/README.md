@@ -2,6 +2,11 @@
 
 Engine-neutral dialog trees and a headless conversation runtime for games.
 
+## Links
+
+- [View `@dialog-designer/core` on npm](https://www.npmjs.com/package/@dialog-designer/core)
+- [Play **The Silent Ledger** detective demo](https://tzachshabtay.github.io/dialog-designer/)
+
 ```ts
 import { DialogRuntime, defineDialogManifest } from "@dialog-designer/core";
 

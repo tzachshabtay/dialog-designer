@@ -2,6 +2,11 @@
 
 A compact point-and-click detective story demonstrating Dialog Designer with Phaser and AI Assets. At 9:00 PM, a thirty-second blackout strikes the locked library at Blackwood House. When the lights return, Edwin Mercer's rare Raven Ledger is gone from its locked display case, even though its only key never left his pocket. Ada Mercer, Bram Holt, and Dr. Lucien Vale were the only people inside.
 
+## Links
+
+- [Play **The Silent Ledger** online](https://tzachshabtay.github.io/dialog-designer/)
+- Dialog Designer on npm: [`core`](https://www.npmjs.com/package/@dialog-designer/core), [`designer`](https://www.npmjs.com/package/@dialog-designer/designer), [`dev`](https://www.npmjs.com/package/@dialog-designer/dev), and [`phaser`](https://www.npmjs.com/package/@dialog-designer/phaser)
+
 The mandatory ensemble briefing establishes the victim, stolen item, locked-room conditions, each suspect's reason for being present, and the disputed 1846 watermark before questioning begins. The three branching suspect dialogs then reveal and close paths until the detective can prove timeline, method, and motive.
 
 ## Run

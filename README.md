@@ -6,6 +6,11 @@ and `scene-designer`: the packages share AI Assets' in-game tool dock, dialogs
 reference AI voice and voice-line assets, and Phaser integration is provided
 without forcing a playback UI on the game.
 
+## Links
+
+- [Play **The Silent Ledger** detective demo](https://tzachshabtay.github.io/dialog-designer/)
+- npm: [`@dialog-designer/core`](https://www.npmjs.com/package/@dialog-designer/core), [`@dialog-designer/designer`](https://www.npmjs.com/package/@dialog-designer/designer), [`@dialog-designer/dev`](https://www.npmjs.com/package/@dialog-designer/dev), and [`@dialog-designer/phaser`](https://www.npmjs.com/package/@dialog-designer/phaser)
+
 The repository contains four publishable packages:
 
 - `@dialog-designer/core` — JSON schema, validation, factories, tree queries,

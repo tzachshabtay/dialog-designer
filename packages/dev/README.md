@@ -3,6 +3,11 @@
 Local JSON persistence, TypeScript manifest generation, and the development
 HTTP server for [Dialog Designer](https://github.com/tzachshabtay/dialog-designer).
 
+## Links
+
+- [View `@dialog-designer/dev` on npm](https://www.npmjs.com/package/@dialog-designer/dev)
+- [Play **The Silent Ledger** detective demo](https://tzachshabtay.github.io/dialog-designer/)
+
 ```sh
 npm install --save-dev @dialog-designer/dev @ai-game-assets/dev
 ```
