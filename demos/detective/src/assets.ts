@@ -765,29 +765,33 @@ export const assets = defineAiAssets(
   "character.lucien.speaking": {
     "id": "character.lucien.speaking",
     "kind": "spritesheet",
-    "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
     "dimensions": {
-      "width": 640,
-      "height": 840
+      "width": 960,
+      "height": 1260
     },
     "frameGrid": {
-      "frameCount": 4,
+      "frameCount": 8,
       "frameWidth": 320,
       "frameHeight": 420,
-      "columns": 2,
-      "rows": 2
+      "columns": 3,
+      "rows": 3
     },
     "animations": [
       {
         "key": "character.lucien.speaking",
+        "frameRate": 6,
+        "repeat": -1,
         "frames": [
           0,
           1,
           2,
-          3
-        ],
-        "frameRate": 6,
-        "repeat": -1
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
       }
     ],
     "settings": {
@@ -800,7 +804,7 @@ export const assets = defineAiAssets(
         "character.lucien"
       ]
     },
-    "activeVersion": "first-draft-1788492979963-6",
+    "activeVersion": "promoted-1788576019415",
     "versions": {
       "first-draft-1788492979963-6": {
         "name": "first-draft-1788492979963-6",
@@ -822,6 +826,28 @@ export const assets = defineAiAssets(
         "audioPlayback": {},
         "voiceSettings": {},
         "notes": "Auto-generated first draft for a missing asset."
+      },
+      "promoted-1788576019415": {
+        "name": "promoted-1788576019415",
+        "file": "/assets/character.lucien.speaking.promoted-1788576019415.png",
+        "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-05T02:40:19.480Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.lucien"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "parentVersion": "first-draft-1788492979963-6",
+        "notes": "Promoted from the AI asset designer."
       }
     },
     "tags": [
