@@ -34,8 +34,8 @@
     "@dialog-designer/designer": "0.1.0"
   },
   "peerDependencies": {
-    "@ai-game-assets/core": "^0.8.2",
-    "@ai-game-assets/phaser": "^0.8.2",
+    "@ai-game-assets/core": "^0.8.4",
+    "@ai-game-assets/phaser": "^0.8.4",
     "phaser": ">=4"
   },
   "devDependencies": {

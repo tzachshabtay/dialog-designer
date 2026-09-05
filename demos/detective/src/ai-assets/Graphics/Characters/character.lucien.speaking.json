@@ -1,7 +1,7 @@
 {
   "id": "character.lucien.speaking",
   "kind": "spritesheet",
-  "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+  "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
   "dimensions": {
     "width": 640,
     "height": 840

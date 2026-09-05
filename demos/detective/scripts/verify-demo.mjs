@@ -70,11 +70,15 @@ for (const assetId of ["character.ada", "character.bram", "character.lucien"]) {
     );
     const animationAsset = assets[animationAssetId];
     assert(animationAsset?.kind === "spritesheet", `${animationAssetId} must be a spritesheet.`);
+    const expectedGrid = animationAssetId === "character.ada.speaking"
+      ? { frameCount: 8, columns: 3, rows: 3 }
+      : { frameCount: 4, columns: 2, rows: 2 };
     assert(
-      animationAsset.frameGrid?.frameCount === 4
-        && animationAsset.frameGrid?.columns === 2
-        && animationAsset.frameGrid?.rows === 2,
-      `${animationAssetId} must remain a four-frame 2x2 sheet.`
+      animationAsset.frameGrid?.frameCount === expectedGrid.frameCount
+        && animationAsset.frameGrid?.columns === expectedGrid.columns
+        && animationAsset.frameGrid?.rows === expectedGrid.rows,
+      `${animationAssetId} must use its ${expectedGrid.frameCount}-frame `
+        + `${expectedGrid.columns}x${expectedGrid.rows} sheet.`
     );
     assert(
       animationAsset.settings?.background === "transparent"
@@ -87,7 +91,9 @@ for (const assetId of ["character.ada", "character.bram", "character.lucien"]) {
     );
     const animation = animationAsset.animations?.[0];
     assert(
-      animation?.key === animationAssetId && animation.repeat === -1,
+      animation?.key === animationAssetId
+        && animation.repeat === -1
+        && animation.frames.length === expectedGrid.frameCount,
       `${animationAssetId} must expose a unique looping Phaser animation.`
     );
     const animationVersion = animationAsset.versions?.[animationAsset.activeVersion];

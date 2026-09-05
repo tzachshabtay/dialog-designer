@@ -71,7 +71,7 @@ export const assets = defineAiAssets(
   "character.ada.idle": {
     "id": "character.ada.idle",
     "kind": "spritesheet",
-    "prompt": "Ada Mercer idle loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+    "prompt": "Ada Mercer idle loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence with only subtle breathing and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
     "dimensions": {
       "width": 640,
       "height": 840
@@ -223,29 +223,33 @@ export const assets = defineAiAssets(
   "character.ada.speaking": {
     "id": "character.ada.speaking",
     "kind": "spritesheet",
-    "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, no hand gestures. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
     "dimensions": {
-      "width": 640,
-      "height": 840
+      "width": 960,
+      "height": 1260
     },
     "frameGrid": {
-      "frameCount": 4,
+      "frameCount": 8,
       "frameWidth": 320,
       "frameHeight": 420,
-      "columns": 2,
-      "rows": 2
+      "columns": 3,
+      "rows": 3
     },
     "animations": [
       {
         "key": "character.ada.speaking",
+        "frameRate": 6,
+        "repeat": -1,
         "frames": [
           0,
           1,
           2,
-          3
-        ],
-        "frameRate": 6,
-        "repeat": -1
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
       }
     ],
     "settings": {
@@ -258,7 +262,7 @@ export const assets = defineAiAssets(
         "character.ada"
       ]
     },
-    "activeVersion": "first-draft-1788492914672-2",
+    "activeVersion": "promoted-1788572866868",
     "versions": {
       "first-draft-1788492914672-2": {
         "name": "first-draft-1788492914672-2",
@@ -280,6 +284,72 @@ export const assets = defineAiAssets(
         "audioPlayback": {},
         "voiceSettings": {},
         "notes": "Auto-generated first draft for a missing asset."
+      },
+      "promoted-1788557526977-1": {
+        "name": "promoted-1788557526977-1",
+        "file": "/assets/character.ada.speaking.promoted-1788557526977-1.png",
+        "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-04T21:32:07.049Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.ada"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "parentVersion": "first-draft-1788492914672-2",
+        "notes": "Promoted from the AI asset designer with Promote all."
+      },
+      "promoted-1788557809316": {
+        "name": "promoted-1788557809316",
+        "file": "/assets/character.ada.speaking.promoted-1788557809316.png",
+        "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, no hand gestures. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-04T21:36:49.347Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.ada"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "parentVersion": "promoted-1788557526977-1",
+        "notes": "Promoted from the AI asset designer."
+      },
+      "promoted-1788572866868": {
+        "name": "promoted-1788572866868",
+        "file": "/assets/character.ada.speaking.promoted-1788572866868.png",
+        "prompt": "Ada Mercer speaking loop, matching character.ada exactly: preserve her face, hairstyle, dark red 1930s evening dress, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of quiet, intelligent conversation using small mouth-shape changes, a slight eyebrow or head movement, no hand gestures. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep her body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+        "createdAt": "2026-09-05T01:47:46.892Z",
+        "model": "gpt-image-2",
+        "settings": {
+          "model": "gpt-image-2",
+          "background": "transparent",
+          "quality": "low",
+          "format": "png",
+          "frameAlignment": "center",
+          "referenceAssetIds": [
+            "character.ada"
+          ]
+        },
+        "audioSettings": {},
+        "audioPlayback": {},
+        "voiceSettings": {},
+        "parentVersion": "promoted-1788557809316",
+        "notes": "Generated with isolated per-frame composition to prevent cross-cell bleed."
       }
     },
     "tags": [
@@ -296,7 +366,7 @@ export const assets = defineAiAssets(
   "character.bram.idle": {
     "id": "character.bram.idle",
     "kind": "spritesheet",
-    "prompt": "Bram Holt idle loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a small weight shift through the shoulders, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+    "prompt": "Bram Holt idle loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence with only subtle breathing, a small weight shift through the shoulders, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
     "dimensions": {
       "width": 640,
       "height": 840
@@ -448,7 +518,7 @@ export const assets = defineAiAssets(
   "character.bram.speaking": {
     "id": "character.bram.speaking",
     "kind": "spritesheet",
-    "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
     "dimensions": {
       "width": 640,
       "height": 840
@@ -521,7 +591,7 @@ export const assets = defineAiAssets(
   "character.lucien.idle": {
     "id": "character.lucien.idle",
     "kind": "spritesheet",
-    "prompt": "Dr. Lucien Vale idle loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames with only subtle breathing, a minute posture adjustment, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, keep both hands and the folio controlled, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
+    "prompt": "Dr. Lucien Vale idle loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence with only subtle breathing, a minute posture adjustment, and one natural blink. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, keep both hands and the folio controlled, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, or change the character between frames. Transparent background.",
     "dimensions": {
       "width": 640,
       "height": 840
@@ -673,7 +743,7 @@ export const assets = defineAiAssets(
   "character.lucien.speaking": {
     "id": "character.lucien.speaking",
     "kind": "spritesheet",
-    "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+    "prompt": "Dr. Lucien Vale speaking loop, matching character.lucien exactly: preserve his older face, hair, midnight suit, clasped folio, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of poised but guarded conversation using small mouth-shape changes, a slight eyebrow or head movement, and one restrained free-hand gesture while the folio remains secure. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep all clothing and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
     "dimensions": {
       "width": 640,
       "height": 840

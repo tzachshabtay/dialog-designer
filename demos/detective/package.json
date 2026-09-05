@@ -13,9 +13,9 @@
     "typecheck": "npm run generate && tsc --noEmit"
   },
   "dependencies": {
-    "@ai-game-assets/core": "^0.8.2",
-    "@ai-game-assets/dev": "^0.8.2",
-    "@ai-game-assets/phaser": "^0.8.2",
+    "@ai-game-assets/core": "^0.8.4",
+    "@ai-game-assets/dev": "^0.8.4",
+    "@ai-game-assets/phaser": "^0.8.4",
     "@dialog-designer/core": "0.1.0",
     "@dialog-designer/dev": "0.1.0",
     "@dialog-designer/phaser": "0.1.0",

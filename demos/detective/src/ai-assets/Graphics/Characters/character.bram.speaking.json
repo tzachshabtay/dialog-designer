@@ -1,7 +1,7 @@
 {
   "id": "character.bram.speaking",
   "kind": "spritesheet",
-  "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create four seamless full-body frames of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
+  "prompt": "Bram Holt speaking loop, matching character.bram exactly: preserve his face, hair, electrician's work clothes, tool satchel, proportions, silhouette, camera angle, scale, lighting, and painterly film-noir style. Create a seamless full-body frame sequence of guarded, practical conversation using small mouth-shape changes, a slight head movement, and one restrained free-hand gesture. Keep both feet planted at exactly the same baseline and horizontal position in every frame, keep his body centered, and keep the satchel, clothing, and facial details consistent. Do not translate, crop, resize, rotate, add props, speech bubbles, or text. Transparent background.",
   "dimensions": {
     "width": 640,
     "height": 840

@@ -18,6 +18,7 @@ const aiAssetsManifestPath = path.join(demoRoot, "src/ai-assets");
 const aiAssetsManifestModulePath = path.join(demoRoot, "src/assets.ts");
 const aiAssets = createAiAssetDevServer({
   manifestPath: aiAssetsManifestPath,
+  manifestModulePath: aiAssetsManifestModulePath,
   assetsDir: path.join(demoRoot, "public/assets"),
   publicPathPrefix: "/assets",
   port: 4097,
