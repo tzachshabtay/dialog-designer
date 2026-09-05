@@ -273,6 +273,15 @@ const createMethod = sceneSource.slice(
 );
 assert(createMethod.includes("this.showCaseLanding()"), "Scene creation must present the landing screen.");
 assert(!createMethod.includes("this.startCaseIntro()"), "Scene creation must not start dialog audio before a gesture.");
+assert(
+  sceneSource.includes("if (!this.designersEnabled) return;"),
+  "The scene must not install either designer unless the host explicitly enables development tools."
+);
+const mainSource = await readFile(path.join(sourceRoot, "main.ts"), "utf8");
+assert(
+  mainSource.includes("designersEnabled: import.meta.env.DEV"),
+  "The detective demo must enable designer panels only in Vite development builds."
+);
 const advanceMethod = sceneSource.slice(
   sceneSource.indexOf("  private advanceCurrentLine(): void"),
   sceneSource.indexOf("  private stopVoiceLines(): void")

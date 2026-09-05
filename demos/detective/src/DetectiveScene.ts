@@ -53,6 +53,7 @@ type DetectiveSceneOptions = {
   assetBaseUrl?: string;
   dialogs: DialogDesignerManifest;
   dialogDebugClient?: DialogDesignerDebugClient;
+  designersEnabled?: boolean;
 };
 
 type SuspectId = "ada" | "bram" | "lucien";
@@ -142,6 +143,7 @@ export class DetectiveScene extends Phaser.Scene {
   private readonly aiAssetDebugClient?: AiAssetDebugClient;
   private readonly dialogDebugClient?: DialogDesignerDebugClient;
   private readonly assetBaseUrl?: string;
+  private readonly designersEnabled: boolean;
   private aiRuntime!: AiAssetRuntime;
   private runtime!: PhaserDialogRuntime;
   private assetDesigner?: AiAssetDesigner;
@@ -188,6 +190,7 @@ export class DetectiveScene extends Phaser.Scene {
     this.aiAssetDebugClient = options.aiAssetDebugClient;
     this.dialogDebugClient = options.dialogDebugClient;
     this.assetBaseUrl = options.assetBaseUrl;
+    this.designersEnabled = options.designersEnabled ?? false;
   }
 
   preload(): void {
@@ -534,6 +537,8 @@ export class DetectiveScene extends Phaser.Scene {
   }
 
   private installDesigners(): void {
+    if (!this.designersEnabled) return;
+
     if (this.aiAssetDebugClient) {
       const callbacks = this.aiRuntime.designerCallbacks();
       this.assetDesigner = installAiAssetDesigner({

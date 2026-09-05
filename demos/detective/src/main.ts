@@ -51,7 +51,8 @@ async function boot(): Promise<void> {
         aiAssetDebugClient: aiAssets.debugClient,
         assetBaseUrl: aiAssets.assetBaseUrl,
         dialogs: dialogs.manifest,
-        dialogDebugClient: dialogs.debugClient
+        dialogDebugClient: dialogs.debugClient,
+        designersEnabled: import.meta.env.DEV
       })
     ]
   });
