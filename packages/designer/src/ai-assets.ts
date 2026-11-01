@@ -62,9 +62,9 @@ export function voiceLineDirection(asset: AiAssetDefinition | undefined): string
   if (!isVoiceLineAsset(asset)) return undefined;
   const version = asset.versions[asset.activeVersion];
   return version?.voiceSettings?.direction
-    ?? version?.prompt
     ?? asset.voiceSettings?.direction
-    ?? asset.prompt;
+    ?? (version?.prompt && version.prompt !== voiceLineText(asset) ? version.prompt : undefined)
+    ?? (asset.prompt === voiceLineText(asset) ? "" : asset.prompt);
 }
 
 export function voiceLineLabel(asset: VoiceLineAiAsset): string {

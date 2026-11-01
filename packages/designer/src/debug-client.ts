@@ -63,6 +63,13 @@ export class DialogDesignerDebugClient {
     return this.readJson<CreateDialogVoiceLineResult>(response);
   }
 
+  async updateVoiceLine(request: { assetId: string; text: string; direction: string }): Promise<AiAssetManifest> {
+    const response = await this.fetch(`${this.baseUrl}/__dialog-designer/update-voice-line`, {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(request)
+    });
+    return (await this.readJson<{ aiAssets: AiAssetManifest }>(response)).aiAssets;
+  }
+
   private async fetch(url: string, init?: RequestInit): Promise<Response> {
     try {
       return await globalThis.fetch(url, init);

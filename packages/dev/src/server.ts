@@ -1,3 +1,4 @@
+import { updateVoiceLine } from "@ai-game-assets/dev";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import type {
   AiAssetDefinition,
@@ -110,6 +111,16 @@ async function routeRequest(
       manifestModulePath: options.aiAssetsManifestModulePath
     }, body);
     sendJson(response, 200, result);
+    return;
+  }
+
+  if (request.method === "POST" && url.pathname === "/__dialog-designer/update-voice-line") {
+    const body = await readJson<{ assetId: string; text?: string; direction?: string }>(request);
+    const aiAssets = await updateVoiceLine({
+      manifestPath: options.aiAssetsManifestPath,
+      manifestModulePath: options.aiAssetsManifestModulePath
+    }, { assetId: body.assetId, text: body.text, direction: body.direction });
+    sendJson(response, 200, { aiAssets });
     return;
   }
 

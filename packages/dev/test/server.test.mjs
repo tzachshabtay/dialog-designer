@@ -82,6 +82,15 @@ test("dev server exposes manifest, promotion, and voice-line routes", async () =
     assert.equal(line.asset.kind, "voice-line");
     assert.equal(line.aiAssets.assets[line.lineAssetId].voiceSettings.text, "Start from the beginning.");
 
+    const editResponse = await fetch(`${endpoint}/__dialog-designer/update-voice-line`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ assetId: line.lineAssetId, text: "Tell me everything.", direction: "Quietly" })
+    });
+    assert.equal(editResponse.status, 200);
+    const edited = (await editResponse.json()).aiAssets.assets[line.lineAssetId];
+    assert.equal(edited.voiceSettings.text, "Tell me everything.");
+    assert.equal(edited.voiceSettings.direction, "Quietly");
+
     const saveResponse = await fetch(`${endpoint}/__dialog-designer/save`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

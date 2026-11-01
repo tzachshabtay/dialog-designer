@@ -374,6 +374,9 @@ export function ensureDialogDesignerStyles(): void {
   color: var(--dd-muted);
   font-size: 11px;
 }
+.dialog-designer__line-copy > button { float: right; margin-left: 6px; }
+.dialog-designer__line-copy > p { margin: 0 0 5px; color: var(--dd-text); }
+.dialog-designer__line-copy > small { display: block; font-size: 10px; }
 .dialog-designer__create-card summary {
   color: var(--dd-accent);
   font-weight: 750;

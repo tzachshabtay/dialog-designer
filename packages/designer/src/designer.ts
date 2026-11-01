@@ -361,7 +361,7 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
       const requestDialogId = selectedDialogId;
       findBlock(manifest, requestDialogId, blockId);
       voiceLineRequestActive = true;
-      setStatus("Adding voice line to AI Assets…", "working");
+      setStatus("Adding voice line…", "working");
       try {
         const result = await client.createVoiceLine({
           voiceAssetId,
@@ -1017,13 +1017,48 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     card.append(field("Voice line", lineSelect));
 
     const asset = aiAssets.assets[line.lineAssetId];
-    const direction = voiceLineDirection(asset);
-    if (direction) {
-      const note = document.createElement("p");
-      note.className = "dialog-designer__line-copy";
-      note.textContent = `Direction: ${direction}`;
-      card.append(note);
-    }
+    const copy = document.createElement("div");
+    copy.className = "dialog-designer__line-copy";
+    const spoken = document.createElement("p");
+    spoken.textContent = voiceLineText(asset);
+    const note = document.createElement("small");
+    note.textContent = voiceLineDirection(asset) || "No director notes";
+    const edit = iconButton("✎", "Edit voice line text and director notes");
+    copy.append(edit, spoken, note);
+    edit.addEventListener("click", stop(() => {
+      const form = document.createElement("form");
+      form.className = "dialog-designer__create-form";
+      const text = textarea(voiceLineText(asset));
+      text.required = true;
+      const direction = textarea(voiceLineDirection(asset) ?? "");
+      const save = button("Save text", "dialog-designer__button dialog-designer__button--primary");
+      save.type = "submit";
+      const cancel = button("Cancel", "dialog-designer__button");
+      cancel.addEventListener("click", () => form.replaceWith(copy));
+      const hint = document.createElement("small");
+      hint.textContent = "Updates this voice line everywhere it is used. Existing recordings are kept; changed wording can be regenerated with missing or outdated lines.";
+      form.append(field("Spoken text", text), field("Director notes", direction), hint, save, cancel);
+      form.addEventListener("click", event => event.stopPropagation());
+      form.addEventListener("submit", async event => {
+        event.preventDefault();
+        if (!text.value.trim()) return;
+        save.disabled = true; cancel.disabled = true;
+        try {
+          const updated = await client.updateVoiceLine({ assetId: line.lineAssetId, text: text.value, direction: direction.value });
+          assertDialogAiAssets(manifest, updated);
+          aiAssets = updated;
+          options.onAiAssetsChange?.(structuredClone(aiAssets));
+          render();
+          setStatus("Voice line text saved.", "success");
+        } catch (error) {
+          setStatus(errorMessage(error), "error");
+          save.disabled = false; cancel.disabled = false;
+        }
+      });
+      copy.replaceWith(form);
+      text.focus();
+    }));
+    card.append(copy);
     return card;
   }
 
@@ -1031,7 +1066,7 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     const details = document.createElement("details");
     details.className = "dialog-designer__create-card";
     const summary = document.createElement("summary");
-    summary.textContent = "Create a new AI voice line";
+    summary.textContent = "Create a new voice line";
     details.append(summary);
 
     const form = document.createElement("form");
@@ -1158,12 +1193,14 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     if (commitOptions.aiAssets) aiAssets = nextAiAssets;
     normalizeSelection();
     render();
-    emitManifestChange();
-    emitSelectionChange();
-    emitDialogChange();
+    // Consumers validate dialog references as soon as they receive the manifest.
+    // Publish newly created assets first so those references already exist.
     if (commitOptions.emitAiAssets) {
       options.onAiAssetsChange?.(structuredClone(aiAssets));
     }
+    emitManifestChange();
+    emitSelectionChange();
+    emitDialogChange();
     if (commitOptions.message) setStatus(commitOptions.message, "success");
   }
 
