@@ -89,6 +89,13 @@ export const dialogs = defineDialogManifest({
 });
 ```
 
+Options also have two independent settings in the designer:
+
+- **Should exit dialog** (`exitDialog`): after the reply tree, end the conversation when true or return to that decision when false. Omitted values preserve the original exit behavior.
+- **Spoken by the character** (`spokenByCharacter`): speak the selected option before its reply tree. Choose a voice with `voiceAssetId`; `syncDialogOptionVoiceLines(manifest, aiAssets, defaultVoiceId)` creates stable `lineAssetId` references and links their text under that voice for generation or recording. The designer synchronizes edits and promotion persists the assets before their dialog references. Existing takes remain available when text changes; stale recordings are not played.
+
+Spoken selections produce ordinary `line` turns with an additional `optionId`. Advance them like other lines; the next turn begins the reply tree. Return behavior requires no cyclic graph links. Set `defaultOptionVoiceAssetId` when installing the designer to make newly added options spoken by that character.
+
 Every dialog, block, line, decision, and option has authored enabled state.
 Games can override that state at runtime without mutating or accidentally
 promoting investigation/session state.

@@ -57,6 +57,12 @@ export type DialogDecision = {
 };
 
 export type DialogOption = {
+  /** Exit after the branch finishes; false returns to this decision. Defaults to true. */
+  exitDialog?: boolean;
+  /** Speak the selected choice before entering its branch. */
+  spokenByCharacter?: boolean;
+  voiceAssetId?: string;
+  lineAssetId?: string;
   id: string;
   text: string;
   enabled: boolean;
@@ -102,6 +108,8 @@ export type ResolvedDialogLine = {
 };
 
 export type DialogLineTurn = {
+  /** Present when this turn speaks a selected option instead of a block line. */
+  optionId?: string;
   type: "line";
   dialogId: string;
   nodeId: string;

@@ -126,7 +126,10 @@ export function assertDialogAiAssets(
 
   for (const dialog of Object.values(manifest.dialogs)) {
     for (const node of Object.values(dialog.nodes)) {
-      if (node.type !== "block") continue;
+      if (node.type === "decision") {
+        for (const option of node.options) if (option.spokenByCharacter) resolveDialogOption(manifest, aiAssets, dialog.id, node.id, option.id, options);
+        continue;
+      }
       for (const line of node.lines) {
         resolveDialogLine(manifest, aiAssets, dialog.id, node.id, line.id, options);
       }
@@ -208,6 +211,30 @@ export function resolveDialogLine(
   const line = node.lines.find((candidate) => candidate.id === lineId);
   if (!line) throw new Error(`Unknown dialog line "${lineId}" in block "${blockId}".`);
 
+  return resolveSpeech(aiAssets, dialogId, blockId, line, options);
+}
+
+export function resolveDialogOption(manifest: DialogDesignerManifest, aiAssets: AiAssetManifest,
+  dialogId: string, nodeId: string, optionId: string, options: ResolveDialogLineOptions = {}): ResolvedDialogLine {
+  const node = getDialogNode(manifest, dialogId, nodeId);
+  const option = node.type === "decision" ? node.options.find(option => option.id === optionId) : undefined;
+  if (!option?.voiceAssetId || !option.lineAssetId) throw new Error(`Spoken option "${optionId}" needs a voice and voice line.`);
+  const asset = aiAssets.assets[option.lineAssetId];
+  const recording = asset?.versions[asset.activeVersion];
+  const settings = recording?.voiceSettings ?? asset?.voiceSettings;
+  const stale = recording && (settings?.text !== option.text || settings?.voiceAssetId !== option.voiceAssetId);
+  const speechAssets = stale ? { ...aiAssets, assets: { ...aiAssets.assets,
+    [option.lineAssetId]: { ...asset!, activeVersion: "", versions: {} } } } : aiAssets;
+  const resolved = resolveSpeech(speechAssets, dialogId, nodeId, {
+    id: option.id, enabled: option.enabled, voiceAssetId: option.voiceAssetId, lineAssetId: option.lineAssetId
+  }, options);
+  // An old recording must not override newly edited choice text.
+  if (resolved.text !== option.text) resolved.audio = undefined;
+  return { ...resolved, text: option.text };
+}
+
+function resolveSpeech(aiAssets: AiAssetManifest, dialogId: string, blockId: string,
+  line: DialogLine, options: ResolveDialogLineOptions): ResolvedDialogLine {
   const sourceVoiceAsset = aiAssets.assets[line.voiceAssetId];
   if (!sourceVoiceAsset || sourceVoiceAsset.kind !== "voice") {
     throw new Error(
@@ -326,6 +353,12 @@ function assertNode(node: DialogNode, label: string): void {
     assertNonEmpty(option.id, `${optionLabel}.id`);
     assertNonEmpty(option.text, `${optionLabel}.text`);
     assertBoolean(option.enabled, `${optionLabel}.enabled`);
+    if (option.exitDialog !== undefined) assertBoolean(option.exitDialog, `${optionLabel}.exitDialog`);
+    if (option.spokenByCharacter !== undefined) assertBoolean(option.spokenByCharacter, `${optionLabel}.spokenByCharacter`);
+    if (option.spokenByCharacter) {
+      assertNonEmpty(option.voiceAssetId!, `${optionLabel}.voiceAssetId`);
+      assertNonEmpty(option.lineAssetId!, `${optionLabel}.lineAssetId`);
+    }
     assertStringList(option.tags, `${optionLabel}.tags`);
     if (optionIds.has(option.id)) throw new Error(`${label} contains duplicate option id "${option.id}".`);
     optionIds.add(option.id);

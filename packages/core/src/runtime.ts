@@ -5,6 +5,7 @@ import {
   cloneDialogManifest,
   getDialog,
   resolveDialogLine,
+  resolveDialogOption,
   targetKey
 } from "./manifest.js";
 import type {
@@ -37,6 +38,7 @@ export class DialogRuntime {
   private readonly enabledOverrides = new Map<string, boolean>();
   private readonly listeners = new Map<keyof DialogRuntimeEventMap, Set<(event: never) => void>>();
   private dialogId?: string;
+  private readonly returnDecisions: string[] = [];
   private cursor?: RuntimeCursor;
   private turn?: DialogTurn;
   private status: DialogRuntimeSnapshot["status"] = "idle";
@@ -94,6 +96,7 @@ export class DialogRuntime {
     if (this.status === "running") this.stop();
     let dialog = getDialog(this.manifest, dialogId);
     this.dialogId = dialogId;
+    this.returnDecisions.length = 0;
     this.status = "running";
     this.cursor = undefined;
     this.turn = undefined;
@@ -129,6 +132,14 @@ export class DialogRuntime {
       || this.turn !== activeTurn
     ) {
       return this.interruptedTurn("advancing a dialog line");
+    }
+    if (said.optionId) {
+      const node = getDialog(this.manifest, said.dialogId).nodes[said.nodeId];
+      const option = node?.type === "decision" ? node.options.find(option => option.id === said.optionId) : undefined;
+      const nextNodeId = option?.nextNodeId ?? node?.nextNodeId;
+      if (!nextNodeId) return this.finish("completed");
+      this.cursor = { nodeId: nextNodeId, lineIndex: 0, entered: false };
+      return this.seek();
     }
     this.cursor = {
       nodeId: said.nodeId,
@@ -172,6 +183,17 @@ export class DialogRuntime {
     ) {
       return this.interruptedTurn("choosing a dialog option");
     }
+    if (option.exitDialog === false) this.returnDecisions.push(sourceDecision.id);
+    else this.returnDecisions.length = 0;
+    if (option.spokenByCharacter) {
+      const resolved = resolveDialogOption(this.manifest, this.aiAssets, this.dialogId, sourceDecision.id, option.id, { targetId: this.options.targetId });
+      const turn: DialogLineTurn = { type: "line", dialogId: this.dialogId, nodeId: sourceDecision.id,
+        optionId: option.id, lineIndex: 0, line: resolved.line, resolved,
+        block: { id: sourceDecision.id, type: "block", name: option.text, enabled: true, lines: [resolved.line] } };
+      this.turn = turn;
+      this.emit("line:ready", structuredClone(turn));
+      return this.interruptedTurn("speaking a dialog option");
+    }
     const nextNodeId = option.nextNodeId ?? sourceDecision.nextNodeId;
     if (!nextNodeId) return this.finish("completed");
     this.cursor = { nodeId: nextNodeId, lineIndex: 0, entered: false };
@@ -180,7 +202,7 @@ export class DialogRuntime {
 
   stop(): DialogEndTurn | undefined {
     if (!this.dialogId || this.status !== "running") return undefined;
-    return this.finish("stopped");
+    return this.finish("stopped") as DialogEndTurn;
   }
 
   setEnabled(target: DialogElementTarget, enabled: boolean): void {
@@ -389,7 +411,12 @@ export class DialogRuntime {
     return -1;
   }
 
-  private finish(reason: DialogEndReason): DialogEndTurn {
+  private finish(reason: DialogEndReason): DialogTurn {
+    if (reason === "completed" && this.returnDecisions.length) {
+      this.cursor = { nodeId: this.returnDecisions.pop()!, lineIndex: 0, entered: false };
+      return this.seek();
+    }
+    this.returnDecisions.length = 0;
     if (!this.dialogId) throw new Error("Cannot finish a dialog before it starts.");
     const turn: DialogEndTurn = { type: "end", dialogId: this.dialogId, reason };
     this.status = "ended";
@@ -426,6 +453,9 @@ export class DialogRuntime {
     if (turn.dialogId !== dialog.id) return false;
     const node = dialog.nodes[turn.nodeId];
     if (turn.type === "line") {
+      if (turn.optionId) return node?.type === "decision"
+        && node.options.some(option => option.id === turn.optionId && option.spokenByCharacter)
+        && this.isEnabled({ type: "option", dialogId: dialog.id, nodeId: node.id, optionId: turn.optionId });
       return node?.type === "block"
         && this.isEnabled({
           type: "node",

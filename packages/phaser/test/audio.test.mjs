@@ -115,3 +115,12 @@ test("target-specific audio keys match the assets queued by the loader", async (
     loaded[0][0]
   );
 });
+
+
+test("spoken choice audio is included even on disabled options; silent choices are omitted", () => {
+  const manifest={schemaVersion:1,dialogs:{talk:{nodes:{topics:{type:"decision",options:[
+    {spokenByCharacter:true,lineAssetId:"choice",enabled:false},
+    {spokenByCharacter:false,lineAssetId:"unused"}
+  ]}}}}};
+  assert.deepEqual(referencedDialogLineAssetIds(manifest),["choice"]);
+});

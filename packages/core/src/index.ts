@@ -54,6 +54,7 @@ export {
   getDialog,
   getDialogNode,
   resolveDialogLine,
+  resolveDialogOption,
   targetKey,
   walkDialogTree
 } from "./manifest.js";
@@ -62,3 +63,5 @@ export {
   decisionOption,
   DialogRuntime
 } from "./runtime.js";
+
+export { dialogOptionVoiceLineId, syncDialogOptionVoiceLines } from "./option-voices.js";

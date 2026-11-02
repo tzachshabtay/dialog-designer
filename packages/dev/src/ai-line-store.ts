@@ -1,3 +1,4 @@
+import { syncDialogOptionVoiceLines, assertDialogAiAssets, type DialogDesignerManifest } from "@dialog-designer/core";
 import path from "node:path";
 import {
   assertAsset,
@@ -251,4 +252,17 @@ function slugify(value: string): string {
 
 function isSafeAssetId(value: string): boolean {
   return value.length <= 180 && /^[a-zA-Z0-9._-]+$/.test(value);
+}
+
+/** Persist choice lines before saving dialog references, retaining all existing recordings. */
+export async function persistDialogOptionVoices(options: AiVoiceLineStoreOptions, dialogs: DialogDesignerManifest): Promise<void> {
+  if (!Object.values(dialogs.dialogs).some(dialog => Object.values(dialog.nodes).some(node => node.type === "decision" && node.options.some(option => option.spokenByCharacter)))) return;
+  const manifestPath = path.resolve(options.manifestPath);
+  await withManifestWriteLock(manifestPath, async () => {
+    const source = await readManifest(manifestPath);
+    const assets = syncDialogOptionVoiceLines(dialogs, source);
+    assertDialogAiAssets(dialogs, assets);
+    await writeManifest(manifestPath, assets);
+    if (options.manifestModulePath) await writeManifestModule(options.manifestModulePath, assets);
+  });
 }

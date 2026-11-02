@@ -37,7 +37,10 @@ export function referencedDialogLineAssetIds(manifest: DialogDesignerManifest): 
   const ids = new Set<string>();
   for (const dialog of Object.values(manifest.dialogs)) {
     for (const node of Object.values(dialog.nodes)) {
-      if (node.type !== "block") continue;
+      if (node.type === "decision") {
+        for (const option of node.options) if (option.spokenByCharacter && option.lineAssetId) ids.add(option.lineAssetId);
+        continue;
+      }
       for (const line of node.lines) ids.add(line.lineAssetId);
     }
   }

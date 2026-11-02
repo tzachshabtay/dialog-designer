@@ -1,3 +1,5 @@
+import { assertDialogManifest } from "@dialog-designer/core";
+import { persistDialogOptionVoices } from "./ai-line-store.js";
 import { updateVoiceLine } from "@ai-game-assets/dev";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import type {
@@ -99,6 +101,8 @@ async function routeRequest(
     )
   ) {
     const body = await readJson<{ manifest: DialogDesignerManifest }>(request);
+    assertDialogManifest(body.manifest);
+    await persistDialogOptionVoices({ manifestPath: options.aiAssetsManifestPath, manifestModulePath: options.aiAssetsManifestModulePath }, body.manifest);
     const manifest = await promoteDialogManifest(options, body.manifest);
     sendJson(response, 200, { manifest });
     return;

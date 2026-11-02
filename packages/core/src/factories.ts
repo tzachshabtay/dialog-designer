@@ -99,6 +99,10 @@ export function createDialogOption(input: CreateDialogOptionInput = {}): DialogO
     text: input.text ?? "New option",
     enabled: input.enabled ?? true,
     nextNodeId: input.nextNodeId,
+    exitDialog: input.exitDialog,
+    spokenByCharacter: input.spokenByCharacter,
+    voiceAssetId: input.voiceAssetId,
+    lineAssetId: input.lineAssetId,
     tags: input.tags ? [...input.tags] : undefined,
     metadata: input.metadata ? structuredClone(input.metadata) : undefined
   };

@@ -4,6 +4,7 @@ import {
 } from "@ai-game-assets/core";
 import {
   assertDialogAiAssets,
+  syncDialogOptionVoiceLines,
   assertDialogManifest,
   cloneDialogManifest,
   createDialog,
@@ -50,6 +51,8 @@ export type DialogDesignerOptions = {
   title?: string;
   mount?: HTMLElement;
   defaultDialogId?: string;
+  /** Voice used for newly added spoken choices. */
+  defaultOptionVoiceAssetId?: string;
   onOpenChange?(isOpen: boolean): void;
   onDialogChange?(dialogId: string, dialog: DialogDefinition): void;
   onManifestChange?(manifest: DialogDesignerManifest): void;
@@ -70,7 +73,7 @@ export type DialogDesignerLineUpdate = Partial<Pick<
 
 export type DialogDesignerOptionUpdate = Partial<Pick<
   DialogOption,
-  "enabled" | "text"
+  "enabled" | "text" | "exitDialog" | "spokenByCharacter" | "voiceAssetId"
 >>;
 
 export type DialogDesignerAddLineInput = {
@@ -147,11 +150,11 @@ const MAX_HISTORY_ENTRIES = 100;
 export function installDialogDesigner(options: DialogDesignerOptions): DialogDesigner {
   ensureDialogDesignerStyles();
   assertDialogManifest(options.manifest);
-  assertDialogAiAssets(options.manifest, options.aiAssets);
 
   const client = options.client ?? new DialogDesignerDebugClient();
   let manifest = cloneDialogManifest(options.manifest);
-  let aiAssets = structuredClone(options.aiAssets);
+  let aiAssets = syncDialogOptionVoiceLines(manifest, options.aiAssets, options.defaultOptionVoiceAssetId);
+  assertDialogAiAssets(manifest, aiAssets);
   const initialDialogIds = Object.keys(manifest.dialogs);
   if (initialDialogIds.length === 0) {
     const dialog = createDialog();
@@ -215,6 +218,8 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     },
     setManifest(nextManifest) {
       assertDialogManifest(nextManifest);
+      aiAssets = syncDialogOptionVoiceLines(nextManifest, aiAssets, options.defaultOptionVoiceAssetId);
+      options.onAiAssetsChange?.(structuredClone(aiAssets));
       assertDialogAiAssets(nextManifest, aiAssets);
       manifest = cloneDialogManifest(nextManifest);
       past.length = 0;
@@ -405,7 +410,8 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
       }
     },
     addOption(decisionId, text = "New option") {
-      const option = createDialogOption({ text: text.trim() || "New option" });
+      const option = createDialogOption({ text: text.trim() || "New option", exitDialog: true,
+        spokenByCharacter: !!options.defaultOptionVoiceAssetId, voiceAssetId: options.defaultOptionVoiceAssetId });
       commit((draft) => {
         findDecision(draft, selectedDialogId, decisionId).options.push(option);
       }, { message: "Added decision option." });
@@ -422,6 +428,10 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     updateOption(decisionId, optionId, patch) {
       commit((draft) => {
         const option = findOption(draft, selectedDialogId, decisionId, optionId);
+        if (patch.exitDialog !== undefined) option.exitDialog = patch.exitDialog;
+        if (patch.spokenByCharacter !== undefined) option.spokenByCharacter = patch.spokenByCharacter;
+        if (patch.voiceAssetId !== undefined) option.voiceAssetId = patch.voiceAssetId;
+        if (option.spokenByCharacter && !option.voiceAssetId) option.voiceAssetId = options.defaultOptionVoiceAssetId ?? voiceAssets(aiAssets)[0]?.id;
         if (patch.text !== undefined) option.text = requireText(patch.text, "Option text");
         if (patch.enabled !== undefined) option.enabled = patch.enabled;
       }, { message: "Updated decision option." });
@@ -439,6 +449,8 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     undo() {
       const previous = past.pop();
       if (!previous) return;
+      aiAssets = syncDialogOptionVoiceLines(previous, aiAssets, options.defaultOptionVoiceAssetId);
+      options.onAiAssetsChange?.(structuredClone(aiAssets));
       assertDialogAiAssets(previous, aiAssets);
       future.push(cloneDialogManifest(manifest));
       trimHistory(future);
@@ -453,6 +465,8 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     redo() {
       const next = future.pop();
       if (!next) return;
+      aiAssets = syncDialogOptionVoiceLines(next, aiAssets, options.defaultOptionVoiceAssetId);
+      options.onAiAssetsChange?.(structuredClone(aiAssets));
       assertDialogAiAssets(next, aiAssets);
       past.push(cloneDialogManifest(manifest));
       trimHistory(past);
@@ -501,6 +515,7 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
   window.addEventListener("keydown", onKeyDown, true);
 
   render();
+  options.onAiAssetsChange?.(structuredClone(aiAssets));
   emitManifestChange();
   emitSelectionChange();
   emitDialogChange();
@@ -1161,6 +1176,23 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
         { text: copy.value }
       )));
       card.append(field("Choice text", copy));
+      const exit = check("Should exit dialog", option.exitDialog !== false);
+      exit.input.addEventListener("change", () => perform(() => api.updateOption(decision.id, option.id, { exitDialog: exit.input.checked })));
+      const spoken = check("Spoken by the character", option.spokenByCharacter === true);
+      spoken.input.addEventListener("change", () => perform(() => api.updateOption(decision.id, option.id, { spokenByCharacter: spoken.input.checked })));
+      card.append(exit.label, spoken.label);
+      if (option.spokenByCharacter) {
+        const voice = document.createElement("select"); voice.className = "dialog-designer__select";
+        for (const asset of voiceAssets(aiAssets)) {
+          const item = document.createElement("option"); item.value = asset.id; item.textContent = readableAssetName(asset.id); voice.append(item);
+        }
+        voice.value = option.voiceAssetId ?? "";
+        voice.addEventListener("change", () => perform(() => api.updateOption(decision.id, option.id, { voiceAssetId: voice.value })));
+        card.append(field("Speaking character", voice));
+        const hint = document.createElement("p"); hint.className = "dialog-designer__hint";
+        hint.textContent = "Choice text is synced to a line under this voice. Generate or record it in the asset designer.";
+        card.append(hint);
+      }
       const branch = document.createElement("p");
       branch.className = "dialog-designer__hint";
       branch.textContent = option.nextNodeId
@@ -1177,10 +1209,11 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
     commitOptions: CommitOptions = {}
   ): void {
     const draft = cloneDialogManifest(manifest);
-    const nextAiAssets = commitOptions.aiAssets
+    let nextAiAssets = commitOptions.aiAssets
       ? structuredClone(commitOptions.aiAssets)
       : aiAssets;
     mutator(draft);
+    nextAiAssets = syncDialogOptionVoiceLines(draft, nextAiAssets, options.defaultOptionVoiceAssetId);
     assertDialogManifest(draft);
     assertDialogAiAssets(draft, nextAiAssets);
 
@@ -1190,12 +1223,13 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
       future.length = 0;
     }
     manifest = draft;
-    if (commitOptions.aiAssets) aiAssets = nextAiAssets;
+    const changedAssets = JSON.stringify(aiAssets) !== JSON.stringify(nextAiAssets);
+    aiAssets = nextAiAssets;
     normalizeSelection();
     render();
     // Consumers validate dialog references as soon as they receive the manifest.
     // Publish newly created assets first so those references already exist.
-    if (commitOptions.emitAiAssets) {
+    if (commitOptions.emitAiAssets || changedAssets) {
       options.onAiAssetsChange?.(structuredClone(aiAssets));
     }
     emitManifestChange();
