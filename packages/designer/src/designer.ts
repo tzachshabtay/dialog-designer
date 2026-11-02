@@ -232,8 +232,9 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
       setStatus("Loaded dialog manifest.", "info");
     },
     setAiAssets(nextAiAssets) {
-      assertDialogAiAssets(manifest, nextAiAssets);
-      aiAssets = structuredClone(nextAiAssets);
+      const complete = syncDialogOptionVoiceLines(manifest, nextAiAssets, options.defaultOptionVoiceAssetId);
+      assertDialogAiAssets(manifest, complete);
+      aiAssets = complete;
       render();
       options.onAiAssetsChange?.(structuredClone(aiAssets));
       setStatus("Updated AI voice assets.", "info");
@@ -1060,8 +1061,9 @@ export function installDialogDesigner(options: DialogDesignerOptions): DialogDes
         save.disabled = true; cancel.disabled = true;
         try {
           const updated = await client.updateVoiceLine({ assetId: line.lineAssetId, text: text.value, direction: direction.value });
-          assertDialogAiAssets(manifest, updated);
-          aiAssets = updated;
+          const complete = syncDialogOptionVoiceLines(manifest, updated, options.defaultOptionVoiceAssetId);
+          assertDialogAiAssets(manifest, complete);
+          aiAssets = complete;
           options.onAiAssetsChange?.(structuredClone(aiAssets));
           render();
           setStatus("Voice line text saved.", "success");
