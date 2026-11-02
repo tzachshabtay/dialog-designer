@@ -93,6 +93,14 @@ async function routeRequest(
     return;
   }
 
+  if (request.method === "POST" && url.pathname === "/__dialog-designer/sync-option-voices") {
+    const body = await readJson<{ manifest: DialogDesignerManifest }>(request);
+    assertDialogManifest(body.manifest);
+    await persistDialogOptionVoices({ manifestPath: options.aiAssetsManifestPath, manifestModulePath: options.aiAssetsManifestModulePath }, body.manifest);
+    sendJson(response, 200, { synced: true });
+    return;
+  }
+
   if (
     request.method === "POST"
     && (

@@ -262,6 +262,7 @@ export async function persistDialogOptionVoices(options: AiVoiceLineStoreOptions
     const source = await readManifest(manifestPath);
     const assets = syncDialogOptionVoiceLines(dialogs, source);
     assertDialogAiAssets(dialogs, assets);
+    if (JSON.stringify(source) === JSON.stringify(assets)) return;
     await writeManifest(manifestPath, assets);
     if (options.manifestModulePath) await writeManifestModule(options.manifestModulePath, assets);
   });

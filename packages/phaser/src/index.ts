@@ -29,3 +29,4 @@ export {
 export {
   DialogDesignerDebugClient
 } from "@dialog-designer/designer";
+export { DialogOptionAssetClient } from './asset-client.js';

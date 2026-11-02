@@ -50,6 +50,14 @@ export class DialogDesignerDebugClient {
     return body.manifest;
   }
 
+  /** Register draft choice lines without promoting the dialog graph or any recordings. */
+  async syncOptionVoices(manifest: DialogDesignerManifest): Promise<void> {
+    const response = await this.fetch(`${this.baseUrl}/__dialog-designer/sync-option-voices`, {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ manifest })
+    });
+    await this.readJson(response);
+  }
+
   async createVoiceLine(
     request: CreateDialogVoiceLineRequest
   ): Promise<CreateDialogVoiceLineResult> {
